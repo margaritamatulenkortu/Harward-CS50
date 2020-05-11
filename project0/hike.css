@@ -1,0 +1,65 @@
+div {
+  font-family: Arial, Helvetica, sans-serif;
+}
+div p {
+  color: #334d4d;
+}
+
+ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  color: black;
+}
+
+th {
+  background-color: #1f2e2e;
+  color: grey;
+}
+
+.backgroundpic5, .backgroundpic4, .backgroundpic3, .backgroundpic2, .backgroundpicvec, .backgroundpicam, .backgroundpicgar, .hikingpic {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.hikingpic {
+  background-image: url("pic/swing.jpg");
+}
+
+.backgroundpicgar {
+  background-image: url("pic/garezeri1.jpg");
+}
+
+.backgroundpicam {
+  background-image: url("pic/amata.jpg");
+}
+
+.backgroundpicvec {
+  background-image: url("pic/veczemes.jpg");
+}
+
+.backgroundpic2 {
+  background-image: url("pic/garezeri2.jpg");
+  height: 600px;
+}
+
+.backgroundpic3 {
+  background-image: url("pic/garezeri3.jpg");
+  height: 600px;
+}
+
+.backgroundpic4 {
+  background-image: url("pic/garezeri4.jpg");
+  height: 600px;
+}
+
+.backgroundpic5 {
+  background-image: url("pic/backgroundpic5.jpg");
+  height: 100%;
+}
+
+/*# sourceMappingURL=hike.css.map */

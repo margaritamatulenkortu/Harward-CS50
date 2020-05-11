@@ -1,0 +1,63 @@
+$color: black;
+$background-color: #1f2e2e;
+div {
+  font-family: Arial, Helvetica, sans-serif;
+  p {
+    color: #334d4d;
+  }
+}
+ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  color: $color
+  }
+  th {
+    background-color:$background-color;
+    color: grey;
+  }
+
+  %background {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+.hikingpic {
+  @extend %background;
+  background-image:url("pic/swing.jpg");
+}
+.backgroundpicgar{
+  @extend %background;
+  background-image:url("pic/garezeri1.jpg");
+}
+.backgroundpicam{
+  @extend %background;
+background-image:url("pic/amata.jpg");
+}
+.backgroundpicvec{
+  @extend %background;
+background-image:url("pic/veczemes.jpg");
+}
+
+.backgroundpic2 {
+  @extend %background;
+  background-image:url("pic/garezeri2.jpg");
+  height: 600px;
+}
+.backgroundpic3 {
+  @extend %background;
+  background-image:url("pic/garezeri3.jpg");
+  height: 600px;
+}.backgroundpic4 {
+  @extend %background;
+  background-image:url("pic/garezeri4.jpg");
+  height: 600px;
+}
+.backgroundpic5 {
+  @extend %background;
+  background-image:url("pic/backgroundpic5.jpg");
+  height: 100%;
+}

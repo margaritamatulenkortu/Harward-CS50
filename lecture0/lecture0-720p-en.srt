@@ -1,0 +1,8692 @@
+0
+00:00:00,000 --> 00:00:03,465
+[MUSIC PLAYING]
+
+1
+00:00:03,465 --> 00:00:15,345
+
+
+2
+00:00:15,345 --> 00:00:18,920
+DAVID MALAN: Welcome everyone to web programming with Python and JavaScript.
+
+3
+00:00:18,920 --> 00:00:20,180
+My name is David Malan.
+
+4
+00:00:20,180 --> 00:00:21,080
+BRIAN YU: I'm Brian.
+
+5
+00:00:21,080 --> 00:00:24,288
+DAVID MALAN: And today we're going to give you a quick overview of the course
+
+6
+00:00:24,288 --> 00:00:26,690
+and then dive right into the course's material.
+
+7
+00:00:26,690 --> 00:00:29,962
+So this is meant to be a class taken after a course like CS50, which
+
+8
+00:00:29,962 --> 00:00:31,670
+is the colleges and the extension schools
+
+9
+00:00:31,670 --> 00:00:33,045
+introduction to computer science.
+
+10
+00:00:33,045 --> 00:00:35,782
+But even if you haven't taken that class anything approximating
+
+11
+00:00:35,782 --> 00:00:36,740
+that is certainly fine.
+
+12
+00:00:36,740 --> 00:00:39,920
+We assume only prior programming experience in some language.
+
+13
+00:00:39,920 --> 00:00:42,110
+And what we'll then do is assuming you know
+
+14
+00:00:42,110 --> 00:00:45,500
+some of the basic constructs of most any procedural or imperative language,
+
+15
+00:00:45,500 --> 00:00:49,100
+we'll fill in the blanks along the way both with Python and with JavaScript.
+
+16
+00:00:49,100 --> 00:00:50,660
+Neither is actually assumed.
+
+17
+00:00:50,660 --> 00:00:53,540
+And what we'll do over the course of the next several weeks
+
+18
+00:00:53,540 --> 00:00:54,950
+is first dive into Git.
+
+19
+00:00:54,950 --> 00:00:58,040
+So you might know Git if you've used it before as a version control
+
+20
+00:00:58,040 --> 00:01:01,250
+software, whereby you can maintain multiple versions of your software.
+
+21
+00:01:01,250 --> 00:01:03,980
+But these days it's actually used for much more than that.
+
+22
+00:01:03,980 --> 00:01:06,480
+People will use it not only for versioning their code
+
+23
+00:01:06,480 --> 00:01:08,720
+and for collaborating with others, but also
+
+24
+00:01:08,720 --> 00:01:11,000
+for deploying their code from their local machines
+
+25
+00:01:11,000 --> 00:01:14,484
+to some staging server to some testing server and ultimately to production.
+
+26
+00:01:14,484 --> 00:01:16,400
+So it's actually become quite an integral tool
+
+27
+00:01:16,400 --> 00:01:19,110
+when it comes to actually deploying your code to the cloud,
+
+28
+00:01:19,110 --> 00:01:20,367
+so to speak these days.
+
+29
+00:01:20,367 --> 00:01:23,450
+Thereafter, we'll transition to HTML and CSS, with which you might already
+
+30
+00:01:23,450 --> 00:01:26,269
+be familiar, but we're focused on some of the more modern perhaps
+
+31
+00:01:26,269 --> 00:01:28,810
+some of the more advanced features of both of these languages
+
+32
+00:01:28,810 --> 00:01:31,850
+HTML5, specifically the latest incarnation of that,
+
+33
+00:01:31,850 --> 00:01:34,490
+as well as CSS and various selectors that you may or may not
+
+34
+00:01:34,490 --> 00:01:35,420
+have used before.
+
+35
+00:01:35,420 --> 00:01:38,690
+But also toolchain, something called SAS that allows you to programmatically
+
+36
+00:01:38,690 --> 00:01:42,290
+generate and maintain more readily, more complicated style sheets
+
+37
+00:01:42,290 --> 00:01:45,840
+especially as your web apps become themselves more complicated.
+
+38
+00:01:45,840 --> 00:01:47,690
+We'll then introduce Flask, which is going
+
+39
+00:01:47,690 --> 00:01:50,180
+to be a very popular framework for making web
+
+40
+00:01:50,180 --> 00:01:52,261
+based applications using Python.
+
+41
+00:01:52,261 --> 00:01:54,260
+And it's generally considered a micro framework,
+
+42
+00:01:54,260 --> 00:01:57,110
+which means there's not all that much complexity to it.
+
+43
+00:01:57,110 --> 00:01:58,580
+It doesn't try to do too much.
+
+44
+00:01:58,580 --> 00:02:01,640
+It really just tries to solve some very common problems so that most
+
+45
+00:02:01,640 --> 00:02:03,710
+of your effort when writing a web app with it
+
+46
+00:02:03,710 --> 00:02:06,530
+isn't focused on how do I learn Flask and how do I
+
+47
+00:02:06,530 --> 00:02:08,400
+build with this architecture, but rather how
+
+48
+00:02:08,400 --> 00:02:11,224
+do you implement your ideas without reinventing the wheel?
+
+49
+00:02:11,224 --> 00:02:13,640
+And so you'll get that out of a micro framework like this.
+
+50
+00:02:13,640 --> 00:02:17,060
+We'll then introduce a bit of SQL, or structured query language
+
+51
+00:02:17,060 --> 00:02:19,950
+with which you can query databases and store your actual data.
+
+52
+00:02:19,950 --> 00:02:21,980
+And we'll look at perhaps more complex queries
+
+53
+00:02:21,980 --> 00:02:23,990
+than you've seen or used in the past.
+
+54
+00:02:23,990 --> 00:02:28,190
+We'll talk about the idea of API, or application programming interfaces.
+
+55
+00:02:28,190 --> 00:02:32,300
+These can be both your own that you build for your own applications to use,
+
+56
+00:02:32,300 --> 00:02:35,330
+or as you may have used them already third party APIs.
+
+57
+00:02:35,330 --> 00:02:39,651
+Data feeds and functional behavior that you can actually access over the web
+
+58
+00:02:39,651 --> 00:02:42,650
+or from some other server that some other company or person has actually
+
+59
+00:02:42,650 --> 00:02:45,149
+made available to you to make your applications all the more
+
+60
+00:02:45,149 --> 00:02:47,187
+interactive or featureful.
+
+61
+00:02:47,187 --> 00:02:50,270
+And then we'll introduce JavaScript, which you might have used or tinkered
+
+62
+00:02:50,270 --> 00:02:50,840
+with before.
+
+63
+00:02:50,840 --> 00:02:53,420
+We'll introduce the very latest something known as ES6
+
+64
+00:02:53,420 --> 00:02:56,840
+or ECMAScript 6, which adds a number of features many of which,
+
+65
+00:02:56,840 --> 00:02:59,000
+or most of which are supported by today's browsers.
+
+66
+00:02:59,000 --> 00:03:00,971
+But we'll also talk about some of the pitfalls
+
+67
+00:03:00,971 --> 00:03:03,470
+when you try to use some of the latest and greatest features
+
+68
+00:03:03,470 --> 00:03:07,760
+and what it might mean to ensure as through transpiling or other techniques
+
+69
+00:03:07,760 --> 00:03:11,510
+that your code will indeed work on any number of mobile devices and desktops
+
+70
+00:03:11,510 --> 00:03:12,559
+and laptops these days.
+
+71
+00:03:12,559 --> 00:03:15,350
+And we'll also talk about front ends, the idea of actually building
+
+72
+00:03:15,350 --> 00:03:18,860
+a front end user interface using JavaScript talking about techniques
+
+73
+00:03:18,860 --> 00:03:22,980
+like Ajax or SPAs single page applications these days,
+
+74
+00:03:22,980 --> 00:03:26,300
+particularly modern paradigms with which folks are implementing today's web
+
+75
+00:03:26,300 --> 00:03:26,907
+applications.
+
+76
+00:03:26,907 --> 00:03:29,240
+Also looking at things like graphics and animation as it
+
+77
+00:03:29,240 --> 00:03:32,149
+can be implemented in JavaScript and inside of a browser.
+
+78
+00:03:32,149 --> 00:03:34,190
+And then we'll look at a heavier weight framework
+
+79
+00:03:34,190 --> 00:03:37,500
+something known as Django, which is similar in spirit at least at first
+
+80
+00:03:37,500 --> 00:03:38,720
+to something like Flask.
+
+81
+00:03:38,720 --> 00:03:41,470
+Just makes it easier to get going building web applications,
+
+82
+00:03:41,470 --> 00:03:43,070
+but comes with so many more features.
+
+83
+00:03:43,070 --> 00:03:44,570
+The proverbial kitchen sink.
+
+84
+00:03:44,570 --> 00:03:47,120
+So when you get a little tired in life of implementing
+
+85
+00:03:47,120 --> 00:03:50,537
+an administrative interface to your web application, or a log in interface
+
+86
+00:03:50,537 --> 00:03:53,120
+for your application, or any number of things that a lot of us
+
+87
+00:03:53,120 --> 00:03:54,800
+probably use in various tools.
+
+88
+00:03:54,800 --> 00:03:57,560
+You can start to lean on these larger scale frameworks that
+
+89
+00:03:57,560 --> 00:03:59,340
+just come with many more features.
+
+90
+00:03:59,340 --> 00:04:02,240
+And as such, you might have to comfort of it more to its conventions,
+
+91
+00:04:02,240 --> 00:04:04,980
+but you'll end up writing a lot less code than you would otherwise.
+
+92
+00:04:04,980 --> 00:04:07,190
+So we'll sort of graduate to that level of framework.
+
+93
+00:04:07,190 --> 00:04:09,890
+And then we'll talk about a world that's generally
+
+94
+00:04:09,890 --> 00:04:14,230
+known these days as DevOps, development and operations kind of united in one,
+
+95
+00:04:14,230 --> 00:04:17,022
+in the context of testing like making sure your code actually works
+
+96
+00:04:17,022 --> 00:04:19,938
+and how you can think about that and how you can actually do that when
+
+97
+00:04:19,938 --> 00:04:20,810
+writing your code.
+
+98
+00:04:20,810 --> 00:04:25,080
+And then CICD continuous integration and continuous development,
+
+99
+00:04:25,080 --> 00:04:27,770
+which is just a fancy way of saying setting yourself up
+
+100
+00:04:27,770 --> 00:04:30,470
+for success with the right tools and with the right scripts,
+
+101
+00:04:30,470 --> 00:04:34,880
+the right environments so that when you run a command on your laptop or desktop
+
+102
+00:04:34,880 --> 00:04:38,090
+the code actually goes somewhere and it goes not only into a code
+
+103
+00:04:38,090 --> 00:04:41,450
+repository to be saved and versioned and shared with other people,
+
+104
+00:04:41,450 --> 00:04:45,480
+but you can test it automatically and continuously so to speak.
+
+105
+00:04:45,480 --> 00:04:48,230
+And you can even deploy it to the cloud simply by having set up
+
+106
+00:04:48,230 --> 00:04:49,710
+some of those steps in advance.
+
+107
+00:04:49,710 --> 00:04:53,465
+So if you're already in the habit now of deploying your applications by kind
+
+108
+00:04:53,465 --> 00:04:57,620
+of dragging and dropping them to an FTP server or using some web interface
+
+109
+00:04:57,620 --> 00:05:01,760
+or copying things, all of this now can be automated in very robust ways
+
+110
+00:05:01,760 --> 00:05:04,310
+especially that are conducive to collaboration with others.
+
+111
+00:05:04,310 --> 00:05:05,390
+And then toward the end of the term we'll
+
+112
+00:05:05,390 --> 00:05:07,310
+talk about some higher level issues that will
+
+113
+00:05:07,310 --> 00:05:09,432
+inform how you go about building web applications
+
+114
+00:05:09,432 --> 00:05:10,640
+after the scope of the class.
+
+115
+00:05:10,640 --> 00:05:11,660
+Scalability.
+
+116
+00:05:11,660 --> 00:05:14,065
+So topics like DNS and load balancing and how
+
+117
+00:05:14,065 --> 00:05:17,720
+you think about anticipating that 101st user that
+
+118
+00:05:17,720 --> 00:05:19,200
+might not fit on just one server.
+
+119
+00:05:19,200 --> 00:05:21,410
+And so if you now have to have your app on two
+
+120
+00:05:21,410 --> 00:05:23,512
+or three or more different servers, how do you
+
+121
+00:05:23,512 --> 00:05:25,220
+have these servers talking to one another
+
+122
+00:05:25,220 --> 00:05:26,780
+and how do you share data among them?
+
+123
+00:05:26,780 --> 00:05:27,821
+What's going to get easy?
+
+124
+00:05:27,821 --> 00:05:31,130
+What's going to get hard as you scale to more and more users?
+
+125
+00:05:31,130 --> 00:05:34,130
+And then throughout the semester, we'll talk about topics of security.
+
+126
+00:05:34,130 --> 00:05:36,770
+What you want to do in terms of best practices
+
+127
+00:05:36,770 --> 00:05:39,290
+to avoid getting exploited in some way, but we'll also
+
+128
+00:05:39,290 --> 00:05:42,129
+culminate that discussion in a focus on security at the end
+
+129
+00:05:42,129 --> 00:05:43,920
+so that when you go out into the real world
+
+130
+00:05:43,920 --> 00:05:46,430
+or back into the real world after the courses lessons,
+
+131
+00:05:46,430 --> 00:05:49,370
+you actually are mindful of especially in the languages and tools
+
+132
+00:05:49,370 --> 00:05:51,590
+that we'll use throughout the semester of what
+
+133
+00:05:51,590 --> 00:05:53,481
+you should be particularly mindful of.
+
+134
+00:05:53,481 --> 00:05:56,480
+And then as punctuating the whole semester will be a number of projects.
+
+135
+00:05:56,480 --> 00:06:00,200
+So four assigned projects where we prescribe the specifications of some
+
+136
+00:06:00,200 --> 00:06:03,560
+app that we'd like you to build with the whole course's staff and support
+
+137
+00:06:03,560 --> 00:06:04,190
+structure.
+
+138
+00:06:04,190 --> 00:06:07,356
+And then one final project that will culminate this semester, whereby you'll
+
+139
+00:06:07,356 --> 00:06:10,019
+be invited to design and implement your own tool that's
+
+140
+00:06:10,019 --> 00:06:11,810
+a genuine personal or professional interest
+
+141
+00:06:11,810 --> 00:06:15,595
+to you that somehow draws upon the course's lessons.
+
+142
+00:06:15,595 --> 00:06:19,640
+And let me pause there and see before we forge ahead if there are any questions.
+
+143
+00:06:19,640 --> 00:06:21,987
+
+
+144
+00:06:21,987 --> 00:06:22,570
+Anything else?
+
+145
+00:06:22,570 --> 00:06:23,070
+Yeah.
+
+146
+00:06:23,070 --> 00:06:25,736
+AUDIENCE: So HTML, CSS, JavaScript-- suppose
+
+147
+00:06:25,736 --> 00:06:28,712
+I don't have any experience on those things?
+
+148
+00:06:28,712 --> 00:06:30,220
+DAVID MALAN: Good question.
+
+149
+00:06:30,220 --> 00:06:31,710
+And so what then?
+
+150
+00:06:31,710 --> 00:06:34,740
+So if you don't have any experience in some of the alphabet soup
+
+151
+00:06:34,740 --> 00:06:37,380
+that we put up already like HTML and CSS,
+
+152
+00:06:37,380 --> 00:06:39,990
+JavaScript and/or Python, for the most part that's OK.
+
+153
+00:06:39,990 --> 00:06:42,615
+I would say that they'll be a bit of a more of a learning curve
+
+154
+00:06:42,615 --> 00:06:43,390
+early on for you.
+
+155
+00:06:43,390 --> 00:06:45,930
+But we will take care to provide students like you
+
+156
+00:06:45,930 --> 00:06:47,940
+with any number of resources supplementary
+
+157
+00:06:47,940 --> 00:06:49,950
+so you know where to fill in any gaps.
+
+158
+00:06:49,950 --> 00:06:52,660
+And we'll also introduce these topics in the class itself.
+
+159
+00:06:52,660 --> 00:06:56,190
+So all of the topics that we just gave an overview of we'll
+
+160
+00:06:56,190 --> 00:06:58,119
+introduce and dive into in the class.
+
+161
+00:06:58,119 --> 00:07:00,660
+It will certainly be advantageous if you've seen them before,
+
+162
+00:07:00,660 --> 00:07:04,020
+but each of the projects and by way of the courses sections and lectures
+
+163
+00:07:04,020 --> 00:07:06,850
+where you have all the material you need to succeed,
+
+164
+00:07:06,850 --> 00:07:08,940
+even if most of these topics are brand new.
+
+165
+00:07:08,940 --> 00:07:10,754
+So not to worry.
+
+166
+00:07:10,754 --> 00:07:11,420
+Other questions?
+
+167
+00:07:11,420 --> 00:07:11,560
+Yeah.
+
+168
+00:07:11,560 --> 00:07:14,226
+AUDIENCE: [INAUDIBLE] purchase any of the software [INAUDIBLE]??
+
+169
+00:07:14,226 --> 00:07:16,740
+DAVID MALAN: No need to purchase any software whatsoever.
+
+170
+00:07:16,740 --> 00:07:18,990
+All of the tools that we'll use, all of the libraries,
+
+171
+00:07:18,990 --> 00:07:24,650
+frameworks, APIs are freely available now and after the class as well.
+
+172
+00:07:24,650 --> 00:07:27,040
+Other questions?
+
+173
+00:07:27,040 --> 00:07:27,540
+No.
+
+174
+00:07:27,540 --> 00:07:28,039
+All right.
+
+175
+00:07:28,039 --> 00:07:31,260
+So first on the agenda today is version control
+
+176
+00:07:31,260 --> 00:07:33,180
+and Gits in particular, a tool that you'll
+
+177
+00:07:33,180 --> 00:07:36,820
+use not only to version your code and share your code,
+
+178
+00:07:36,820 --> 00:07:38,550
+but also ultimately deploy it.
+
+179
+00:07:38,550 --> 00:07:41,130
+So without further ado allow me to turn things over to Brian.
+
+180
+00:07:41,130 --> 00:07:42,771
+BRIAN YU: Thank you very much.
+
+181
+00:07:42,771 --> 00:07:43,270
+All right.
+
+182
+00:07:43,270 --> 00:07:45,780
+So the first topic that we're going to be talking about today as we approach
+
+183
+00:07:45,780 --> 00:07:47,940
+the world of web programming and web development
+
+184
+00:07:47,940 --> 00:07:50,190
+is thinking about when we're designing projects,
+
+185
+00:07:50,190 --> 00:07:52,750
+how do we keep track of different versions of our code?
+
+186
+00:07:52,750 --> 00:07:54,460
+How do we collaborate with other people?
+
+187
+00:07:54,460 --> 00:07:56,960
+How do we make sure that if we make a change and that change
+
+188
+00:07:56,960 --> 00:08:00,300
+doesn't work that we have an easy way to go back to older versions of our code
+
+189
+00:08:00,300 --> 00:08:02,500
+and make sure that we have access to those as well?
+
+190
+00:08:02,500 --> 00:08:04,830
+And so all of that falls under the larger umbrella
+
+191
+00:08:04,830 --> 00:08:06,510
+of what's called version control.
+
+192
+00:08:06,510 --> 00:08:09,780
+And out there, there are some number of different version control software
+
+193
+00:08:09,780 --> 00:08:12,800
+that people are using on a day to day basis, but one of the most popular
+
+194
+00:08:12,800 --> 00:08:15,450
+is a piece of software called Git, which is a version control
+
+195
+00:08:15,450 --> 00:08:17,560
+tool that we're going to be using in this class
+
+196
+00:08:17,560 --> 00:08:20,670
+and that people often use in industry in order to help maintain and manage
+
+197
+00:08:20,670 --> 00:08:24,180
+different versions of their code in order to keep track of their projects
+
+198
+00:08:24,180 --> 00:08:25,960
+and make sure that everything is organized
+
+199
+00:08:25,960 --> 00:08:27,960
+and that they're able to effectively collaborate
+
+200
+00:08:27,960 --> 00:08:29,892
+with other people along the way.
+
+201
+00:08:29,892 --> 00:08:32,850
+So we'll take a moment to step back and talk about the different things
+
+202
+00:08:32,850 --> 00:08:34,434
+that Git does for you at a high level.
+
+203
+00:08:34,434 --> 00:08:36,683
+And then we'll dive in and look at the actual commands
+
+204
+00:08:36,683 --> 00:08:39,360
+that you would use in order to run Git, understand how it works
+
+205
+00:08:39,360 --> 00:08:40,689
+and actually make use of it.
+
+206
+00:08:40,689 --> 00:08:42,480
+So the first thing that Git's good at doing
+
+207
+00:08:42,480 --> 00:08:45,131
+is keeping track of different changes to your code
+
+208
+00:08:45,131 --> 00:08:47,130
+so that if you're making changes, you don't only
+
+209
+00:08:47,130 --> 00:08:49,179
+have access to the latest version of your code,
+
+210
+00:08:49,179 --> 00:08:50,970
+but if you start out with a particular file
+
+211
+00:08:50,970 --> 00:08:53,000
+and then you make changes and add another line to it,
+
+212
+00:08:53,000 --> 00:08:54,780
+you remove a line to it later you can keep
+
+213
+00:08:54,780 --> 00:08:57,480
+track of all of those different versions of those files
+
+214
+00:08:57,480 --> 00:08:59,790
+such that you know the history of your project
+
+215
+00:08:59,790 --> 00:09:01,920
+and how it's developed from the beginning
+
+216
+00:09:01,920 --> 00:09:03,810
+all the way up until where you are now.
+
+217
+00:09:03,810 --> 00:09:06,150
+So that's one thing Git's particularly good at.
+
+218
+00:09:06,150 --> 00:09:08,610
+One other thing the version control is very useful for
+
+219
+00:09:08,610 --> 00:09:10,862
+is synchronizing code between different people.
+
+220
+00:09:10,862 --> 00:09:12,570
+Very often in the modern world you're not
+
+221
+00:09:12,570 --> 00:09:16,170
+the only person working alone on your projects independently, but rather you
+
+222
+00:09:16,170 --> 00:09:18,240
+and one or more other people are working together
+
+223
+00:09:18,240 --> 00:09:21,720
+collaboratively trying to work on a project together and making sure
+
+224
+00:09:21,720 --> 00:09:25,290
+that you and the people you're working with stay in sync in terms of your code
+
+225
+00:09:25,290 --> 00:09:26,580
+is often a challenging task.
+
+226
+00:09:26,580 --> 00:09:28,538
+And what Git, another version control softwares
+
+227
+00:09:28,538 --> 00:09:31,390
+like it do is help to make that process a little bit easier.
+
+228
+00:09:31,390 --> 00:09:34,140
+So you can imagine that maybe we're storing a version of your code
+
+229
+00:09:34,140 --> 00:09:35,940
+up in some remote server somewhere.
+
+230
+00:09:35,940 --> 00:09:37,980
+And Git what will allow you to do is make sure
+
+231
+00:09:37,980 --> 00:09:41,620
+that you and someone you're working with both have access to that same code.
+
+232
+00:09:41,620 --> 00:09:44,970
+And when you both make independent different changes to that code
+
+233
+00:09:44,970 --> 00:09:47,640
+there's an easy way via which Git can merge those changes back
+
+234
+00:09:47,640 --> 00:09:50,040
+together so that there's a central version that
+
+235
+00:09:50,040 --> 00:09:53,194
+has all of the changes to which both of you will then have access to.
+
+236
+00:09:53,194 --> 00:09:55,110
+So synchronizing code between different people
+
+237
+00:09:55,110 --> 00:09:57,970
+and making sure that everyone has access to that code base
+
+238
+00:09:57,970 --> 00:10:01,380
+is something that is also useful with regards to version control.
+
+239
+00:10:01,380 --> 00:10:04,830
+In addition, Git is also very good at letting you test your code
+
+240
+00:10:04,830 --> 00:10:06,940
+without losing your original copy.
+
+241
+00:10:06,940 --> 00:10:10,110
+So if you have a working program or a working web application
+
+242
+00:10:10,110 --> 00:10:13,252
+and you want to make some modifications to it in order to add a new feature
+
+243
+00:10:13,252 --> 00:10:15,210
+but you're worried that adding that new feature
+
+244
+00:10:15,210 --> 00:10:18,270
+might break some prior feature that's already existing within your web
+
+245
+00:10:18,270 --> 00:10:21,840
+application, Git's very good at letting you test your new changes
+
+246
+00:10:21,840 --> 00:10:25,170
+and experiment with your code without losing track of that original.
+
+247
+00:10:25,170 --> 00:10:27,330
+And only once you're happy with the original code
+
+248
+00:10:27,330 --> 00:10:30,930
+that you have can you then merge your new changes in with the existing
+
+249
+00:10:30,930 --> 00:10:35,730
+changes so that you never lose a working copy of your web application
+
+250
+00:10:35,730 --> 00:10:37,629
+And finally, one last thing to Git is very
+
+251
+00:10:37,629 --> 00:10:39,920
+good at is reverting back to old versions of your code.
+
+252
+00:10:39,920 --> 00:10:41,370
+So you've been working on your project, you've
+
+253
+00:10:41,370 --> 00:10:43,500
+made some number of modifications or edits,
+
+254
+00:10:43,500 --> 00:10:46,770
+and you realize that your most recent version of your program doesn't work,
+
+255
+00:10:46,770 --> 00:10:49,200
+you want to go back to some previous version of your code.
+
+256
+00:10:49,200 --> 00:10:51,600
+Git is also very good at allowing you to revert back
+
+257
+00:10:51,600 --> 00:10:53,010
+to old versions of your code.
+
+258
+00:10:53,010 --> 00:10:56,020
+And we'll see examples of all of that in just a moment.
+
+259
+00:10:56,020 --> 00:10:59,460
+So that's sort of the high level overview of what Git is
+
+260
+00:10:59,460 --> 00:11:00,480
+and how it works.
+
+261
+00:11:00,480 --> 00:11:04,290
+And in this course we'll also be using another service known as GitHub.
+
+262
+00:11:04,290 --> 00:11:06,750
+And GitHub is just a website whose purpose in life
+
+263
+00:11:06,750 --> 00:11:09,060
+is to store Git repositories on the internet.
+
+264
+00:11:09,060 --> 00:11:11,370
+It's to give you and people all around the world access
+
+265
+00:11:11,370 --> 00:11:13,290
+to Git repositories on the internet, such
+
+266
+00:11:13,290 --> 00:11:16,260
+that you can look at repositories that other people have created
+
+267
+00:11:16,260 --> 00:11:18,540
+and contribute to them or use them, and such
+
+268
+00:11:18,540 --> 00:11:21,470
+that you can work on your own projects, push them to GitHub so
+
+269
+00:11:21,470 --> 00:11:25,250
+that your collaborators or other people on the internet can also see and use
+
+270
+00:11:25,250 --> 00:11:27,260
+and work on those projects as well.
+
+271
+00:11:27,260 --> 00:11:30,260
+And so one of the first things you'll do in this course is go to GitHub.
+
+272
+00:11:30,260 --> 00:11:32,551
+And if you don't already have an account already you'll
+
+273
+00:11:32,551 --> 00:11:34,140
+create a free GitHub account.
+
+274
+00:11:34,140 --> 00:11:37,420
+And once you do, I'll show you what GitHub's interface looks like.
+
+275
+00:11:37,420 --> 00:11:39,740
+We'll just go to get github.com.
+
+276
+00:11:39,740 --> 00:11:42,509
+And so this is what github.com might look like once you log in.
+
+277
+00:11:42,509 --> 00:11:44,300
+And what we'll do right here is we're going
+
+278
+00:11:44,300 --> 00:11:46,550
+to first create a GitHub repository.
+
+279
+00:11:46,550 --> 00:11:49,340
+And repository is just a fancy word for the place
+
+280
+00:11:49,340 --> 00:11:52,489
+where we are going to keep track of all of your code and all of the changes
+
+281
+00:11:52,489 --> 00:11:53,030
+to your code.
+
+282
+00:11:53,030 --> 00:11:55,520
+Think of it as like a central storage place where
+
+283
+00:11:55,520 --> 00:11:57,290
+we're going to store your project.
+
+284
+00:11:57,290 --> 00:12:00,020
+So in the upper right of GitHub's screen we have the plus button
+
+285
+00:12:00,020 --> 00:12:02,420
+and we can go to the new repository.
+
+286
+00:12:02,420 --> 00:12:05,510
+And this takes us to the page where we can create a brand new repository.
+
+287
+00:12:05,510 --> 00:12:09,290
+In this case, I'm going to name the repository Lecture Zero.
+
+288
+00:12:09,290 --> 00:12:11,690
+And I'll go ahead and just click Create Repository.
+
+289
+00:12:11,690 --> 00:12:15,744
+And that creates a new repository for me that stored on GitHub.
+
+290
+00:12:15,744 --> 00:12:18,410
+Right now it's not on my computer yet, but we'll see in a moment
+
+291
+00:12:18,410 --> 00:12:22,130
+how we can take this repository which is right now empty but on the internet
+
+292
+00:12:22,130 --> 00:12:24,620
+and download a copy of it to our own computer.
+
+293
+00:12:24,620 --> 00:12:27,920
+And so that's where we start to introduce some of the command line
+
+294
+00:12:27,920 --> 00:12:31,432
+interface of Git and the commands that you might run in order to use it.
+
+295
+00:12:31,432 --> 00:12:34,640
+So after you've installed Git, one of the first commands you'll want to learn
+
+296
+00:12:34,640 --> 00:12:36,160
+is git clone.
+
+297
+00:12:36,160 --> 00:12:38,580
+And the git clone command has just one purpose.
+
+298
+00:12:38,580 --> 00:12:41,090
+What it does is it takes a repository stored somewhere
+
+299
+00:12:41,090 --> 00:12:43,100
+else like on some server like GitHub.
+
+300
+00:12:43,100 --> 00:12:45,770
+And what happens is that when you run git clone followed
+
+301
+00:12:45,770 --> 00:12:50,450
+by the URL of that GitHub repository, that remote version of your code
+
+302
+00:12:50,450 --> 00:12:53,060
+will be downloaded onto your computer so that you
+
+303
+00:12:53,060 --> 00:12:56,490
+have a copy of the repository on your own computer.
+
+304
+00:12:56,490 --> 00:12:58,320
+So I'll show you what that looks like now.
+
+305
+00:12:58,320 --> 00:13:00,740
+We'll head back over to the GitHub repository
+
+306
+00:13:00,740 --> 00:13:02,430
+that we just created over here.
+
+307
+00:13:02,430 --> 00:13:05,780
+And what you'll notice is that GitHub provides me with this URL.
+
+308
+00:13:05,780 --> 00:13:08,240
+This is the URL of this GitHub repository.
+
+309
+00:13:08,240 --> 00:13:10,550
+So if I go ahead and copy that to my clipboard
+
+310
+00:13:10,550 --> 00:13:13,820
+and open up a terminal window, for example, what I can do
+
+311
+00:13:13,820 --> 00:13:18,830
+is type git clone followed by that URL, just pasting it right in there.
+
+312
+00:13:18,830 --> 00:13:23,394
+When I press Return it already exists because I already created it.
+
+313
+00:13:23,394 --> 00:13:25,560
+So I'll go ahead and remove the old version of that.
+
+314
+00:13:25,560 --> 00:13:26,450
+Sorry about that.
+
+315
+00:13:26,450 --> 00:13:31,512
+And we'll do git clone pasting in that repository.
+
+316
+00:13:31,512 --> 00:13:32,720
+And it's giving me a warning.
+
+317
+00:13:32,720 --> 00:13:35,510
+Warning you appear to have cloned an empty repository, which
+
+318
+00:13:35,510 --> 00:13:39,740
+is to be expected because the repository that I just created was in fact empty.
+
+319
+00:13:39,740 --> 00:13:42,170
+And I can CD, CD for change directory, if you're
+
+320
+00:13:42,170 --> 00:13:44,150
+unfamiliar with the command line interface
+
+321
+00:13:44,150 --> 00:13:46,160
+into that Lecture Zero directory.
+
+322
+00:13:46,160 --> 00:13:48,740
+And now I'm inside of that Lecture Zero directory.
+
+323
+00:13:48,740 --> 00:13:51,770
+Which if I take LS for list or list all files
+
+324
+00:13:51,770 --> 00:13:53,370
+in that directory nothing shows up.
+
+325
+00:13:53,370 --> 00:13:55,589
+So this directory is currently empty.
+
+326
+00:13:55,589 --> 00:13:56,880
+So let's go ahead and fix that.
+
+327
+00:13:56,880 --> 00:14:00,860
+Let's add some code to this repository.
+
+328
+00:14:00,860 --> 00:14:03,710
+I can use the touch command where touch is just
+
+329
+00:14:03,710 --> 00:14:07,370
+a command that if you're unfamiliar with it can help to create a brand new file.
+
+330
+00:14:07,370 --> 00:14:11,420
+And I'll create a new file called hello.html.
+
+331
+00:14:11,420 --> 00:14:14,817
+And I'll open up that file using a text editor.
+
+332
+00:14:14,817 --> 00:14:17,150
+In this class you can use whatever text editor you wish.
+
+333
+00:14:17,150 --> 00:14:19,500
+But common ones include Adam which I'm using here,
+
+334
+00:14:19,500 --> 00:14:22,160
+but also Sublime and VS Code and many others.
+
+335
+00:14:22,160 --> 00:14:26,440
+And I'll just go ahead and create here a simple HTML web page.
+
+336
+00:14:26,440 --> 00:14:28,190
+No worries if you haven't seen HTML before
+
+337
+00:14:28,190 --> 00:14:29,660
+and this looks unfamiliar to you.
+
+338
+00:14:29,660 --> 00:14:31,880
+Later on during tonight's lecture we'll dive
+
+339
+00:14:31,880 --> 00:14:34,810
+in more depth into what all this code means if you haven't seen HTML
+
+340
+00:14:34,810 --> 00:14:38,244
+before to understand what's actually happening when I create this web page.
+
+341
+00:14:38,244 --> 00:14:40,160
+But in essence, what I'm going to do is create
+
+342
+00:14:40,160 --> 00:14:49,610
+a website whose title is my web page and whose contents just say hello, world.
+
+343
+00:14:49,610 --> 00:14:50,180
+All right.
+
+344
+00:14:50,180 --> 00:14:52,260
+So there I have it, a simple HTML web page.
+
+345
+00:14:52,260 --> 00:14:55,010
+Again, not to worry if you haven't seen this type of thing before.
+
+346
+00:14:55,010 --> 00:14:58,430
+But now I want to take that code and save it.
+
+347
+00:14:58,430 --> 00:15:01,809
+I want to make a what's called a commit to my repository
+
+348
+00:15:01,809 --> 00:15:04,850
+to say these are changes that I want to save because one day I might want
+
+349
+00:15:04,850 --> 00:15:07,040
+to refer back to them, for instance.
+
+350
+00:15:07,040 --> 00:15:10,716
+And so the next thing we'll need to know is git add.
+
+351
+00:15:10,716 --> 00:15:12,590
+And the git add command basically means we're
+
+352
+00:15:12,590 --> 00:15:16,460
+going to take some number of files, one or more files that we've changed
+
+353
+00:15:16,460 --> 00:15:20,720
+and tell Git that these are files that we want to include the next time we
+
+354
+00:15:20,720 --> 00:15:22,700
+make a commit, to the next time that we save
+
+355
+00:15:22,700 --> 00:15:26,100
+a version or a snapshot of the current repository.
+
+356
+00:15:26,100 --> 00:15:28,250
+So for instance, if I say git add followed
+
+357
+00:15:28,250 --> 00:15:34,160
+by some file name, what that's going to do is tell Git to track that file.
+
+358
+00:15:34,160 --> 00:15:37,340
+That this file is a file that I want to track the next time
+
+359
+00:15:37,340 --> 00:15:40,320
+that I save a copy of the repository.
+
+360
+00:15:40,320 --> 00:15:42,410
+So what does that actually look like?
+
+361
+00:15:42,410 --> 00:15:45,860
+If I do ls right now, again, list all the files in the current directory,
+
+362
+00:15:45,860 --> 00:15:49,590
+you'll see that I have hello.html, that file that I just created.
+
+363
+00:15:49,590 --> 00:15:55,240
+And what I'll do now is I'll say git add hello.html.
+
+364
+00:15:55,240 --> 00:15:58,730
+To mean, I want to take hello.html, and I
+
+365
+00:15:58,730 --> 00:16:01,700
+want to include that the next time I save a version of this repository.
+
+366
+00:16:01,700 --> 00:16:03,533
+Nothing appears to have happened, but that's
+
+367
+00:16:03,533 --> 00:16:06,650
+OK I have now added hello.html as a file that I want
+
+368
+00:16:06,650 --> 00:16:09,170
+to track the next time I make a save.
+
+369
+00:16:09,170 --> 00:16:11,060
+So what does that process look like?
+
+370
+00:16:11,060 --> 00:16:13,990
+That comes in the form of a command called git commit.
+
+371
+00:16:13,990 --> 00:16:17,570
+Commit it just fancy way of saying take a snapshot of the repository
+
+372
+00:16:17,570 --> 00:16:19,670
+in the current moment and save it.
+
+373
+00:16:19,670 --> 00:16:24,190
+And so how that would work is I would say git commit followed by a flag dash
+
+374
+00:16:24,190 --> 00:16:26,960
+m, m for message, and then in quotation marks
+
+375
+00:16:26,960 --> 00:16:30,435
+some English message describing what it is that I've changed in this commit,
+
+376
+00:16:30,435 --> 00:16:32,810
+describing what it is that's happened in this change that
+
+377
+00:16:32,810 --> 00:16:35,339
+makes it different from previous versions of the code.
+
+378
+00:16:35,339 --> 00:16:37,130
+This is useful because as you begin working
+
+379
+00:16:37,130 --> 00:16:40,340
+on a project that has dozens or hundreds or even thousands of commits,
+
+380
+00:16:40,340 --> 00:16:42,890
+later on you can refer back to this list of messages
+
+381
+00:16:42,890 --> 00:16:45,260
+that you yourself have written describing what happened
+
+382
+00:16:45,260 --> 00:16:48,301
+in any successive change, so that you know where to look if you're trying
+
+383
+00:16:48,301 --> 00:16:51,260
+to find a particular commit, or a particular change that you made
+
+384
+00:16:51,260 --> 00:16:53,400
+to your code at any particular time.
+
+385
+00:16:53,400 --> 00:16:56,990
+So when you run git commit dash m followed by a short description of what
+
+386
+00:16:56,990 --> 00:17:01,940
+you've done, what that'll do is have Git save a new version or a new snapshot
+
+387
+00:17:01,940 --> 00:17:04,339
+of your repository in that moment keeping track
+
+388
+00:17:04,339 --> 00:17:06,829
+of all of your old versions as well.
+
+389
+00:17:06,829 --> 00:17:08,150
+So that's git commit.
+
+390
+00:17:08,150 --> 00:17:09,770
+And we'll take a look at that now.
+
+391
+00:17:09,770 --> 00:17:13,450
+I'll do git commit dash m for message.
+
+392
+00:17:13,450 --> 00:17:18,859
+And the message that I want to include in this case is just added hello.html.
+
+393
+00:17:18,859 --> 00:17:19,890
+That's what I did.
+
+394
+00:17:19,890 --> 00:17:20,852
+I'll press Return.
+
+395
+00:17:20,852 --> 00:17:23,810
+And what you'll notice is that Git provides me some helpful information
+
+396
+00:17:23,810 --> 00:17:25,490
+about what it is that I just did.
+
+397
+00:17:25,490 --> 00:17:29,990
+It said one file changed at nine insertions because I added a new file
+
+398
+00:17:29,990 --> 00:17:31,760
+and that file had nine lines in it.
+
+399
+00:17:31,760 --> 00:17:34,700
+And so now Git has kept track of the fact that in this commit,
+
+400
+00:17:34,700 --> 00:17:37,940
+in this save I have added this hello.html file that
+
+401
+00:17:37,940 --> 00:17:40,890
+has the contents that you just saw a moment ago.
+
+402
+00:17:40,890 --> 00:17:44,922
+So that's me making a save to the contents of that file.
+
+403
+00:17:44,922 --> 00:17:47,630
+Next command that's often helpful to know and to be familiar with
+
+404
+00:17:47,630 --> 00:17:49,040
+is git status.
+
+405
+00:17:49,040 --> 00:17:52,220
+Git status is a simple command that effectively just tells you what's
+
+406
+00:17:52,220 --> 00:17:53,990
+currently going on in your repository.
+
+407
+00:17:53,990 --> 00:17:57,379
+If you forget whether you've made new commits since the last time you checked
+
+408
+00:17:57,379 --> 00:18:00,170
+from GitHub, if you forget whether you've made new changes that you
+
+409
+00:18:00,170 --> 00:18:03,920
+haven't committed yet, git status is an easy way to just run git status
+
+410
+00:18:03,920 --> 00:18:08,070
+and see the current status of what's going on inside of your repository.
+
+411
+00:18:08,070 --> 00:18:11,270
+So let's take a look at the code that we've been working on.
+
+412
+00:18:11,270 --> 00:18:14,150
+We'll go ahead and run git status on it.
+
+413
+00:18:14,150 --> 00:18:16,821
+And what we see is on branch master--
+
+414
+00:18:16,821 --> 00:18:18,320
+don't worry about branches too much.
+
+415
+00:18:18,320 --> 00:18:20,820
+We'll dive into more depth about that next week.
+
+416
+00:18:20,820 --> 00:18:26,480
+But importantly, we'll see that we are based on origin master
+
+417
+00:18:26,480 --> 00:18:29,980
+and right now it says we have nothing to commit.
+
+418
+00:18:29,980 --> 00:18:33,980
+So git status effectively tells us the current status of the repository,
+
+419
+00:18:33,980 --> 00:18:38,940
+tells us what's going on with our repository at any given moment.
+
+420
+00:18:38,940 --> 00:18:42,210
+So next up we've made these changes to our repository.
+
+421
+00:18:42,210 --> 00:18:46,280
+The next question is, now how do we send those changes back to GitHub?
+
+422
+00:18:46,280 --> 00:18:48,650
+GitHub's keeping track of our repository on the internet
+
+423
+00:18:48,650 --> 00:18:52,400
+and we've made changes to the repository adding hello.html on our computer
+
+424
+00:18:52,400 --> 00:18:55,010
+locally, but that isn't yet reflected on GitHub.
+
+425
+00:18:55,010 --> 00:18:57,440
+If we were to check the GitHub page for this repository
+
+426
+00:18:57,440 --> 00:18:59,240
+it would still currently be empty.
+
+427
+00:18:59,240 --> 00:19:02,390
+So how do we then send those changes to GitHub?
+
+428
+00:19:02,390 --> 00:19:05,930
+That's called a push, where we push our code from our local computer
+
+429
+00:19:05,930 --> 00:19:08,550
+to the repository that's stored somewhere on the internet.
+
+430
+00:19:08,550 --> 00:19:11,480
+And so when we run git push, that causes those changes,
+
+431
+00:19:11,480 --> 00:19:14,090
+whatever changes that we've made to our code locally
+
+432
+00:19:14,090 --> 00:19:17,780
+to be pushed to the remote server so that GitHub is now able to keep
+
+433
+00:19:17,780 --> 00:19:20,930
+track of those changes that we've made.
+
+434
+00:19:20,930 --> 00:19:22,730
+So that is git push.
+
+435
+00:19:22,730 --> 00:19:24,770
+And I'll go ahead and try and show you that now.
+
+436
+00:19:24,770 --> 00:19:32,660
+If I try and run git push it pushes those changes to the GitHub repository.
+
+437
+00:19:32,660 --> 00:19:37,370
+And now if I go back to here, this GitHub page for student50/lecturezero,
+
+438
+00:19:37,370 --> 00:19:41,105
+which is the repository page on GitHub, and refresh that page
+
+439
+00:19:41,105 --> 00:19:42,980
+you'll notice that now there's contents here.
+
+440
+00:19:42,980 --> 00:19:47,370
+Now I have an hello.html file that's located inside this repository.
+
+441
+00:19:47,370 --> 00:19:52,460
+And if I click on it then you can see the contents of that hello.html file
+
+442
+00:19:52,460 --> 00:19:54,840
+that is now stored on GitHub as well.
+
+443
+00:19:54,840 --> 00:19:57,590
+So I've now taken my changes that were just on my computer before
+
+444
+00:19:57,590 --> 00:20:02,810
+and I'll push them so that they are on the internet as well for people to see.
+
+445
+00:20:02,810 --> 00:20:04,276
+So that's git push.
+
+446
+00:20:04,276 --> 00:20:05,900
+Next up is sort of the inverse of that.
+
+447
+00:20:05,900 --> 00:20:06,880
+Git pull.
+
+448
+00:20:06,880 --> 00:20:10,310
+What if someone else has been working on your repository,
+
+449
+00:20:10,310 --> 00:20:12,680
+has made changes to it, and pushed those to GitHub?
+
+450
+00:20:12,680 --> 00:20:16,100
+And now you want to download the latest version of that repository.
+
+451
+00:20:16,100 --> 00:20:19,120
+You want to download the latest changes down onto your computer locally
+
+452
+00:20:19,120 --> 00:20:20,600
+to take a look at it.
+
+453
+00:20:20,600 --> 00:20:22,050
+How would you go about doing that?
+
+454
+00:20:22,050 --> 00:20:24,260
+That's by a different command called git pull.
+
+455
+00:20:24,260 --> 00:20:26,840
+When you run git pull, if there are other changes that
+
+456
+00:20:26,840 --> 00:20:29,840
+have happened on the remote server, notice that here locally I've
+
+457
+00:20:29,840 --> 00:20:32,780
+made one change, but someone else on GitHub for instance
+
+458
+00:20:32,780 --> 00:20:35,520
+has pushed some second change that's been made to the code.
+
+459
+00:20:35,520 --> 00:20:38,510
+If I run git pull, that causes any of the latest changes that
+
+460
+00:20:38,510 --> 00:20:41,970
+have been made on the remote server to be downloaded onto my own computer
+
+461
+00:20:41,970 --> 00:20:45,080
+so that I now have a working copy of the entire history of what's
+
+462
+00:20:45,080 --> 00:20:47,090
+been going on with my project so far.
+
+463
+00:20:47,090 --> 00:20:48,080
+So that's git pull.
+
+464
+00:20:48,080 --> 00:20:50,390
+And we'll show you a quick example of that now.
+
+465
+00:20:50,390 --> 00:20:54,410
+If I go back into the GitHub interface there is sort of two ways
+
+466
+00:20:54,410 --> 00:20:56,870
+to make changes to the code that you see here on GitHub.
+
+467
+00:20:56,870 --> 00:21:00,230
+Either I can change that code on my own and my code on my computer,
+
+468
+00:21:00,230 --> 00:21:03,260
+or actually GitHub's web interface actually has a button here
+
+469
+00:21:03,260 --> 00:21:04,890
+that lets me edit this code.
+
+470
+00:21:04,890 --> 00:21:08,000
+So let's say I wanted to add another line that
+
+471
+00:21:08,000 --> 00:21:12,530
+says hello, again, for instance, that I wanted to add to this file,
+
+472
+00:21:12,530 --> 00:21:15,040
+I can scroll down and go ahead and commit those changes.
+
+473
+00:21:15,040 --> 00:21:18,650
+Again, commit is just a fancy way of saying save or take a snapshot.
+
+474
+00:21:18,650 --> 00:21:21,650
+And when I commit those changes what I see
+
+475
+00:21:21,650 --> 00:21:26,000
+is that the contents of my web page on GitHub show hello, world
+
+476
+00:21:26,000 --> 00:21:27,830
+and also hello again.
+
+477
+00:21:27,830 --> 00:21:31,310
+But if I were to check my computer I just have hello, world.
+
+478
+00:21:31,310 --> 00:21:32,420
+Just the one sentence.
+
+479
+00:21:32,420 --> 00:21:33,920
+That change has been made on GitHub.
+
+480
+00:21:33,920 --> 00:21:37,170
+It hasn't yet been reflected in my version of the code that's
+
+481
+00:21:37,170 --> 00:21:38,850
+stored on my computer.
+
+482
+00:21:38,850 --> 00:21:40,400
+So what can I do now?
+
+483
+00:21:40,400 --> 00:21:45,470
+I can run git pull to say pull down any of those latest changes from GitHub.
+
+484
+00:21:45,470 --> 00:21:46,640
+I press Return.
+
+485
+00:21:46,640 --> 00:21:49,280
+And notice that it says hello.html.
+
+486
+00:21:49,280 --> 00:21:51,980
+Two changes, one plus and one minus.
+
+487
+00:21:51,980 --> 00:21:53,514
+One insertion, one deletion.
+
+488
+00:21:53,514 --> 00:21:56,180
+Git's not quite smart enough to know that I actually took a line
+
+489
+00:21:56,180 --> 00:21:57,050
+and changed it.
+
+490
+00:21:57,050 --> 00:21:59,720
+As far as Git is concerned I removed that old line
+
+491
+00:21:59,720 --> 00:22:02,060
+that just said hello, world, and added a new line that
+
+492
+00:22:02,060 --> 00:22:04,220
+said hello, world, and hello again.
+
+493
+00:22:04,220 --> 00:22:07,400
+So if I check my code now going back here, I see that it's now updated.
+
+494
+00:22:07,400 --> 00:22:11,240
+My local version on my computer now says hello, world, and hello again
+
+495
+00:22:11,240 --> 00:22:14,990
+because that was the change that I had just pulled down from GitHub.
+
+496
+00:22:14,990 --> 00:22:18,110
+And so via pushing and pulling code can you and other people
+
+497
+00:22:18,110 --> 00:22:20,690
+that you're working with collaborate together on a repository
+
+498
+00:22:20,690 --> 00:22:23,870
+and make sure that you're keeping track of any changes that you make.
+
+499
+00:22:23,870 --> 00:22:25,040
+But what can go wrong here?
+
+500
+00:22:25,040 --> 00:22:30,020
+What might happen and cause things to not seem as simple as they are?
+
+501
+00:22:30,020 --> 00:22:34,040
+Well, what if I decided to make a change here?
+
+502
+00:22:34,040 --> 00:22:36,750
+Hello a third time.
+
+503
+00:22:36,750 --> 00:22:42,050
+So I make that change and I decide to OK, git add hello.html.
+
+504
+00:22:42,050 --> 00:22:43,220
+I want to track that.
+
+505
+00:22:43,220 --> 00:22:48,010
+And git commit, add a third line.
+
+506
+00:22:48,010 --> 00:22:53,690
+So now I've added that third line to the contents of my hello.html file.
+
+507
+00:22:53,690 --> 00:22:58,910
+But what if someone else on the internet who has access to my GitHub repository
+
+508
+00:22:58,910 --> 00:23:05,660
+decides to edit it differently and decides to say hello, hello, hello,
+
+509
+00:23:05,660 --> 00:23:08,510
+and save those changes by committing them?
+
+510
+00:23:08,510 --> 00:23:12,290
+Now the online version says hello, world, hello again, hello, hello,
+
+511
+00:23:12,290 --> 00:23:14,900
+hello, but in my local version of the code
+
+512
+00:23:14,900 --> 00:23:18,200
+it says hello, world, hello again, hello a third time.
+
+513
+00:23:18,200 --> 00:23:21,119
+And if I try now to pull this code from GitHub
+
+514
+00:23:21,119 --> 00:23:24,410
+it's not going to be as simple as it was last time of just updating the changes
+
+515
+00:23:24,410 --> 00:23:27,850
+because Git doesn't quite know which change I actually want.
+
+516
+00:23:27,850 --> 00:23:30,650
+Here I've added a sentence online that's a different sentence.
+
+517
+00:23:30,650 --> 00:23:33,990
+So we're going to need some way to reconcile those two things.
+
+518
+00:23:33,990 --> 00:23:37,380
+And so that's where we introduce the concept of merge conflicts.
+
+519
+00:23:37,380 --> 00:23:39,800
+Git will try whenever it can to automatically take
+
+520
+00:23:39,800 --> 00:23:42,890
+any changes that have been made and combine them together automatically
+
+521
+00:23:42,890 --> 00:23:45,570
+for you without you needing to worry about what's going on.
+
+522
+00:23:45,570 --> 00:23:47,720
+But in some cases, if you and another person
+
+523
+00:23:47,720 --> 00:23:50,570
+have both made changes to the same lines of the same files
+
+524
+00:23:50,570 --> 00:23:52,670
+you may run into a merge conflict, which is what
+
+525
+00:23:52,670 --> 00:23:54,680
+happens when you try and run git pull.
+
+526
+00:23:54,680 --> 00:23:57,470
+But what happens is that there's some sort of conflict.
+
+527
+00:23:57,470 --> 00:23:58,886
+The pull can't happen.
+
+528
+00:23:58,886 --> 00:24:01,760
+And so what you'll see is a message that says automatic merge failed.
+
+529
+00:24:01,760 --> 00:24:05,030
+You need to fix the conflicts and then commit the results.
+
+530
+00:24:05,030 --> 00:24:06,480
+So what does that look like?
+
+531
+00:24:06,480 --> 00:24:09,530
+Well, what will happen is that if you open up the file with the conflict
+
+532
+00:24:09,530 --> 00:24:11,821
+you'll see something that looks a little bit like this.
+
+533
+00:24:11,821 --> 00:24:14,510
+You'll see a file with a bunch of less than signs
+
+534
+00:24:14,510 --> 00:24:17,300
+and then HEAD, some lines and then equals, equals, equals,
+
+535
+00:24:17,300 --> 00:24:21,330
+some more lines and then this sort of random long sequence of numbers
+
+536
+00:24:21,330 --> 00:24:21,830
+and letters.
+
+537
+00:24:21,830 --> 00:24:24,110
+It might seem a little bit arcane at the moment,
+
+538
+00:24:24,110 --> 00:24:26,040
+but we'll break down what this actually means.
+
+539
+00:24:26,040 --> 00:24:28,250
+So when you look at a file like this, which
+
+540
+00:24:28,250 --> 00:24:31,220
+results whenever there is a merge conflict produced by Git,
+
+541
+00:24:31,220 --> 00:24:33,510
+there are a couple of things to keep in mind.
+
+542
+00:24:33,510 --> 00:24:38,940
+One is that anything between HEAD and all the equal signs are your changes.
+
+543
+00:24:38,940 --> 00:24:42,980
+The things that you did on your computer before you tried to do the pull.
+
+544
+00:24:42,980 --> 00:24:46,160
+Anything between these equal signs and the greater
+
+545
+00:24:46,160 --> 00:24:48,770
+than signs here, these are the remote changes.
+
+546
+00:24:48,770 --> 00:24:51,710
+The changes from GitHub that you were trying to pull down that
+
+547
+00:24:51,710 --> 00:24:52,770
+were somehow in conflict.
+
+548
+00:24:52,770 --> 00:24:56,090
+That these two lines couldn't automatically be merged together.
+
+549
+00:24:56,090 --> 00:25:00,560
+And this long sequence of numbers and letters is the conflicting commit.
+
+550
+00:25:00,560 --> 00:25:04,520
+Whenever you make a commit in Git, Git represents that using a long hash.
+
+551
+00:25:04,520 --> 00:25:06,530
+Just a long sequence of numbers and letters
+
+552
+00:25:06,530 --> 00:25:09,170
+so that you can uniquely identify one commit out
+
+553
+00:25:09,170 --> 00:25:11,090
+of a series in a history of commits.
+
+554
+00:25:11,090 --> 00:25:13,190
+And this long sequence of numbers and letters
+
+555
+00:25:13,190 --> 00:25:15,140
+is just the name of that conflicting commit.
+
+556
+00:25:15,140 --> 00:25:18,510
+It is that commit hash of the one that caused the conflict.
+
+557
+00:25:18,510 --> 00:25:20,570
+So what do you do in a situation like this?
+
+558
+00:25:20,570 --> 00:25:24,080
+All you need to do is remove all of the lines you don't want.
+
+559
+00:25:24,080 --> 00:25:27,530
+Remove all of those less than, equal than, greater than lines
+
+560
+00:25:27,530 --> 00:25:30,830
+and also remove whichever part of the code
+
+561
+00:25:30,830 --> 00:25:35,690
+you didn't want leaving only the version that you want to be merged together,
+
+562
+00:25:35,690 --> 00:25:37,700
+and then get rid of any that extra white space
+
+563
+00:25:37,700 --> 00:25:39,200
+and then you can commit the result.
+
+564
+00:25:39,200 --> 00:25:43,370
+So I'll show you what that looks like if we go back over to the computer here.
+
+565
+00:25:43,370 --> 00:25:46,900
+Recall again, that locally we had three different sentences.
+
+566
+00:25:46,900 --> 00:25:49,040
+And online we had three different sentences,
+
+567
+00:25:49,040 --> 00:25:51,050
+but the third sentence differed.
+
+568
+00:25:51,050 --> 00:25:54,950
+So now if I try and run a git pull what you'll notice
+
+569
+00:25:54,950 --> 00:25:56,210
+is that we see exactly this.
+
+570
+00:25:56,210 --> 00:25:59,870
+We tried to automerge hello.html, but there was a conflict.
+
+571
+00:25:59,870 --> 00:26:02,240
+There was a merge conflict in hello.html.
+
+572
+00:26:02,240 --> 00:26:03,770
+The automatic merge failed.
+
+573
+00:26:03,770 --> 00:26:07,140
+We need to fix the conflicts and then commit the results.
+
+574
+00:26:07,140 --> 00:26:12,380
+So if I take a look at hello.html, my text editor Adam
+
+575
+00:26:12,380 --> 00:26:14,982
+is automatically highlighting things in certain colors for me.
+
+576
+00:26:14,982 --> 00:26:17,690
+But what you'll notice is you see this less than, less than head,
+
+577
+00:26:17,690 --> 00:26:21,660
+and then this version, which was my version, hello a third time.
+
+578
+00:26:21,660 --> 00:26:25,290
+And then this version down here, which is the version from online.
+
+579
+00:26:25,290 --> 00:26:27,747
+Git doesn't know which one I want, so I need to pick.
+
+580
+00:26:27,747 --> 00:26:29,080
+And I'll just say you know what?
+
+581
+00:26:29,080 --> 00:26:32,340
+Let's use the version that I had.
+
+582
+00:26:32,340 --> 00:26:44,586
+So I'll go ahead and get rid of all of these extra lines
+
+583
+00:26:44,586 --> 00:26:46,460
+so that I'm left with just the version that I
+
+584
+00:26:46,460 --> 00:26:49,640
+want, the one that says hello, world, hello again, hello a third time.
+
+585
+00:26:49,640 --> 00:26:52,200
+And if I then commit those changes, now Git
+
+586
+00:26:52,200 --> 00:26:54,080
+knows because I have told it this is how I
+
+587
+00:26:54,080 --> 00:26:56,040
+want you to resolve the merge conflict.
+
+588
+00:26:56,040 --> 00:26:59,990
+Now Git is aware of how to go about merging the two different versions
+
+589
+00:26:59,990 --> 00:27:02,150
+of that repository together in order to come up
+
+590
+00:27:02,150 --> 00:27:06,205
+with one version that is going to work for everyone.
+
+591
+00:27:06,205 --> 00:27:08,330
+So that's the process of resolving merge conflicts.
+
+592
+00:27:08,330 --> 00:27:10,850
+It can seem a bit complicated at first, but as you start to deal with them
+
+593
+00:27:10,850 --> 00:27:13,970
+you'll start to get a sense for where the different changes are
+
+594
+00:27:13,970 --> 00:27:15,440
+and how to go about resolving them.
+
+595
+00:27:15,440 --> 00:27:19,220
+And it's something you may run into as you go about the process of working
+
+596
+00:27:19,220 --> 00:27:21,050
+on your project.
+
+597
+00:27:21,050 --> 00:27:23,490
+A couple other useful commands that are useful to know.
+
+598
+00:27:23,490 --> 00:27:24,687
+One is git log.
+
+599
+00:27:24,687 --> 00:27:27,020
+What git log does is effectively just show you a history
+
+600
+00:27:27,020 --> 00:27:28,644
+of all of the commits that you've made.
+
+601
+00:27:28,644 --> 00:27:31,579
+If you run git log while you're inside of a Git repository,
+
+602
+00:27:31,579 --> 00:27:34,370
+you'll see a list of all the different commits that have been made.
+
+603
+00:27:34,370 --> 00:27:38,180
+Notice again that you'll see each commit is marked by a unique commit hash.
+
+604
+00:27:38,180 --> 00:27:41,390
+Just a sequence of numbers and letters describing that commit.
+
+605
+00:27:41,390 --> 00:27:43,910
+You'll see who made the commit, when that commit was made,
+
+606
+00:27:43,910 --> 00:27:46,160
+and also a description based on that message
+
+607
+00:27:46,160 --> 00:27:49,490
+that you provide whenever you make a commit of what it is that happened
+
+608
+00:27:49,490 --> 00:27:51,890
+in that commit so that you can see the history of what's
+
+609
+00:27:51,890 --> 00:27:54,120
+been going on in your repository.
+
+610
+00:27:54,120 --> 00:27:55,400
+So that's git log.
+
+611
+00:27:55,400 --> 00:27:58,551
+And then one other command that's useful to know is git reset.
+
+612
+00:27:58,551 --> 00:28:00,800
+So we talked about before if you've made some changes,
+
+613
+00:28:00,800 --> 00:28:02,900
+realize that you messed up and you want to go back
+
+614
+00:28:02,900 --> 00:28:06,170
+to the way things were before, you can run one of these commands
+
+615
+00:28:06,170 --> 00:28:11,090
+if you do git reset --hard, followed by a commit hash like the numbers
+
+616
+00:28:11,090 --> 00:28:12,590
+and letters that we saw before.
+
+617
+00:28:12,590 --> 00:28:14,840
+That will reset your whole repository back
+
+618
+00:28:14,840 --> 00:28:17,960
+to that version, whichever version was marked by that commit hash.
+
+619
+00:28:17,960 --> 00:28:23,180
+And likewise, if you run something like git rest --hard origin/master,
+
+620
+00:28:23,180 --> 00:28:27,940
+origin/master is a fancy way of saying the version of the repository that
+
+621
+00:28:27,940 --> 00:28:30,710
+was the origin of this repository where I got it from.
+
+622
+00:28:30,710 --> 00:28:34,220
+In other words, if I cloned my repository from GitHub then running git
+
+623
+00:28:34,220 --> 00:28:38,330
+reset origin master is going to reset the contents to my repository
+
+624
+00:28:38,330 --> 00:28:42,170
+back to the version that was previously on GitHub so that then I am
+
+625
+00:28:42,170 --> 00:28:45,660
+able to see whatever it was originally.
+
+626
+00:28:45,660 --> 00:28:48,530
+So in this case, if I run git reset --hard
+
+627
+00:28:48,530 --> 00:28:51,950
+followed by the commit hash of some previous version of the code,
+
+628
+00:28:51,950 --> 00:28:56,120
+what that's going to do is reset that code back to that older version,
+
+629
+00:28:56,120 --> 00:28:58,580
+and now my repository is back to a previous version
+
+630
+00:28:58,580 --> 00:29:02,430
+such that I can correct my mistakes and then continue working appropriately.
+
+631
+00:29:02,430 --> 00:29:05,010
+And so we'll show a quick example of that.
+
+632
+00:29:05,010 --> 00:29:09,150
+So first of all, commit my changes.
+
+633
+00:29:09,150 --> 00:29:16,980
+So just now I fixed the merge conflict and run a quick git status.
+
+634
+00:29:16,980 --> 00:29:17,480
+Oh.
+
+635
+00:29:17,480 --> 00:29:19,360
+I need to add the files before I commit them.
+
+636
+00:29:19,360 --> 00:29:21,490
+So that's a good lesson to be learned.
+
+637
+00:29:21,490 --> 00:29:23,780
+The way Git effectively works is that we first
+
+638
+00:29:23,780 --> 00:29:27,355
+need to add the files to what's called a staging area or an index.
+
+639
+00:29:27,355 --> 00:29:30,230
+Just telling it these are files that I want to track in the next time
+
+640
+00:29:30,230 --> 00:29:32,810
+that I make a commit and then you commit after that.
+
+641
+00:29:32,810 --> 00:29:38,390
+So if I git add hello.html and then git commit, fix the merge conflicts,
+
+642
+00:29:38,390 --> 00:29:39,719
+that will resolve the issue.
+
+643
+00:29:39,719 --> 00:29:42,260
+And if you're looking to simplify these two commands into one
+
+644
+00:29:42,260 --> 00:29:46,940
+simpler command know that you can also do a command like git commit -am,
+
+645
+00:29:46,940 --> 00:29:50,600
+where the a stands for add to both add files to the staging area
+
+646
+00:29:50,600 --> 00:29:53,540
+and commit them all together in one command.
+
+647
+00:29:53,540 --> 00:29:55,470
+So go ahead and press Return there.
+
+648
+00:29:55,470 --> 00:29:58,730
+And now if I run a command like git log, what you'll see
+
+649
+00:29:58,730 --> 00:30:01,370
+is a history of all the different commits that I've made now.
+
+650
+00:30:01,370 --> 00:30:05,300
+Here was me fixing the merge commits, here was when I updated HTML online,
+
+651
+00:30:05,300 --> 00:30:08,610
+here was when I added a third line to the repository.
+
+652
+00:30:08,610 --> 00:30:10,820
+So I see the history of all of the different
+
+653
+00:30:10,820 --> 00:30:13,280
+commits that I've made to this repository.
+
+654
+00:30:13,280 --> 00:30:16,640
+And let's say I wanted to reset back to an older one of these.
+
+655
+00:30:16,640 --> 00:30:21,380
+I wanted to reset back to this original one where I first added hello.HTML.
+
+656
+00:30:21,380 --> 00:30:23,720
+I can take this commit hash, the commit hash
+
+657
+00:30:23,720 --> 00:30:26,210
+of when I first made that change, or even just
+
+658
+00:30:26,210 --> 00:30:28,370
+the first couple characters of the commit hash
+
+659
+00:30:28,370 --> 00:30:30,980
+is usually sufficient to be able to identify it.
+
+660
+00:30:30,980 --> 00:30:35,270
+And I can run a command like git reset --hard followed
+
+661
+00:30:35,270 --> 00:30:37,670
+by that commit hash by pasting it in there.
+
+662
+00:30:37,670 --> 00:30:42,290
+And now I've reset the head, reset where I am in this repository
+
+663
+00:30:42,290 --> 00:30:44,430
+back to that older version.
+
+664
+00:30:44,430 --> 00:30:48,380
+And now if I check the contents of hello.html, it just says hello, world.
+
+665
+00:30:48,380 --> 00:30:50,990
+Back to that very first version of the HTML
+
+666
+00:30:50,990 --> 00:30:54,840
+file that I created way back when I first created the repository.
+
+667
+00:30:54,840 --> 00:30:57,140
+Yes, so Git keeps track of all the different snapshots.
+
+668
+00:30:57,140 --> 00:31:00,590
+In fact, if you run a command like git rest log,
+
+669
+00:31:00,590 --> 00:31:02,540
+just a log of all of the different references
+
+670
+00:31:02,540 --> 00:31:06,055
+that Git has kept track of you can see all the different changes
+
+671
+00:31:06,055 --> 00:31:06,930
+that are still there.
+
+672
+00:31:06,930 --> 00:31:09,481
+So they're accessible, but they're just not present
+
+673
+00:31:09,481 --> 00:31:12,230
+in the current version of the repository as you see it just there.
+
+674
+00:31:12,230 --> 00:31:14,640
+
+
+675
+00:31:14,640 --> 00:31:15,140
+Yeah.
+
+676
+00:31:15,140 --> 00:31:16,056
+A question over there.
+
+677
+00:31:16,056 --> 00:31:25,270
+AUDIENCE: Once you run the [INAUDIBLE] what version of the file [INAUDIBLE]??
+
+678
+00:31:25,270 --> 00:31:27,210
+BRIAN YU: GitHub was untouched.
+
+679
+00:31:27,210 --> 00:31:31,880
+So the question was, what happens to the remote repository,
+
+680
+00:31:31,880 --> 00:31:35,000
+the repository on GitHub when I reset something locally?
+
+681
+00:31:35,000 --> 00:31:37,820
+And the answer is that any changes I make to my computer,
+
+682
+00:31:37,820 --> 00:31:40,160
+to my version of the repository on my computer
+
+683
+00:31:40,160 --> 00:31:44,390
+never affect what's going on online unless I try to push
+
+684
+00:31:44,390 --> 00:31:46,620
+those changes to GitHub for instance.
+
+685
+00:31:46,620 --> 00:31:50,250
+So if I really screw things up, mess things up on my computer completely
+
+686
+00:31:50,250 --> 00:31:53,164
+GitHub's version is still going to be the way it was before.
+
+687
+00:31:53,164 --> 00:31:55,580
+And if I really wanted to I could just download a new copy
+
+688
+00:31:55,580 --> 00:31:57,560
+by cloning the old version from GitHub.
+
+689
+00:31:57,560 --> 00:32:01,280
+If I check now, even though I reset my version on my computer
+
+690
+00:32:01,280 --> 00:32:04,490
+it still has hello, world, hello, again, hello, hello, hello,
+
+691
+00:32:04,490 --> 00:32:08,120
+because I have never pushed any new changes to GitHub after that
+
+692
+00:32:08,120 --> 00:32:11,660
+to tell it to make any additional changes after this point
+
+693
+00:32:11,660 --> 00:32:12,740
+that it knows about.
+
+694
+00:32:12,740 --> 00:32:16,070
+So GitHub doesn't know about any of those additional changes just yet.
+
+695
+00:32:16,070 --> 00:32:16,910
+Question back there.
+
+696
+00:32:16,910 --> 00:32:17,884
+AUDIENCE: Yeah.
+
+697
+00:32:17,884 --> 00:32:27,137
+So does Windows or a Mac OS [INAUDIBLE] built into it so [INAUDIBLE]??
+
+698
+00:32:27,137 --> 00:32:28,250
+BRIAN YU: Great question.
+
+699
+00:32:28,250 --> 00:32:30,940
+The question is, is Git built into Windows and Mac OS,
+
+700
+00:32:30,940 --> 00:32:32,830
+or is there something special you have to do?
+
+701
+00:32:32,830 --> 00:32:35,440
+In many cases, you will need to install Git.
+
+702
+00:32:35,440 --> 00:32:38,990
+When we release project zero you'll find that in the project zero instructions,
+
+703
+00:32:38,990 --> 00:32:41,740
+there are instructions for how to get set up with a GitHub account
+
+704
+00:32:41,740 --> 00:32:43,570
+and how to install Git onto your computer
+
+705
+00:32:43,570 --> 00:32:45,945
+and configure it correctly so that it can talk to GitHub.
+
+706
+00:32:45,945 --> 00:32:47,819
+But yes, typically you'll need to install it.
+
+707
+00:32:47,819 --> 00:32:50,260
+It's free software that you can install on your machine
+
+708
+00:32:50,260 --> 00:32:52,360
+and it will prove helpful as you go about starting
+
+709
+00:32:52,360 --> 00:32:53,723
+to work on version control.
+
+710
+00:32:53,723 --> 00:32:54,222
+Yeah.
+
+711
+00:32:54,222 --> 00:32:57,221
+AUDIENCE: Do merge conflicts only happen if you
+
+712
+00:32:57,221 --> 00:33:01,069
+were trying to pull from the repository and it's different,
+
+713
+00:33:01,069 --> 00:33:04,917
+or is there any situation where I'd be pushing changes and not
+
+714
+00:33:04,917 --> 00:33:06,428
+running to a merge conflict?
+
+715
+00:33:06,428 --> 00:33:07,803
+I don't know if that makes sense.
+
+716
+00:33:07,803 --> 00:33:09,200
+BRIAN YU: Great question.
+
+717
+00:33:09,200 --> 00:33:12,250
+So the question is, is pulling the only time that you
+
+718
+00:33:12,250 --> 00:33:13,840
+might run into merge conflicts?
+
+719
+00:33:13,840 --> 00:33:14,720
+And the answer is no.
+
+720
+00:33:14,720 --> 00:33:16,360
+It's the only one we've seen so far.
+
+721
+00:33:16,360 --> 00:33:20,260
+But any time you are trying to take two different versions of the code
+
+722
+00:33:20,260 --> 00:33:24,010
+and combine them, there is a possibility that you'll run into a merge conflict.
+
+723
+00:33:24,010 --> 00:33:26,470
+And so later on in this course, we'll take a look
+
+724
+00:33:26,470 --> 00:33:28,690
+at additional features of Git like branching,
+
+725
+00:33:28,690 --> 00:33:31,780
+where you can keep track of multiple different versions of your repository
+
+726
+00:33:31,780 --> 00:33:35,080
+at once so that you have your current version of your repository,
+
+727
+00:33:35,080 --> 00:33:37,510
+but you also have a different branch on which you're
+
+728
+00:33:37,510 --> 00:33:39,889
+working on some new feature and maybe a different branch
+
+729
+00:33:39,889 --> 00:33:41,680
+where you're working on some other feature.
+
+730
+00:33:41,680 --> 00:33:45,010
+And any time you want to merge two branches together to say,
+
+731
+00:33:45,010 --> 00:33:46,160
+OK, this feature is done.
+
+732
+00:33:46,160 --> 00:33:50,200
+I want to bring it back into the master branch or the official version
+
+733
+00:33:50,200 --> 00:33:51,502
+of the code, so to speak.
+
+734
+00:33:51,502 --> 00:33:53,710
+Then there's possibilities for merge conflicts there.
+
+735
+00:33:53,710 --> 00:33:56,510
+So pulling is one instance in which conflicts can happen,
+
+736
+00:33:56,510 --> 00:34:00,811
+but certainly not the only instance in which those conflicts can happen.
+
+737
+00:34:00,811 --> 00:34:01,310
+Yeah.
+
+738
+00:34:01,310 --> 00:34:02,464
+One more question.
+
+739
+00:34:02,464 --> 00:34:07,334
+AUDIENCE: Let's say I entered in multiple files [INAUDIBLE]
+
+740
+00:34:07,334 --> 00:34:09,769
+should I run Git [INAUDIBLE]?
+
+741
+00:34:09,769 --> 00:34:14,152
+
+
+742
+00:34:14,152 --> 00:34:15,350
+BRIAN YU: Great question.
+
+743
+00:34:15,350 --> 00:34:18,070
+So the question is, all right, so far in this example
+
+744
+00:34:18,070 --> 00:34:20,874
+we've only ever been dealing with one file, hello.html.
+
+745
+00:34:20,874 --> 00:34:23,290
+What happens if I have multiple files that I'm working on?
+
+746
+00:34:23,290 --> 00:34:25,670
+As it might happen if I'm working on a larger project,
+
+747
+00:34:25,670 --> 00:34:27,170
+how do I deal with that?
+
+748
+00:34:27,170 --> 00:34:30,219
+Well, the answer is that you need to add any of the files
+
+749
+00:34:30,219 --> 00:34:32,210
+that you want saved in that commit.
+
+750
+00:34:32,210 --> 00:34:36,040
+And so you could you git add file one, git add file two, git add file three.
+
+751
+00:34:36,040 --> 00:34:39,820
+You can also do git add star, where a star just means add everything.
+
+752
+00:34:39,820 --> 00:34:42,760
+And that will add all of the files that you have unsaved.
+
+753
+00:34:42,760 --> 00:34:46,060
+And the advantage of doing things file by file
+
+754
+00:34:46,060 --> 00:34:49,179
+is if you've edited three files, but one of those files
+
+755
+00:34:49,179 --> 00:34:51,580
+is unfinished but the other two are ready to go,
+
+756
+00:34:51,580 --> 00:34:55,120
+you can just add those two files and commit those changes.
+
+757
+00:34:55,120 --> 00:34:58,720
+You only ever need to commit one after you add multiple files to say,
+
+758
+00:34:58,720 --> 00:35:00,929
+I want to save the changes I made to these two files,
+
+759
+00:35:00,929 --> 00:35:03,511
+but the changes I made to the third file aren't quite done yet
+
+760
+00:35:03,511 --> 00:35:05,500
+and I didn't want to add or commit those.
+
+761
+00:35:05,500 --> 00:35:09,610
+And so separating the add and commits step gives you that kind of control
+
+762
+00:35:09,610 --> 00:35:11,800
+over your repository to say, these are the files
+
+763
+00:35:11,800 --> 00:35:17,380
+that I want to keep track of in the next change that I make to the repository.
+
+764
+00:35:17,380 --> 00:35:21,160
+So that was effectively a short introduction to Git
+
+765
+00:35:21,160 --> 00:35:23,050
+and we'll dive into more detail about Git
+
+766
+00:35:23,050 --> 00:35:25,592
+later on as we progress throughout the course.
+
+767
+00:35:25,592 --> 00:35:28,300
+But we'll go ahead and take a short, maybe five minute break now.
+
+768
+00:35:28,300 --> 00:35:31,064
+And when we come back, we'll start talking about the HTML code
+
+769
+00:35:31,064 --> 00:35:32,230
+that we actually saw before.
+
+770
+00:35:32,230 --> 00:35:35,890
+Diving into HTML, what it is, how it works, and also CSS,
+
+771
+00:35:35,890 --> 00:35:38,230
+how we might style our web pages to make them
+
+772
+00:35:38,230 --> 00:35:40,100
+look a little more aesthetically pleasing.
+
+773
+00:35:40,100 --> 00:35:41,349
+So all that when we come back.
+
+774
+00:35:41,349 --> 00:35:45,251
+
+
+775
+00:35:45,251 --> 00:35:45,750
+All right.
+
+776
+00:35:45,750 --> 00:35:46,480
+Welcome back.
+
+777
+00:35:46,480 --> 00:35:48,780
+So now that we've taken a look at version control
+
+778
+00:35:48,780 --> 00:35:50,820
+and how we might go about versioning our project
+
+779
+00:35:50,820 --> 00:35:53,736
+and keeping track of different versions of our project as we go along,
+
+780
+00:35:53,736 --> 00:35:56,070
+we'll dive right now into the actual web programming
+
+781
+00:35:56,070 --> 00:35:59,820
+aspect of the course starting by just taking a look at HTML, or HyperText
+
+782
+00:35:59,820 --> 00:36:01,020
+Markup Language.
+
+783
+00:36:01,020 --> 00:36:05,430
+This is a language via which we're going to be laying out the structure of a web
+
+784
+00:36:05,430 --> 00:36:08,910
+page such that when a user opens up in their web browser,
+
+785
+00:36:08,910 --> 00:36:12,630
+their web browser, whether it's Safari or Chrome or Firefox or some other
+
+786
+00:36:12,630 --> 00:36:17,400
+knows how to understand and interpret that HTML and display it as a web page
+
+787
+00:36:17,400 --> 00:36:18,840
+to the user.
+
+788
+00:36:18,840 --> 00:36:20,640
+So we'll take a look at a simple example.
+
+789
+00:36:20,640 --> 00:36:24,030
+In fact, we'll just take a look at hello.html.
+
+790
+00:36:24,030 --> 00:36:27,330
+Very similar to what we've just been working on with that Git repository.
+
+791
+00:36:27,330 --> 00:36:29,204
+And we'll now break this down and sort of get
+
+792
+00:36:29,204 --> 00:36:32,100
+a feel for what's going on in terms of what we see here
+
+793
+00:36:32,100 --> 00:36:35,820
+and how this is going to translate when a web browser reads code like this
+
+794
+00:36:35,820 --> 00:36:38,140
+and tries to interpret it as a web page.
+
+795
+00:36:38,140 --> 00:36:44,490
+So up here on line one, we see this sort of funky angled bracket !DOCTYPE HTML.
+
+796
+00:36:44,490 --> 00:36:48,210
+This first line just goes mean something along the lines of HTML
+
+797
+00:36:48,210 --> 00:36:50,130
+has come in a number of different versions.
+
+798
+00:36:50,130 --> 00:36:53,190
+It's had a bunch of different standards where people specify,
+
+799
+00:36:53,190 --> 00:36:56,940
+here's what's included in this version of HTML and this new version of HTML.
+
+800
+00:36:56,940 --> 00:37:00,030
+And the latest version of HTML is called HTML5.
+
+801
+00:37:00,030 --> 00:37:02,340
+And the way that a web browser knows when
+
+802
+00:37:02,340 --> 00:37:05,545
+it gets a web page, which version of HTML it's using
+
+803
+00:37:05,545 --> 00:37:07,170
+is by taking a look at that first line.
+
+804
+00:37:07,170 --> 00:37:10,260
+So that first line saying doctype HTML is
+
+805
+00:37:10,260 --> 00:37:15,810
+our way of telling the web browser that this web page is written using HTML5.
+
+806
+00:37:15,810 --> 00:37:18,630
+So now let's take a look at the rest of this web page.
+
+807
+00:37:18,630 --> 00:37:20,700
+And what you'll notice throughout this web page
+
+808
+00:37:20,700 --> 00:37:23,710
+are a whole bunch of what are called HTML tags.
+
+809
+00:37:23,710 --> 00:37:26,280
+Those are these keywords that begin with an angled bracket
+
+810
+00:37:26,280 --> 00:37:27,840
+and end with an angled bracket.
+
+811
+00:37:27,840 --> 00:37:30,270
+Right here we see the HTML tag.
+
+812
+00:37:30,270 --> 00:37:35,010
+And all that tag means is that angled bracket HTML ending angle bracket
+
+813
+00:37:35,010 --> 00:37:39,000
+means this is the start of the HTML content of the website.
+
+814
+00:37:39,000 --> 00:37:43,710
+And this will go all the way until here on line nine where we see a tag that is
+
+815
+00:37:43,710 --> 00:37:49,029
+angled bracket /HTML, where that slash just means this is the end of the tag.
+
+816
+00:37:49,029 --> 00:37:50,820
+So what line two and line nine sort of tell
+
+817
+00:37:50,820 --> 00:37:55,530
+us here is that this is the start of the HTML content of our web page and line
+
+818
+00:37:55,530 --> 00:37:58,770
+nine here is the end of the HTML content of our website.
+
+819
+00:37:58,770 --> 00:38:02,464
+And everything in between is the actual contents of that website.
+
+820
+00:38:02,464 --> 00:38:05,130
+And if you take a look we've divided that content to the website
+
+821
+00:38:05,130 --> 00:38:06,420
+into two parts.
+
+822
+00:38:06,420 --> 00:38:09,800
+Up here on line three we've started the head of the website.
+
+823
+00:38:09,800 --> 00:38:11,730
+Angled bracket head angled bracket.
+
+824
+00:38:11,730 --> 00:38:13,440
+That's the start of the head tag.
+
+825
+00:38:13,440 --> 00:38:17,940
+The head of the website is usually used for a metadata, information
+
+826
+00:38:17,940 --> 00:38:19,890
+about the page that doesn't really appear
+
+827
+00:38:19,890 --> 00:38:22,080
+in the main contents of the page, but is used
+
+828
+00:38:22,080 --> 00:38:25,290
+to give the browser important information about how
+
+829
+00:38:25,290 --> 00:38:28,440
+to go about displaying that page or other important information about it.
+
+830
+00:38:28,440 --> 00:38:31,170
+In this case, you see we have a title tag here
+
+831
+00:38:31,170 --> 00:38:33,630
+where the title in between the start of the title tag
+
+832
+00:38:33,630 --> 00:38:37,330
+and the end of the title tag we've included text, my web page.
+
+833
+00:38:37,330 --> 00:38:40,080
+And so as you might guess what this line four is saying,
+
+834
+00:38:40,080 --> 00:38:45,339
+is we're going to have a web page whose title is just my web page!
+
+835
+00:38:45,339 --> 00:38:47,380
+And that's going to be the title of the web page.
+
+836
+00:38:47,380 --> 00:38:49,130
+And that's information that's all included
+
+837
+00:38:49,130 --> 00:38:51,940
+in the header of our HTML page.
+
+838
+00:38:51,940 --> 00:38:56,940
+In addition to that, on line six here we see the beginning of the body tag
+
+839
+00:38:56,940 --> 00:38:58,950
+and the end body tag is on line eight.
+
+840
+00:38:58,950 --> 00:39:02,370
+And in the body of the website very simply we just say, hello, world.
+
+841
+00:39:02,370 --> 00:39:03,210
+And that's it.
+
+842
+00:39:03,210 --> 00:39:05,070
+So what we've described here in nine lines
+
+843
+00:39:05,070 --> 00:39:08,380
+is an HTML5 website that's got two parts.
+
+844
+00:39:08,380 --> 00:39:10,812
+It's got a header whose title is my web page.
+
+845
+00:39:10,812 --> 00:39:12,520
+That's going to be the title of the page.
+
+846
+00:39:12,520 --> 00:39:14,550
+And we have a body that just says hello, world.
+
+847
+00:39:14,550 --> 00:39:21,090
+And so now if we actually were to open up a web page like this by saying,
+
+848
+00:39:21,090 --> 00:39:25,020
+open hello.html, or just opening it in a web browser like Chrome,
+
+849
+00:39:25,020 --> 00:39:29,641
+you'll see that what we get is a web page that just says hello, world.
+
+850
+00:39:29,641 --> 00:39:32,640
+And if you notice up there at the top it says that the title of the page
+
+851
+00:39:32,640 --> 00:39:33,760
+is my web page.
+
+852
+00:39:33,760 --> 00:39:37,557
+So as you might guess, Chrome is reading that HTML code that we just wrote.
+
+853
+00:39:37,557 --> 00:39:40,140
+And it's interpreting it trying to figure out what means what.
+
+854
+00:39:40,140 --> 00:39:41,990
+And it knows where to put different tags,
+
+855
+00:39:41,990 --> 00:39:45,240
+it knows that the title tag is going to go up here in the title part of my web
+
+856
+00:39:45,240 --> 00:39:47,323
+page, and it knows that whatever is in the body is
+
+857
+00:39:47,323 --> 00:39:50,979
+going to go in the main area, the main body of my web page in general.
+
+858
+00:39:50,979 --> 00:39:52,770
+So if I changed the title to something else
+
+859
+00:39:52,770 --> 00:39:55,530
+or change the body to something else, it would have reflected here.
+
+860
+00:39:55,530 --> 00:39:58,446
+Of course, this is a very simple website, but it shows you the basics.
+
+861
+00:39:58,446 --> 00:40:02,100
+How we use HTML tags to define the structure of our page,
+
+862
+00:40:02,100 --> 00:40:04,830
+and then using those tags we can create pages
+
+863
+00:40:04,830 --> 00:40:08,090
+that are rendered nicely when a web browser sees that HTML
+
+864
+00:40:08,090 --> 00:40:09,810
+and tries to do something with it.
+
+865
+00:40:09,810 --> 00:40:11,180
+Questions about that so far?
+
+866
+00:40:11,180 --> 00:40:11,680
+Yeah.
+
+867
+00:40:11,680 --> 00:40:14,374
+AUDIENCE: Is the indentation style or functional?
+
+868
+00:40:14,374 --> 00:40:15,710
+BRIAN YU: Great question.
+
+869
+00:40:15,710 --> 00:40:19,170
+So the question is, is the indentation that we saw in that code earlier style,
+
+870
+00:40:19,170 --> 00:40:20,340
+or is it functional?
+
+871
+00:40:20,340 --> 00:40:21,900
+The answer is that it's just style.
+
+872
+00:40:21,900 --> 00:40:24,330
+Ultimately Chrome and other web browsers don't really
+
+873
+00:40:24,330 --> 00:40:26,940
+care about whether your head tags are indented
+
+874
+00:40:26,940 --> 00:40:29,102
+and your title tags are indented further than that.
+
+875
+00:40:29,102 --> 00:40:31,810
+But it can often be easy when another human is reading your code,
+
+876
+00:40:31,810 --> 00:40:34,309
+or even when you're reading your own code to be able to say,
+
+877
+00:40:34,309 --> 00:40:37,010
+OK, here's the head tag and just look straight down here
+
+878
+00:40:37,010 --> 00:40:38,427
+is the end of that head tag.
+
+879
+00:40:38,427 --> 00:40:40,260
+And so very frequently you'll see a paradigm
+
+880
+00:40:40,260 --> 00:40:44,130
+like that will indent anything inside of the header,
+
+881
+00:40:44,130 --> 00:40:46,470
+but the header itself will be aligned nicely.
+
+882
+00:40:46,470 --> 00:40:50,731
+And oftentimes, you'll see things that when a tag only contains one line
+
+883
+00:40:50,731 --> 00:40:53,730
+within it, we'll just put the whole thing on the same line where we have
+
+884
+00:40:53,730 --> 00:40:56,370
+title, my web page, and then /title.
+
+885
+00:40:56,370 --> 00:41:00,510
+But we could have just as easily if we had one or two indented the my web page
+
+886
+00:41:00,510 --> 00:41:03,594
+and put the /title on its own line as well.
+
+887
+00:41:03,594 --> 00:41:05,010
+And that would render identically.
+
+888
+00:41:05,010 --> 00:41:07,770
+If we go back into Chrome, refresh that page, no changes.
+
+889
+00:41:07,770 --> 00:41:10,470
+Chrome doesn't care about that difference in indentation.
+
+890
+00:41:10,470 --> 00:41:11,610
+Great question.
+
+891
+00:41:11,610 --> 00:41:14,880
+Other questions about this first HTML web page that we've created?
+
+892
+00:41:14,880 --> 00:41:17,850
+
+
+893
+00:41:17,850 --> 00:41:18,390
+All right.
+
+894
+00:41:18,390 --> 00:41:22,560
+So that was sort of the introduction to just a basic HTML page,
+
+895
+00:41:22,560 --> 00:41:25,560
+but there's a lot more that we can do with HTML
+
+896
+00:41:25,560 --> 00:41:27,250
+by taking advantage of other tags.
+
+897
+00:41:27,250 --> 00:41:31,350
+So far we've seen the HTML team tag and the head tag and the body tag.
+
+898
+00:41:31,350 --> 00:41:34,140
+And right now all that's able to do for us is render some text.
+
+899
+00:41:34,140 --> 00:41:36,910
+And we can type more text and it would appear there as well.
+
+900
+00:41:36,910 --> 00:41:40,350
+But let's take a look at how we might render headings for text
+
+901
+00:41:40,350 --> 00:41:44,280
+because if we have text, maybe we want a heading to go at the top of our page
+
+902
+00:41:44,280 --> 00:41:46,260
+and maybe subheadings to go beneath it.
+
+903
+00:41:46,260 --> 00:41:51,570
+And so we'll open up headings.html And what headings.html is going to do
+
+904
+00:41:51,570 --> 00:41:53,430
+is show you a couple of other tags.
+
+905
+00:41:53,430 --> 00:41:55,314
+So HTML has many, many built in tags, more
+
+906
+00:41:55,314 --> 00:41:57,480
+than we're going to talk about today, but we'll just
+
+907
+00:41:57,480 --> 00:42:01,350
+introduce some of the common ones so you can get a sense for how these tags work
+
+908
+00:42:01,350 --> 00:42:02,670
+and the general feel of them.
+
+909
+00:42:02,670 --> 00:42:05,295
+And these are ones that will come up quite frequently as you go
+
+910
+00:42:05,295 --> 00:42:08,160
+about writing web programs using HTML.
+
+911
+00:42:08,160 --> 00:42:13,020
+And what you see here is in H1 tag located inside the body, where H just
+
+912
+00:42:13,020 --> 00:42:15,930
+stands for heading, like a big headline at the top of the page,
+
+913
+00:42:15,930 --> 00:42:18,450
+and one is a number that stands for its size.
+
+914
+00:42:18,450 --> 00:42:23,490
+So HTML has six built in heading tags inside that understand.
+
+915
+00:42:23,490 --> 00:42:27,866
+h1 is the largest, h6 is the smallest, and two, three, four, and five,
+
+916
+00:42:27,866 --> 00:42:29,740
+as you might guess fall somewhere in between.
+
+917
+00:42:29,740 --> 00:42:31,073
+So this is the largest headline.
+
+918
+00:42:31,073 --> 00:42:33,780
+Starts at h1, ends with the /h1.
+
+919
+00:42:33,780 --> 00:42:38,640
+Notice this continual pattern of angled bracket name of the tag, like h1,
+
+920
+00:42:38,640 --> 00:42:41,520
+and then the /h1 to mean this is the end of the tag.
+
+921
+00:42:41,520 --> 00:42:43,260
+This is the end of that head end.
+
+922
+00:42:43,260 --> 00:42:51,120
+So if we open up this page now by going to not hello.html, but headings.html,
+
+923
+00:42:51,120 --> 00:42:53,479
+what we'll see is this is what gets rendered.
+
+924
+00:42:53,479 --> 00:42:55,020
+We have this is the largest headline.
+
+925
+00:42:55,020 --> 00:42:58,620
+Again, this was our h1, this was our h2, all the way down
+
+926
+00:42:58,620 --> 00:43:01,950
+to h6 at the bottom which is a relatively small headline.
+
+927
+00:43:01,950 --> 00:43:05,230
+And one feature of Chrome and most web browsers
+
+928
+00:43:05,230 --> 00:43:07,980
+nowadays is that if I actually want to take a look at any web page
+
+929
+00:43:07,980 --> 00:43:13,080
+and see what HTML actually made it up, I can Control click on the page
+
+930
+00:43:13,080 --> 00:43:16,125
+and go to View Page Source for instance.
+
+931
+00:43:16,125 --> 00:43:18,000
+And when I go to View Page Source, what I get
+
+932
+00:43:18,000 --> 00:43:22,230
+is Chrome showing me the actual contents of the page that it had just rendered.
+
+933
+00:43:22,230 --> 00:43:24,510
+And this can often be helpful once you start
+
+934
+00:43:24,510 --> 00:43:27,035
+working on larger web applications trying to understand
+
+935
+00:43:27,035 --> 00:43:28,410
+what's actually getting rendered.
+
+936
+00:43:28,410 --> 00:43:30,630
+In this case, what we see here is exactly
+
+937
+00:43:30,630 --> 00:43:33,510
+the same thing as what we loaded before because Chrome is just
+
+938
+00:43:33,510 --> 00:43:36,840
+showing us the HTML contents of the page that it then
+
+939
+00:43:36,840 --> 00:43:38,740
+renders to look something like this.
+
+940
+00:43:38,740 --> 00:43:42,810
+So it's the browser that takes the HTML, understands the tags and what they do,
+
+941
+00:43:42,810 --> 00:43:46,420
+and renders it to look a little bit nicer like that.
+
+942
+00:43:46,420 --> 00:43:49,660
+So what are some other common HTML tags that we might want?
+
+943
+00:43:49,660 --> 00:43:52,560
+So now we have the ability to include text in our web pages,
+
+944
+00:43:52,560 --> 00:43:54,520
+we have the ability to include headings.
+
+945
+00:43:54,520 --> 00:43:56,610
+One other thing that we might naturally want to do
+
+946
+00:43:56,610 --> 00:43:58,470
+is maybe create a list of different items
+
+947
+00:43:58,470 --> 00:44:01,920
+where frequently we'll want to have a bulleted list on our web page
+
+948
+00:44:01,920 --> 00:44:05,100
+or a numbered list on our web page or some other type of list.
+
+949
+00:44:05,100 --> 00:44:07,815
+And so we'll take a look at possible ways we can do that.
+
+950
+00:44:07,815 --> 00:44:12,440
+And we'll see here in lists.html that I have two different examples of lists
+
+951
+00:44:12,440 --> 00:44:13,620
+for you or take a look at.
+
+952
+00:44:13,620 --> 00:44:15,520
+So the start of our web page is the same.
+
+953
+00:44:15,520 --> 00:44:17,070
+We have doctype.html.
+
+954
+00:44:17,070 --> 00:44:19,590
+This is the start of the HTML content of our page,
+
+955
+00:44:19,590 --> 00:44:21,480
+this is the start of the HTML header.
+
+956
+00:44:21,480 --> 00:44:22,379
+Here's our title.
+
+957
+00:44:22,379 --> 00:44:24,420
+Then in our body is where things get interesting.
+
+958
+00:44:24,420 --> 00:44:27,330
+So here where I said an unordered list, I
+
+959
+00:44:27,330 --> 00:44:32,190
+have this tag ul, where ul as you might guess stands for unordered list.
+
+960
+00:44:32,190 --> 00:44:37,440
+And the ul element goes from here all the way down to line 12 over here.
+
+961
+00:44:37,440 --> 00:44:42,570
+And inside of it I have three li's, where li stands for list item.
+
+962
+00:44:42,570 --> 00:44:44,670
+This is an item inside of this unordered list.
+
+963
+00:44:44,670 --> 00:44:47,280
+Here's one item, another item, and yet another item.
+
+964
+00:44:47,280 --> 00:44:50,850
+And so these are three list items that are inside of the unordered list.
+
+965
+00:44:50,850 --> 00:44:54,210
+And as you'll start to notice the HTML tags very frequently
+
+966
+00:44:54,210 --> 00:44:55,200
+nest within each other.
+
+967
+00:44:55,200 --> 00:44:59,340
+We have an li which is inside of a ul which is inside of the body.
+
+968
+00:44:59,340 --> 00:45:02,850
+And this natural way of nesting HTML tags within each other
+
+969
+00:45:02,850 --> 00:45:07,140
+is a nice way of being able to add and make
+
+970
+00:45:07,140 --> 00:45:10,440
+your website more complex by nesting more and more of these different HTML
+
+971
+00:45:10,440 --> 00:45:14,460
+tags together in order to create the end product that you ultimately want.
+
+972
+00:45:14,460 --> 00:45:16,890
+And so that is a ul, an unordered list.
+
+973
+00:45:16,890 --> 00:45:20,430
+Lower down on the page we also see an ordered list, which as you might guess
+
+974
+00:45:20,430 --> 00:45:22,649
+is labeled ol, ol for ordered list.
+
+975
+00:45:22,649 --> 00:45:24,190
+And that one is going to be numbered.
+
+976
+00:45:24,190 --> 00:45:26,610
+We have the first item, second item, and the third item.
+
+977
+00:45:26,610 --> 00:45:31,380
+And now if I were to open that up by opening up list.html, what we see
+
+978
+00:45:31,380 --> 00:45:34,860
+is we have an unordered list that just shows up as a sequence of bullet points
+
+979
+00:45:34,860 --> 00:45:37,810
+and an ordered list that shows up as a sequence of numbers.
+
+980
+00:45:37,810 --> 00:45:42,180
+Note that nowhere in my HTML that I actually say, OK, this is one
+
+981
+00:45:42,180 --> 00:45:45,550
+dot first item, or two dots second item, three dot third item.
+
+982
+00:45:45,550 --> 00:45:47,770
+The web browser knows to render it as an ordered list
+
+983
+00:45:47,770 --> 00:45:49,870
+and it puts the numbers there for me, such
+
+984
+00:45:49,870 --> 00:45:54,370
+that if I try and insert another item here I
+
+985
+00:45:54,370 --> 00:45:56,641
+don't need to go back and renumber the bullet points.
+
+986
+00:45:56,641 --> 00:45:58,390
+The web browser will take care of noticing
+
+987
+00:45:58,390 --> 00:45:59,980
+that this is the third list item.
+
+988
+00:45:59,980 --> 00:46:05,414
+This is now going to actually be the fourth list item.
+
+989
+00:46:05,414 --> 00:46:07,330
+And when I render that page it's going to show
+
+990
+00:46:07,330 --> 00:46:10,600
+me here's the first item and the second item, another item, the third item,
+
+991
+00:46:10,600 --> 00:46:12,580
+and the fourth item in the list there as well.
+
+992
+00:46:12,580 --> 00:46:14,830
+So the web browser is pretty smart about these things.
+
+993
+00:46:14,830 --> 00:46:18,580
+It knows the names of these tags and it knows what they mean and what they do.
+
+994
+00:46:18,580 --> 00:46:22,180
+And it can use that information in order to make a web page that
+
+995
+00:46:22,180 --> 00:46:24,364
+looks the way that we want it to look.
+
+996
+00:46:24,364 --> 00:46:27,280
+Questions about any of that so far, or about the tags that we've seen?
+
+997
+00:46:27,280 --> 00:46:30,630
+
+
+998
+00:46:30,630 --> 00:46:33,090
+So thus far, all the web pages that we've created
+
+999
+00:46:33,090 --> 00:46:34,650
+have all just had text on them.
+
+1000
+00:46:34,650 --> 00:46:38,080
+They've had text maybe just written out like unordered list or ordered list,
+
+1001
+00:46:38,080 --> 00:46:40,740
+they have had headings on them, they potentially had lists
+
+1002
+00:46:40,740 --> 00:46:42,240
+whether they're bulleted or numbers.
+
+1003
+00:46:42,240 --> 00:46:46,060
+But we'd probably like for our web pages to be a little more rich.
+
+1004
+00:46:46,060 --> 00:46:46,560
+Maybe.
+
+1005
+00:46:46,560 --> 00:46:48,570
+Then we want to have give them some images,
+
+1006
+00:46:48,570 --> 00:46:50,320
+some pictures to look at as well.
+
+1007
+00:46:50,320 --> 00:46:56,400
+And so inside of my source folder where I have all these HTML files,
+
+1008
+00:46:56,400 --> 00:47:00,957
+I have a file called cat.jpeg, which is just a photo of a cat.
+
+1009
+00:47:00,957 --> 00:47:02,790
+And maybe I want to take this photo of a cat
+
+1010
+00:47:02,790 --> 00:47:05,250
+and I want to put that on to my web page.
+
+1011
+00:47:05,250 --> 00:47:07,000
+How might I go about doing that?
+
+1012
+00:47:07,000 --> 00:47:12,160
+Let's take a look now at imagezero.html.
+
+1013
+00:47:12,160 --> 00:47:14,630
+So what we're looking at here is a simple web page.
+
+1014
+00:47:14,630 --> 00:47:16,380
+It looks a lot like the ones we've already
+
+1015
+00:47:16,380 --> 00:47:20,650
+seen with one slight difference. so here in the body we see on line seven
+
+1016
+00:47:20,650 --> 00:47:23,960
+that we have an image tag, but there's something a little bit
+
+1017
+00:47:23,960 --> 00:47:25,210
+different about the image tag.
+
+1018
+00:47:25,210 --> 00:47:27,293
+In fact, there's two things that you might notice.
+
+1019
+00:47:27,293 --> 00:47:30,090
+Thing number one, we see the start of the image tag
+
+1020
+00:47:30,090 --> 00:47:32,370
+but we don't really see an end to the image tag.
+
+1021
+00:47:32,370 --> 00:47:37,420
+All the other tags have body and /body, title and /title head and /head,
+
+1022
+00:47:37,420 --> 00:47:40,510
+but there's no image and then /image at the end of it.
+
+1023
+00:47:40,510 --> 00:47:43,280
+And the reasoning for that is that not all of the HTML tags
+
+1024
+00:47:43,280 --> 00:47:46,740
+require a beginning tag and an end tag, a start and an end
+
+1025
+00:47:46,740 --> 00:47:50,050
+because some things like images, it doesn't really make sense to say,
+
+1026
+00:47:50,050 --> 00:47:53,100
+OK, start the image and end the image and what goes in the middle.
+
+1027
+00:47:53,100 --> 00:47:56,040
+You're not going to type text in the middle of the image for instance.
+
+1028
+00:47:56,040 --> 00:47:59,520
+And so for tags like the image tag you don't need an end tag.
+
+1029
+00:47:59,520 --> 00:48:01,800
+It's just sort of a self-contained tag that doesn't
+
+1030
+00:48:01,800 --> 00:48:04,007
+require an end tag to go along with it.
+
+1031
+00:48:04,007 --> 00:48:06,090
+The second thing that you'll notice about this tag
+
+1032
+00:48:06,090 --> 00:48:07,980
+is that it's not just the name of the tag.
+
+1033
+00:48:07,980 --> 00:48:11,400
+The name of the tag is img, for image, but we've also
+
+1034
+00:48:11,400 --> 00:48:13,950
+added what's called an HTML attribute.
+
+1035
+00:48:13,950 --> 00:48:17,760
+And this HTML attribute called SRC, or source is providing
+
+1036
+00:48:17,760 --> 00:48:19,380
+additional information to this tag.
+
+1037
+00:48:19,380 --> 00:48:23,610
+It's saying this is an image tag that I want to render to the web browser.
+
+1038
+00:48:23,610 --> 00:48:27,030
+But without any additional information the web browser
+
+1039
+00:48:27,030 --> 00:48:28,704
+wouldn't know which image to render.
+
+1040
+00:48:28,704 --> 00:48:30,870
+It wouldn't know whether to render an image of a cat
+
+1041
+00:48:30,870 --> 00:48:33,550
+or a dog or a jellyfish or something else entirely.
+
+1042
+00:48:33,550 --> 00:48:36,690
+And so what we have to do in this case is provide that information
+
+1043
+00:48:36,690 --> 00:48:37,540
+to the web browser.
+
+1044
+00:48:37,540 --> 00:48:41,527
+We have to tell in our HTML code here's the name of the file
+
+1045
+00:48:41,527 --> 00:48:43,360
+that we actually want to render on the page.
+
+1046
+00:48:43,360 --> 00:48:47,020
+In this case, it's cat.jpeg, that same file that I was showing you earlier.
+
+1047
+00:48:47,020 --> 00:48:50,430
+And if instead, the image that you wanted to display
+
+1048
+00:48:50,430 --> 00:48:52,260
+was somewhere on the internet, some linked
+
+1049
+00:48:52,260 --> 00:48:55,470
+to an image that was on Google Images for instance
+
+1050
+00:48:55,470 --> 00:48:59,100
+you could just paste in a link to an image and that would render on the page
+
+1051
+00:48:59,100 --> 00:48:59,860
+as well.
+
+1052
+00:48:59,860 --> 00:49:03,720
+So if we then go and open up imagezero.html inside of a web browser,
+
+1053
+00:49:03,720 --> 00:49:08,040
+what we'll see is a very big--
+
+1054
+00:49:08,040 --> 00:49:09,180
+we'll see that cat.
+
+1055
+00:49:09,180 --> 00:49:11,700
+And why did the image render so big?
+
+1056
+00:49:11,700 --> 00:49:13,710
+This probably isn't the type of interface
+
+1057
+00:49:13,710 --> 00:49:15,400
+that I want to present to my users.
+
+1058
+00:49:15,400 --> 00:49:19,587
+If I want to show my users an image of a cat I don't want it rendering huge.
+
+1059
+00:49:19,587 --> 00:49:21,420
+And I guess the reason for this just happens
+
+1060
+00:49:21,420 --> 00:49:25,817
+to be that the cat.jpeg file that I've stored on my computer
+
+1061
+00:49:25,817 --> 00:49:27,150
+is a very high resolution image.
+
+1062
+00:49:27,150 --> 00:49:29,610
+It's many pixels wide by many pixels tall.
+
+1063
+00:49:29,610 --> 00:49:33,300
+And as a result, my web browser without being told any additional information
+
+1064
+00:49:33,300 --> 00:49:37,059
+about how to deal with something like this is just going to take the image
+
+1065
+00:49:37,059 --> 00:49:38,850
+and render it at full resolution because it
+
+1066
+00:49:38,850 --> 00:49:41,130
+hasn't been told to do anything else.
+
+1067
+00:49:41,130 --> 00:49:44,400
+But fortunately, for us in order to control that and have a little bit
+
+1068
+00:49:44,400 --> 00:49:48,090
+more control over what's going on when our web page renders and is displayed
+
+1069
+00:49:48,090 --> 00:49:53,360
+to the user, we can add a couple additional attributes to the image tag.
+
+1070
+00:49:53,360 --> 00:49:56,020
+So what we see here is the exact same web page.
+
+1071
+00:49:56,020 --> 00:49:58,410
+We have the image tag and the source attribute,
+
+1072
+00:49:58,410 --> 00:50:00,510
+but we've added two additional attributes.
+
+1073
+00:50:00,510 --> 00:50:02,340
+We specified a height attribute that says
+
+1074
+00:50:02,340 --> 00:50:06,270
+render this image that's 200 pixels tall and a width attribute that says render
+
+1075
+00:50:06,270 --> 00:50:08,640
+this image that's 300 pixels wide.
+
+1076
+00:50:08,640 --> 00:50:11,220
+And so now when I open up this same web page
+
+1077
+00:50:11,220 --> 00:50:14,610
+but change image zero to image one, it's going
+
+1078
+00:50:14,610 --> 00:50:19,350
+to just render the image as 300 pixels wide by 200 pixels tall because I've
+
+1079
+00:50:19,350 --> 00:50:22,200
+told it using those HTML attributes that this
+
+1080
+00:50:22,200 --> 00:50:26,550
+is what I want the dimensions of the image to ultimately be.
+
+1081
+00:50:26,550 --> 00:50:29,100
+And so we noticed that some of the attributes that we
+
+1082
+00:50:29,100 --> 00:50:33,357
+use in HTML, like the source attribute, you need that source attribute.
+
+1083
+00:50:33,357 --> 00:50:35,940
+If you don't provide a source attribute your web browser's not
+
+1084
+00:50:35,940 --> 00:50:37,260
+going to know what image to add.
+
+1085
+00:50:37,260 --> 00:50:39,718
+But there are many, many more attributes that are optional.
+
+1086
+00:50:39,718 --> 00:50:41,940
+Attributes ones that you can include if you want to.
+
+1087
+00:50:41,940 --> 00:50:44,460
+You can optionally specify the height or the width
+
+1088
+00:50:44,460 --> 00:50:47,954
+of the image that displays in your HTML page, but you don't need to.
+
+1089
+00:50:47,954 --> 00:50:50,370
+But you should be careful because your web browser is just
+
+1090
+00:50:50,370 --> 00:50:53,220
+going to listen to you no matter what it is that you type in.
+
+1091
+00:50:53,220 --> 00:50:56,880
+If I say, all right, I want the width to be 300, but I want the height to be I
+
+1092
+00:50:56,880 --> 00:50:58,710
+don't know 700 pixels for instance.
+
+1093
+00:50:58,710 --> 00:51:00,810
+And then I try refreshing this page, suddenly
+
+1094
+00:51:00,810 --> 00:51:04,050
+the cat doesn't look quite right anymore because I've
+
+1095
+00:51:04,050 --> 00:51:07,370
+distorted the image by telling it exactly what dimensions to display it
+
+1096
+00:51:07,370 --> 00:51:08,070
+as.
+
+1097
+00:51:08,070 --> 00:51:11,100
+But the web browser will be smart if you give it the opportunity to be.
+
+1098
+00:51:11,100 --> 00:51:15,810
+So if I just say, height is 700 pixels but leave off the width for example
+
+1099
+00:51:15,810 --> 00:51:21,030
+and just say render it as a 700 pixel tall cat it will render to 700 pixels
+
+1100
+00:51:21,030 --> 00:51:23,580
+tall and adjust the width appropriately in order to match.
+
+1101
+00:51:23,580 --> 00:51:26,640
+So if you are going to specify both the height and width to something,
+
+1102
+00:51:26,640 --> 00:51:28,389
+make sure the dimensions are what you want
+
+1103
+00:51:28,389 --> 00:51:31,480
+them to be otherwise oftentimes it's best just left up to the browser
+
+1104
+00:51:31,480 --> 00:51:36,500
+to make that determination for itself in terms of what makes the most sense.
+
+1105
+00:51:36,500 --> 00:51:39,730
+So that's images and how we use HTML attributes to adjust
+
+1106
+00:51:39,730 --> 00:51:42,400
+the behavior of particular HTML tags.
+
+1107
+00:51:42,400 --> 00:51:44,080
+Questions about that?
+
+1108
+00:51:44,080 --> 00:51:44,580
+Yes.
+
+1109
+00:51:44,580 --> 00:51:45,413
+Question over there.
+
+1110
+00:51:45,413 --> 00:51:49,471
+AUDIENCE: How would you make the image as a proportion [INAUDIBLE]
+
+1111
+00:51:49,471 --> 00:51:51,866
+web browser [INAUDIBLE]?
+
+1112
+00:51:51,866 --> 00:51:53,180
+BRIAN YU: Fantastic questions.
+
+1113
+00:51:53,180 --> 00:51:57,990
+So the question is, how do we take this image and make it sort of proportional?
+
+1114
+00:51:57,990 --> 00:52:01,680
+Because if I'm here looking at it on a computer with a sort of a wide screen
+
+1115
+00:52:01,680 --> 00:52:04,530
+then this looks great, but if for instance I
+
+1116
+00:52:04,530 --> 00:52:09,120
+were to shrink down this page, now most of the cat gets cut off.
+
+1117
+00:52:09,120 --> 00:52:12,720
+And so HTML, and later we'll see CSS for styling,
+
+1118
+00:52:12,720 --> 00:52:17,580
+has a number of different ways via which we can control exactly how tall
+
+1119
+00:52:17,580 --> 00:52:19,830
+or how wide things are and control the size of things.
+
+1120
+00:52:19,830 --> 00:52:23,250
+One way is by specifically specifying a number of pixels.
+
+1121
+00:52:23,250 --> 00:52:28,147
+For instance, I might say that I want this cat to be 700 pixels tall,
+
+1122
+00:52:28,147 --> 00:52:30,480
+but I might alternatively say, all right, you know what?
+
+1123
+00:52:30,480 --> 00:52:37,710
+I want the width of this cat to be 50%, 50% of the total width of my web page.
+
+1124
+00:52:37,710 --> 00:52:39,840
+So if I save that and render it, what I see
+
+1125
+00:52:39,840 --> 00:52:42,360
+now is that I didn't tell my web browser here's
+
+1126
+00:52:42,360 --> 00:52:44,760
+how many pixels to render this image as, it just
+
+1127
+00:52:44,760 --> 00:52:47,295
+knows 50% of whatever the width of the web page
+
+1128
+00:52:47,295 --> 00:52:49,410
+is, that's going to render as half of that.
+
+1129
+00:52:49,410 --> 00:52:53,477
+And now if I shrink the web page, before the cat didn't change size
+
+1130
+00:52:53,477 --> 00:52:56,310
+because it was a fixed number of pixels and if I shrink the web page
+
+1131
+00:52:56,310 --> 00:52:59,199
+it doesn't really care, but now if I shrink the same web page
+
+1132
+00:52:59,199 --> 00:53:00,990
+you'll notice that the cat shrinks with it.
+
+1133
+00:53:00,990 --> 00:53:05,760
+As my web browser gets narrower, 50% of that full width of the web browser
+
+1134
+00:53:05,760 --> 00:53:06,651
+is getting smaller.
+
+1135
+00:53:06,651 --> 00:53:08,400
+And this is a trick that's often employed.
+
+1136
+00:53:08,400 --> 00:53:10,608
+Now, if you start to think about how to make your web
+
+1137
+00:53:10,608 --> 00:53:13,320
+pages responsive to people using mobile phones or tablets
+
+1138
+00:53:13,320 --> 00:53:17,250
+or devices of different sizes, making sure that your content looks good
+
+1139
+00:53:17,250 --> 00:53:19,980
+both on a computer but also on smaller devices as well
+
+1140
+00:53:19,980 --> 00:53:22,680
+is very, very important nowadays as web applications
+
+1141
+00:53:22,680 --> 00:53:25,530
+become more and more useful on varieties of different platforms.
+
+1142
+00:53:25,530 --> 00:53:28,530
+And so techniques like that of using a percentage instead
+
+1143
+00:53:28,530 --> 00:53:31,740
+of a number of pixels to say I want this to only show up as 50%
+
+1144
+00:53:31,740 --> 00:53:35,460
+can often be a helpful tool to make sure that you have that dynamism, that
+
+1145
+00:53:35,460 --> 00:53:37,710
+responsiveness in your website to make sure
+
+1146
+00:53:37,710 --> 00:53:39,930
+that it's able to adapt accordingly.
+
+1147
+00:53:39,930 --> 00:53:41,170
+Great question, though.
+
+1148
+00:53:41,170 --> 00:53:42,347
+Other questions?
+
+1149
+00:53:42,347 --> 00:53:45,030
+
+
+1150
+00:53:45,030 --> 00:53:45,570
+All right.
+
+1151
+00:53:45,570 --> 00:53:47,080
+We'll keep going.
+
+1152
+00:53:47,080 --> 00:53:48,390
+So that was images.
+
+1153
+00:53:48,390 --> 00:53:51,000
+We'll show you a couple of other things that HTML can do.
+
+1154
+00:53:51,000 --> 00:53:53,840
+One thing that it's very useful for is rendering tables.
+
+1155
+00:53:53,840 --> 00:53:56,490
+So we will have tables of data with rows and columns
+
+1156
+00:53:56,490 --> 00:53:58,990
+and we want to display that data to the user.
+
+1157
+00:53:58,990 --> 00:54:05,710
+Let's take a look at table.html, which will be an example of that.
+
+1158
+00:54:05,710 --> 00:54:10,170
+So what we have here is a table that represents US presidents.
+
+1159
+00:54:10,170 --> 00:54:11,460
+Just the first two.
+
+1160
+00:54:11,460 --> 00:54:16,440
+But what we'll notice here is that we have a table tag that begins the table.
+
+1161
+00:54:16,440 --> 00:54:18,810
+And then we have a whole bunch of tags nested within it.
+
+1162
+00:54:18,810 --> 00:54:22,560
+We have a tr tag, which stands for table row.
+
+1163
+00:54:22,560 --> 00:54:27,240
+And then within that we have th tags, which stands for table headers.
+
+1164
+00:54:27,240 --> 00:54:30,090
+So if you think about this just going one layer at a time,
+
+1165
+00:54:30,090 --> 00:54:31,510
+we start our table.
+
+1166
+00:54:31,510 --> 00:54:34,560
+And the first thing in our table is going to be a row in that table
+
+1167
+00:54:34,560 --> 00:54:38,580
+where that row is going to consist of three headers or three columns that are
+
+1168
+00:54:38,580 --> 00:54:40,920
+being headed by these individual cells.
+
+1169
+00:54:40,920 --> 00:54:44,390
+We have first name, last name, and years in office.
+
+1170
+00:54:44,390 --> 00:54:46,710
+And now we end that row with /tr.
+
+1171
+00:54:46,710 --> 00:54:49,290
+That's the end of that row and now we start another row.
+
+1172
+00:54:49,290 --> 00:54:51,480
+Here's a table row that says, all right, here is
+
+1173
+00:54:51,480 --> 00:54:53,640
+going to be the start of a new row of this table.
+
+1174
+00:54:53,640 --> 00:54:55,590
+We have George and then Washington and then
+
+1175
+00:54:55,590 --> 00:54:58,160
+the years of George Washington's time in office.
+
+1176
+00:54:58,160 --> 00:54:59,910
+And if we scroll down a little more we see
+
+1177
+00:54:59,910 --> 00:55:01,950
+we have another row underneath that.
+
+1178
+00:55:01,950 --> 00:55:05,160
+Notice that inside of the row all of the individual cells
+
+1179
+00:55:05,160 --> 00:55:09,010
+are stored in td elements, where td stands for table data.
+
+1180
+00:55:09,010 --> 00:55:13,370
+This is just the data that is contained within that particular row.
+
+1181
+00:55:13,370 --> 00:55:17,337
+And so now if I were to open up table.html, what I see
+
+1182
+00:55:17,337 --> 00:55:19,170
+is something that looks something like this.
+
+1183
+00:55:19,170 --> 00:55:20,610
+I see my title.
+
+1184
+00:55:20,610 --> 00:55:23,590
+Notice presidents was here labeled as a h1,
+
+1185
+00:55:23,590 --> 00:55:25,830
+so it's going to render as a large heading.
+
+1186
+00:55:25,830 --> 00:55:28,390
+And within that I have individual rows.
+
+1187
+00:55:28,390 --> 00:55:29,760
+Here's my header row.
+
+1188
+00:55:29,760 --> 00:55:32,280
+The th ones make it render as sort of bold.
+
+1189
+00:55:32,280 --> 00:55:37,909
+And I have the names and in the second row inside of that table as well.
+
+1190
+00:55:37,909 --> 00:55:39,950
+Now, this might not look like a very fancy table.
+
+1191
+00:55:39,950 --> 00:55:41,892
+It doesn't have borders or a coloring or it
+
+1192
+00:55:41,892 --> 00:55:44,100
+doesn't look like it could be aesthetically pleasing.
+
+1193
+00:55:44,100 --> 00:55:46,080
+We'll see later on in tonight's lecture how
+
+1194
+00:55:46,080 --> 00:55:48,810
+we might go about styling a web page like this in order
+
+1195
+00:55:48,810 --> 00:55:51,768
+to make it look a little bit nicer and look a little more aesthetically
+
+1196
+00:55:51,768 --> 00:55:52,860
+pleasing.
+
+1197
+00:55:52,860 --> 00:55:54,580
+But that's an individual table.
+
+1198
+00:55:54,580 --> 00:55:56,996
+And if I wanted to, I could add an additional row to this.
+
+1199
+00:55:56,996 --> 00:56:01,020
+Right here is two rows and I can just continue to add more elements inside
+
+1200
+00:56:01,020 --> 00:56:02,040
+of this HTML page.
+
+1201
+00:56:02,040 --> 00:56:06,630
+So I can say one new table row and I'll end that table row.
+
+1202
+00:56:06,630 --> 00:56:17,250
+And inside of that is going to be table data Thomas Jefferson and 1801 to 1809.
+
+1203
+00:56:17,250 --> 00:56:21,330
+And so if I refresh that page, we see that the third row in that table
+
+1204
+00:56:21,330 --> 00:56:24,150
+now appears because I've added to the HTML code.
+
+1205
+00:56:24,150 --> 00:56:27,540
+And you can continually do this by adding more and more HTML elements
+
+1206
+00:56:27,540 --> 00:56:31,080
+to the contents of my HTML page.
+
+1207
+00:56:31,080 --> 00:56:34,980
+One other HTML tag that we'll take a look at just to see how they work
+
+1208
+00:56:34,980 --> 00:56:36,630
+is form.html.
+
+1209
+00:56:36,630 --> 00:56:39,510
+So what we're looking at here is an HTML4.
+
+1210
+00:56:39,510 --> 00:56:41,650
+Oftentimes, when we're working with applications
+
+1211
+00:56:41,650 --> 00:56:43,916
+we don't just want to display information to the user,
+
+1212
+00:56:43,916 --> 00:56:46,290
+but we want to collect information from the user in order
+
+1213
+00:56:46,290 --> 00:56:50,160
+for them to either sign up for our website or log into our web site
+
+1214
+00:56:50,160 --> 00:56:52,360
+or submit data to us in some other way.
+
+1215
+00:56:52,360 --> 00:56:55,260
+And so what we see here is a simple example of an HTML form, where
+
+1216
+00:56:55,260 --> 00:56:58,010
+we have this form tag in the end of the form to say here
+
+1217
+00:56:58,010 --> 00:57:00,770
+is going to be a place where users can input data.
+
+1218
+00:57:00,770 --> 00:57:03,430
+On line seven we have an input tag.
+
+1219
+00:57:03,430 --> 00:57:07,080
+Notice that like the image tag there is no end tag here.
+
+1220
+00:57:07,080 --> 00:57:10,650
+This is just going to be a place where users can input text
+
+1221
+00:57:10,650 --> 00:57:14,124
+and we need to tell the web browser what type of information
+
+1222
+00:57:14,124 --> 00:57:15,540
+the user is going to be inputting.
+
+1223
+00:57:15,540 --> 00:57:18,165
+In this case, we're saying the type of that information is just
+
+1224
+00:57:18,165 --> 00:57:19,214
+going to be text.
+
+1225
+00:57:19,214 --> 00:57:21,630
+And we're specifying a couple of other optional attributes
+
+1226
+00:57:21,630 --> 00:57:25,140
+that give additional information to this form so that it knows how to behave.
+
+1227
+00:57:25,140 --> 00:57:26,910
+Placeholder is just full name.
+
+1228
+00:57:26,910 --> 00:57:29,868
+Placeholder, if you'll recall, and we'll take a look at it in a moment,
+
+1229
+00:57:29,868 --> 00:57:32,420
+is sort of that same text that appears in a text field
+
+1230
+00:57:32,420 --> 00:57:34,170
+before you start typing in it just to give
+
+1231
+00:57:34,170 --> 00:57:37,170
+the user a little bit of an indication as to what's expected of them
+
+1232
+00:57:37,170 --> 00:57:38,670
+as to what goes there.
+
+1233
+00:57:38,670 --> 00:57:41,610
+And this name field at the very end just gives a name
+
+1234
+00:57:41,610 --> 00:57:44,100
+to this input field that says that this input field is
+
+1235
+00:57:44,100 --> 00:57:46,142
+going to store the name of the person.
+
+1236
+00:57:46,142 --> 00:57:49,350
+This won't become relevant just yet, but as we'll see later on in this course
+
+1237
+00:57:49,350 --> 00:57:52,470
+as we start to actually do things with the form, take this information
+
+1238
+00:57:52,470 --> 00:57:55,710
+and log it to a database or process it in some way,
+
+1239
+00:57:55,710 --> 00:57:58,800
+being able to reference a particular input field by its name
+
+1240
+00:57:58,800 --> 00:58:00,775
+can ultimately be very, very helpful.
+
+1241
+00:58:00,775 --> 00:58:03,150
+And then finally down here after they type in their name,
+
+1242
+00:58:03,150 --> 00:58:04,691
+let's give them a button to click on.
+
+1243
+00:58:04,691 --> 00:58:06,630
+That's created just by using a button tag.
+
+1244
+00:58:06,630 --> 00:58:10,210
+And the name of this button is going to be Submit, and then /button to say, OK,
+
+1245
+00:58:10,210 --> 00:58:11,980
+that's the end of that button.
+
+1246
+00:58:11,980 --> 00:58:13,980
+So if we render that form and take a look
+
+1247
+00:58:13,980 --> 00:58:17,240
+at what that looks like when we open it as HTML
+
+1248
+00:58:17,240 --> 00:58:19,270
+we see it's going to look something like this.
+
+1249
+00:58:19,270 --> 00:58:22,016
+So we have a spot for the user to type in their full name.
+
+1250
+00:58:22,016 --> 00:58:25,140
+Notice that full name is automatically placed there as the placeholder text
+
+1251
+00:58:25,140 --> 00:58:28,719
+that we put in or HTML, and they can type their name in there.
+
+1252
+00:58:28,719 --> 00:58:30,510
+And then the Submit button is a button that
+
+1253
+00:58:30,510 --> 00:58:32,200
+would theoretically submit that form.
+
+1254
+00:58:32,200 --> 00:58:35,244
+Now, this form doesn't yet do anything because we haven't hooked it up.
+
+1255
+00:58:35,244 --> 00:58:38,160
+We haven't told the form what to do after someone clicks on the Submit
+
+1256
+00:58:38,160 --> 00:58:39,940
+button, but we'll see later in this course
+
+1257
+00:58:39,940 --> 00:58:42,870
+how we can begin to using other programming languages like Python
+
+1258
+00:58:42,870 --> 00:58:46,557
+and JavaScript begin to take the results of form information
+
+1259
+00:58:46,557 --> 00:58:47,890
+and do something useful with it.
+
+1260
+00:58:47,890 --> 00:58:50,310
+But for now all we're doing is designing the front end.
+
+1261
+00:58:50,310 --> 00:58:54,210
+What the user sees when they visit a particular web page.
+
+1262
+00:58:54,210 --> 00:58:55,710
+So that was the form.
+
+1263
+00:58:55,710 --> 00:58:58,380
+Questions about the forms or tables or images
+
+1264
+00:58:58,380 --> 00:59:02,670
+or any of the other HTML elements or tags that we've seen thus far?
+
+1265
+00:59:02,670 --> 00:59:05,210
+
+
+1266
+00:59:05,210 --> 00:59:06,140
+All right.
+
+1267
+00:59:06,140 --> 00:59:09,560
+One helpful way to think about HTML as we
+
+1268
+00:59:09,560 --> 00:59:12,710
+think about designing our HTML websites is thinking about them
+
+1269
+00:59:12,710 --> 00:59:13,950
+like a tree structure.
+
+1270
+00:59:13,950 --> 00:59:15,800
+If you're unfamiliar with tree structures,
+
+1271
+00:59:15,800 --> 00:59:19,640
+effectively think of them as a combination of nodes
+
+1272
+00:59:19,640 --> 00:59:25,017
+where nodes are just points within this tree that are connected to other nodes.
+
+1273
+00:59:25,017 --> 00:59:28,100
+So in this case, if we look at a simple website like the Hello, World page
+
+1274
+00:59:28,100 --> 00:59:32,690
+that we created before, if we wanted to represent this as a tree in HTML
+
+1275
+00:59:32,690 --> 00:59:35,894
+we typically call that tree the document object model.
+
+1276
+00:59:35,894 --> 00:59:37,310
+It might look something like this.
+
+1277
+00:59:37,310 --> 00:59:39,470
+We have HTML at the very top.
+
+1278
+00:59:39,470 --> 00:59:43,730
+Everything in our web page is contained within this HTML tag.
+
+1279
+00:59:43,730 --> 00:59:47,090
+And within that HTML tag we have the header,
+
+1280
+00:59:47,090 --> 00:59:51,350
+that head section of the HTML page, and we have the body of the HTML page
+
+1281
+00:59:51,350 --> 00:59:55,850
+because inside of HTML we have the head here and the body there.
+
+1282
+00:59:55,850 --> 00:59:58,850
+Inside of the head we have a title because the whole title
+
+1283
+00:59:58,850 --> 01:00:01,460
+tag is nested within the HTML header.
+
+1284
+01:00:01,460 --> 01:00:03,740
+And inside of that title is our text, hello.
+
+1285
+01:00:03,740 --> 01:00:06,510
+And likewise, inside of our body is just this text, hello, world.
+
+1286
+01:00:06,510 --> 01:00:09,020
+And you can imagine for some of our more complicated pages
+
+1287
+01:00:09,020 --> 01:00:11,420
+that we saw earlier where we had tables, for instance,
+
+1288
+01:00:11,420 --> 01:00:15,485
+that we might have a table element inside of our tree
+
+1289
+01:00:15,485 --> 01:00:18,140
+and which is connected to a whole bunch of tr's for table
+
+1290
+01:00:18,140 --> 01:00:22,160
+rows each of which itself is connected to a whole bunch of th's for table
+
+1291
+01:00:22,160 --> 01:00:24,350
+headers, or td's for table data.
+
+1292
+01:00:24,350 --> 01:00:27,984
+And you can represent this entire HTML page as this big tree.
+
+1293
+01:00:27,984 --> 01:00:29,900
+And it might not seem very intuitive as to why
+
+1294
+01:00:29,900 --> 01:00:32,120
+you might want to do that right off the bat,
+
+1295
+01:00:32,120 --> 01:00:35,360
+but as we'll soon see, especially as we start diving into JavaScript later
+
+1296
+01:00:35,360 --> 01:00:38,480
+on in the course that by having an understanding of this tree can
+
+1297
+01:00:38,480 --> 01:00:41,240
+we start to manipulate it, can we start to add things to the tree
+
+1298
+01:00:41,240 --> 01:00:43,790
+in order to add more to our web page, remove things
+
+1299
+01:00:43,790 --> 01:00:45,920
+if we want to take things away from the web page
+
+1300
+01:00:45,920 --> 01:00:47,690
+while the user is interacting with it.
+
+1301
+01:00:47,690 --> 01:00:50,930
+And as we'll see in just a moment we can use this tree in understanding
+
+1302
+01:00:50,930 --> 01:00:54,710
+what's contained within what to begin to style our web pages.
+
+1303
+01:00:54,710 --> 01:00:58,880
+And styling our web pages is going to be the process of taking what so far has
+
+1304
+01:00:58,880 --> 01:01:04,010
+just been websites that have a white background and black text on it
+
+1305
+01:01:04,010 --> 01:01:06,020
+and maybe images and other things as well,
+
+1306
+01:01:06,020 --> 01:01:08,240
+and starting to add some of our own custom styles
+
+1307
+01:01:08,240 --> 01:01:11,120
+to it in order to make it look a little bit nicer to the user.
+
+1308
+01:01:11,120 --> 01:01:13,340
+Because a big part of web development these days
+
+1309
+01:01:13,340 --> 01:01:15,590
+is not just making sure that the web site works
+
+1310
+01:01:15,590 --> 01:01:17,557
+and that it does what it's expected to do,
+
+1311
+01:01:17,557 --> 01:01:19,640
+but also that it's visually appealing to the user.
+
+1312
+01:01:19,640 --> 01:01:21,730
+That it's something that they would want to interact with,
+
+1313
+01:01:21,730 --> 01:01:23,750
+that it looks nice, that it looks professional.
+
+1314
+01:01:23,750 --> 01:01:27,260
+And so that is not something we can do with just HTML alone,
+
+1315
+01:01:27,260 --> 01:01:31,190
+but it's something that's going to come in with an additional tool called CSS,
+
+1316
+01:01:31,190 --> 01:01:34,470
+or cascading style sheets which is a different language altogether
+
+1317
+01:01:34,470 --> 01:01:37,190
+and we can use to interact with HTML in order
+
+1318
+01:01:37,190 --> 01:01:41,630
+to style the HTML in order to change the way the HTML looks according to rules
+
+1319
+01:01:41,630 --> 01:01:45,860
+that we set in order to add color to our web pages, for example,
+
+1320
+01:01:45,860 --> 01:01:49,220
+or add spacing in places where we want spacing or add borders to things
+
+1321
+01:01:49,220 --> 01:01:51,470
+or add a background to things, for instance.
+
+1322
+01:01:51,470 --> 01:01:53,780
+And so what we'll take a look at now is how
+
+1323
+01:01:53,780 --> 01:01:56,540
+we might be able to leverage some of the tools of CSS
+
+1324
+01:01:56,540 --> 01:02:01,100
+in order to design a web page that looks just a little bit nicer than the web
+
+1325
+01:02:01,100 --> 01:02:03,210
+pages that we've already been working with.
+
+1326
+01:02:03,210 --> 01:02:07,600
+So let's take a look at stylezero.html.
+
+1327
+01:02:07,600 --> 01:02:10,580
+And what we'll notice is that this web page is
+
+1328
+01:02:10,580 --> 01:02:12,710
+very similar to ones we've seen before.
+
+1329
+01:02:12,710 --> 01:02:15,620
+It's got a body, it's got an h1 as the headline,
+
+1330
+01:02:15,620 --> 01:02:18,620
+it's also got these p elements where p just stands for paragraph,
+
+1331
+01:02:18,620 --> 01:02:20,030
+like a paragraph of text.
+
+1332
+01:02:20,030 --> 01:02:23,450
+But the key difference here is that we've added a new attribute.
+
+1333
+01:02:23,450 --> 01:02:26,180
+We've added this style attribute here that's associated
+
+1334
+01:02:26,180 --> 01:02:27,550
+with h1, that headline.
+
+1335
+01:02:27,550 --> 01:02:30,550
+And that style attribute is equal to something a little bit complicated,
+
+1336
+01:02:30,550 --> 01:02:32,570
+but let's break it down into parts.
+
+1337
+01:02:32,570 --> 01:02:41,320
+We have in quotation marks, "color:blue;text-align:center";
+
+1338
+01:02:41,320 --> 01:02:45,410
+And so what we see here in this style attribute of our heading,
+
+1339
+01:02:45,410 --> 01:02:50,690
+R2 is CSS properties, where a CSS property is just some specific style
+
+1340
+01:02:50,690 --> 01:02:53,990
+property that the browser is going to understand and render in a particular
+
+1341
+01:02:53,990 --> 01:02:54,560
+way.
+
+1342
+01:02:54,560 --> 01:02:56,420
+And as you might guess what's happening here
+
+1343
+01:02:56,420 --> 01:03:00,380
+is we're saying that we want to assign the color property of this heading
+
+1344
+01:03:00,380 --> 01:03:03,590
+to blue and we want to assign the text align
+
+1345
+01:03:03,590 --> 01:03:06,770
+property of this heading to center.
+
+1346
+01:03:06,770 --> 01:03:09,770
+And so what that's going to do is instead of just rendering an h1 as we
+
+1347
+01:03:09,770 --> 01:03:12,650
+normally would as just a black big headline on the left side
+
+1348
+01:03:12,650 --> 01:03:17,190
+of the screen, we'll render it as a blue headline that's centered on the screen.
+
+1349
+01:03:17,190 --> 01:03:22,280
+And so if we now open up stylezero.html, and we see a web page
+
+1350
+01:03:22,280 --> 01:03:23,660
+that looks something like this.
+
+1351
+01:03:23,660 --> 01:03:26,210
+That big heading is still there at the top of the page,
+
+1352
+01:03:26,210 --> 01:03:27,710
+but it's a little bit different now.
+
+1353
+01:03:27,710 --> 01:03:30,340
+We styled it to be blue, we styled it to be centered.
+
+1354
+01:03:30,340 --> 01:03:32,840
+Whereas before, if we were to just get rid of this style tag
+
+1355
+01:03:32,840 --> 01:03:38,660
+altogether and say that this is what that looks like without any
+
+1356
+01:03:38,660 --> 01:03:41,300
+of that additional styling.
+
+1357
+01:03:41,300 --> 01:03:43,220
+And so leveraging tools like that we can start
+
+1358
+01:03:43,220 --> 01:03:44,839
+to build up styles for our web page.
+
+1359
+01:03:44,839 --> 01:03:47,130
+We can start to make things look the way we want it to.
+
+1360
+01:03:47,130 --> 01:03:49,040
+We can apply a color scheme to our website
+
+1361
+01:03:49,040 --> 01:03:52,850
+in order to put whatever themed colors we want to put on our site.
+
+1362
+01:03:52,850 --> 01:03:55,760
+And this can be used in order to add the sort of styling.
+
+1363
+01:03:55,760 --> 01:03:59,300
+And HTML and CSS have a very rich vocabulary
+
+1364
+01:03:59,300 --> 01:04:01,340
+for the types of things that can understand.
+
+1365
+01:04:01,340 --> 01:04:03,140
+Obviously, we can be simple colors.
+
+1366
+01:04:03,140 --> 01:04:07,540
+We can do the blue color or we can say red to make the headline render as red
+
+1367
+01:04:07,540 --> 01:04:11,290
+instead, but there is something like 140 different colors
+
+1368
+01:04:11,290 --> 01:04:14,990
+that HTML and CSS know how to understand and interpret.
+
+1369
+01:04:14,990 --> 01:04:18,790
+So I could do something like color:dark magenta, for instance.
+
+1370
+01:04:18,790 --> 01:04:23,410
+And if I refresh that page then the heading is rendered as dark magenta.
+
+1371
+01:04:23,410 --> 01:04:26,710
+And if that's not enough color sophistication for you,
+
+1372
+01:04:26,710 --> 01:04:29,180
+the 140 different named colors out there,
+
+1373
+01:04:29,180 --> 01:04:32,230
+you also have the ability to select exactly which color you might
+
+1374
+01:04:32,230 --> 01:04:34,990
+want by using that colors hex value.
+
+1375
+01:04:34,990 --> 01:04:40,180
+And so in HTML and CSS and when we're dealing with color more generally,
+
+1376
+01:04:40,180 --> 01:04:45,010
+we'll often represent color using a format called RGB, or red, green, blue
+
+1377
+01:04:45,010 --> 01:04:48,700
+where we specify how much red is in the color, how much green is in the color,
+
+1378
+01:04:48,700 --> 01:04:50,320
+and how much blue is in the color.
+
+1379
+01:04:50,320 --> 01:04:53,110
+And using different combinations of red and green and blue,
+
+1380
+01:04:53,110 --> 01:04:58,480
+where zero means very little red and 255 means a whole lot of red.
+
+1381
+01:04:58,480 --> 01:05:01,750
+And likewise for green and blue can we represent basically any color
+
+1382
+01:05:01,750 --> 01:05:02,830
+that we want to.
+
+1383
+01:05:02,830 --> 01:05:08,120
+And so if we type in HTML color picker, for instance,
+
+1384
+01:05:08,120 --> 01:05:12,790
+and we can see over here that this color, this shade of blue
+
+1385
+01:05:12,790 --> 01:05:15,490
+is 66 amount of red.
+
+1386
+01:05:15,490 --> 01:05:22,230
+So a moderate amount of red and a little more green, 134 green and 244 blue.
+
+1387
+01:05:22,230 --> 01:05:23,620
+So a whole lot of blue.
+
+1388
+01:05:23,620 --> 01:05:25,250
+And that is this particular color.
+
+1389
+01:05:25,250 --> 01:05:29,300
+And so if we wanted to make our headings some different color, for instance,
+
+1390
+01:05:29,300 --> 01:05:34,450
+maybe we want it green and we want it to be a darker green like this color,
+
+1391
+01:05:34,450 --> 01:05:36,400
+for instance, that's this color.
+
+1392
+01:05:36,400 --> 01:05:40,930
+That's 12 red, 142 green, and five blue.
+
+1393
+01:05:40,930 --> 01:05:43,900
+And that color is represented by this up here.
+
+1394
+01:05:43,900 --> 01:05:45,580
+This is called a hex code.
+
+1395
+01:05:45,580 --> 01:05:48,250
+If you're familiar with hexadecimal or base 16,
+
+1396
+01:05:48,250 --> 01:05:52,990
+it's effectively these three numbers 12, 142, and five represented in base 16.
+
+1397
+01:05:52,990 --> 01:05:56,530
+No need to actually understand where that number comes from,
+
+1398
+01:05:56,530 --> 01:06:00,400
+but effectively know that the first two of these numbers and letters
+
+1399
+01:06:00,400 --> 01:06:03,540
+represent the amount of red, the second to represent the amount of green,
+
+1400
+01:06:03,540 --> 01:06:05,880
+and the last represent the amount of blue.
+
+1401
+01:06:05,880 --> 01:06:14,740
+And if I take that now 0c8e05, and in my HTML code rather than dark magenta,
+
+1402
+01:06:14,740 --> 01:06:20,260
+I say #0c8e05, for instance, that same color hex
+
+1403
+01:06:20,260 --> 01:06:23,470
+code that I saw before and then refresh my page,
+
+1404
+01:06:23,470 --> 01:06:25,870
+now it's going to render using that exact same green.
+
+1405
+01:06:25,870 --> 01:06:28,810
+So by using hex codes and understanding RGB values,
+
+1406
+01:06:28,810 --> 01:06:31,120
+we can have a lot more control over the colors
+
+1407
+01:06:31,120 --> 01:06:33,820
+that our web page uses by specifying exactly which
+
+1408
+01:06:33,820 --> 01:06:38,370
+color that we want to display when that page ultimately gets rendered.
+
+1409
+01:06:38,370 --> 01:06:40,120
+So that's the basic introduction to how we
+
+1410
+01:06:40,120 --> 01:06:43,810
+might use the style attribute to begin to add some styling to our web pages
+
+1411
+01:06:43,810 --> 01:06:46,180
+and make them look just a little bit nicer.
+
+1412
+01:06:46,180 --> 01:06:50,493
+Questions about that so far, CSS or colors or anything we've looked at?
+
+1413
+01:06:50,493 --> 01:06:54,430
+
+
+1414
+01:06:54,430 --> 01:06:57,080
+As we can imagine, if we start to-- and I'll
+
+1415
+01:06:57,080 --> 01:06:59,260
+change this back to blue just for good measure.
+
+1416
+01:06:59,260 --> 01:07:03,050
+If we start to add a lot of styling to our HTML web pages,
+
+1417
+01:07:03,050 --> 01:07:05,350
+this is going to start to get cluttered pretty fast.
+
+1418
+01:07:05,350 --> 01:07:07,630
+I can start to add additional styling here.
+
+1419
+01:07:07,630 --> 01:07:12,550
+If I want my paragraph here to be purple and I want this paragraph over here
+
+1420
+01:07:12,550 --> 01:07:14,422
+to be red, for instance.
+
+1421
+01:07:14,422 --> 01:07:15,630
+And this will certainly work.
+
+1422
+01:07:15,630 --> 01:07:18,950
+I can style things in different colors and that's going to work just fine,
+
+1423
+01:07:18,950 --> 01:07:22,690
+but I've mixed my CSS code of describing what color
+
+1424
+01:07:22,690 --> 01:07:26,350
+and how I want things styled with the actual contents of my page,
+
+1425
+01:07:26,350 --> 01:07:28,809
+of the actual content that I want to be displayed
+
+1426
+01:07:28,809 --> 01:07:30,100
+when the user goes to the page.
+
+1427
+01:07:30,100 --> 01:07:32,770
+And oftentimes, that can be seen as just a little bit messy.
+
+1428
+01:07:32,770 --> 01:07:37,210
+We might look for a cleaner and more elegant way of styling our page.
+
+1429
+01:07:37,210 --> 01:07:40,850
+And CSS offers a number of different ways via which we can do that.
+
+1430
+01:07:40,850 --> 01:07:45,150
+So one way is seen here in styleone.html.
+
+1431
+01:07:45,150 --> 01:07:48,535
+So notice in styleone.html, which ultimately
+
+1432
+01:07:48,535 --> 01:07:51,390
+when we open it is going to render exactly the same way.
+
+1433
+01:07:51,390 --> 01:07:54,700
+Big blue headline and then two paragraphs of black text.
+
+1434
+01:07:54,700 --> 01:07:57,170
+We've done something a little bit different here.
+
+1435
+01:07:57,170 --> 01:08:00,460
+What we've done is the body of the web page
+
+1436
+01:08:00,460 --> 01:08:03,880
+is the same as it was before without any style tag attached to it.
+
+1437
+01:08:03,880 --> 01:08:05,810
+The h1 no longer has a style attribute.
+
+1438
+01:08:05,810 --> 01:08:09,160
+It just says h1m welcome to my web page.
+
+1439
+01:08:09,160 --> 01:08:12,850
+What we've added is we've added an extra section to the header of the web page.
+
+1440
+01:08:12,850 --> 01:08:15,250
+We've added the style element to the header
+
+1441
+01:08:15,250 --> 01:08:18,399
+to say here is some style information for the web page should
+
+1442
+01:08:18,399 --> 01:08:21,700
+know that should be included in the entire web page, the rules
+
+1443
+01:08:21,700 --> 01:08:25,090
+to follow when deciding how to style and how different parts of the web page
+
+1444
+01:08:25,090 --> 01:08:26,319
+should appear.
+
+1445
+01:08:26,319 --> 01:08:29,710
+And what we see here on line six is that inside the styling of the web page
+
+1446
+01:08:29,710 --> 01:08:34,569
+we have h1, meaning here is how you should style any h1 that you see.
+
+1447
+01:08:34,569 --> 01:08:38,770
+We say h1, the color is going to be blue and the text align property
+
+1448
+01:08:38,770 --> 01:08:39,979
+is going to be centered.
+
+1449
+01:08:39,979 --> 01:08:42,819
+And that's why ultimately that page looks exactly the same
+
+1450
+01:08:42,819 --> 01:08:45,960
+because effectively the browser is doing the same things.
+
+1451
+01:08:45,960 --> 01:08:50,960
+We've just moved the CSS styling away from the body of the HTML content
+
+1452
+01:08:50,960 --> 01:08:51,830
+to the web page.
+
+1453
+01:08:51,830 --> 01:08:53,200
+And this is a paradigm you'll start to see
+
+1454
+01:08:53,200 --> 01:08:55,779
+a lot as we begin to approach web development from a number
+
+1455
+01:08:55,779 --> 01:08:58,120
+of different angles that whenever we're intermingling
+
+1456
+01:08:58,120 --> 01:09:00,010
+a lot of different things, oftentimes it can
+
+1457
+01:09:00,010 --> 01:09:02,560
+be helpful to take one part of the web page
+
+1458
+01:09:02,560 --> 01:09:05,250
+and separate it out into a different place such
+
+1459
+01:09:05,250 --> 01:09:08,430
+that it's more logical or more easy to understand or more readable
+
+1460
+01:09:08,430 --> 01:09:09,750
+or ultimately more elegant.
+
+1461
+01:09:09,750 --> 01:09:13,080
+And this is one example of that of taking the h1 out of the h1
+
+1462
+01:09:13,080 --> 01:09:15,750
+from the body and just describing it in the header of the web
+
+1463
+01:09:15,750 --> 01:09:19,569
+page in terms of how the entire page should be styled.
+
+1464
+01:09:19,569 --> 01:09:23,040
+And one other note about this is that when we put the h1 in the style tag
+
+1465
+01:09:23,040 --> 01:09:25,800
+in the header, it's going to apply to every h1
+
+1466
+01:09:25,800 --> 01:09:27,490
+that it sees throughout the page.
+
+1467
+01:09:27,490 --> 01:09:33,000
+So if I add another header, adding here is a second headline,
+
+1468
+01:09:33,000 --> 01:09:36,569
+and that's also an h1 because up here in our style tag
+
+1469
+01:09:36,569 --> 01:09:39,689
+we've told every h1 to render as blue colored
+
+1470
+01:09:39,689 --> 01:09:42,359
+and centered in terms of its alignment of the text.
+
+1471
+01:09:42,359 --> 01:09:44,250
+When we refresh this page the second headline
+
+1472
+01:09:44,250 --> 01:09:46,930
+is also going to show up as centered and blue as well.
+
+1473
+01:09:46,930 --> 01:09:50,240
+Whereas before in that first example, if we were to add an h1
+
+1474
+01:09:50,240 --> 01:09:56,320
+and we wanted it to be styled the same way, we would have needed to go ahead,
+
+1475
+01:09:56,320 --> 01:10:02,010
+and h1 style equals color blue text align center and repeat that same thing
+
+1476
+01:10:02,010 --> 01:10:03,540
+again for the second one.
+
+1477
+01:10:03,540 --> 01:10:07,330
+And generally speaking, whenever you find yourself repeating the same code,
+
+1478
+01:10:07,330 --> 01:10:10,014
+or even copy pasting the same styling code again,
+
+1479
+01:10:10,014 --> 01:10:12,930
+in order to make it to apply to something else, generally speaking you
+
+1480
+01:10:12,930 --> 01:10:15,480
+should look for a better designed or a more elegant
+
+1481
+01:10:15,480 --> 01:10:19,380
+way of doing the same thing because ultimately this repetitiveness gets
+
+1482
+01:10:19,380 --> 01:10:20,310
+difficult to maintain.
+
+1483
+01:10:20,310 --> 01:10:24,510
+If I want to change the headlines from blue to red, for instance,
+
+1484
+01:10:24,510 --> 01:10:28,800
+I now need to change the headline in two different places in my web page.
+
+1485
+01:10:28,800 --> 01:10:32,460
+Whereas, in styleone.html, where I have all the styling
+
+1486
+01:10:32,460 --> 01:10:34,740
+contained inside of just this style element,
+
+1487
+01:10:34,740 --> 01:10:36,570
+inside of the header of my web page.
+
+1488
+01:10:36,570 --> 01:10:40,110
+If I wanted to change both of my headings to red instead of blue
+
+1489
+01:10:40,110 --> 01:10:43,480
+I just need to change it in one place, changing color from color blue
+
+1490
+01:10:43,480 --> 01:10:44,490
+to color red.
+
+1491
+01:10:44,490 --> 01:10:47,460
+And now both of the headings change in their color
+
+1492
+01:10:47,460 --> 01:10:51,475
+because that Heading Style is applied to the entire document as the whole.
+
+1493
+01:10:51,475 --> 01:10:52,350
+Questions about that?
+
+1494
+01:10:52,350 --> 01:10:54,990
+
+
+1495
+01:10:54,990 --> 01:10:55,580
+OK.
+
+1496
+01:10:55,580 --> 01:10:57,830
+But we can in fact get even better at how
+
+1497
+01:10:57,830 --> 01:11:00,440
+we go about trying to separate out the CSS
+
+1498
+01:11:00,440 --> 01:11:04,370
+because natural questions that might come up now are number one,
+
+1499
+01:11:04,370 --> 01:11:07,704
+we still have this styling code inside of the HTML file,
+
+1500
+01:11:07,704 --> 01:11:09,620
+when it sort of feels like something separate.
+
+1501
+01:11:09,620 --> 01:11:12,080
+The way that we style our website is sort of
+
+1502
+01:11:12,080 --> 01:11:14,570
+fundamentally different from the actual content
+
+1503
+01:11:14,570 --> 01:11:17,600
+of the text that goes on our website and the structure of our web page
+
+1504
+01:11:17,600 --> 01:11:18,486
+in general.
+
+1505
+01:11:18,486 --> 01:11:20,360
+But another issue that might come up is, what
+
+1506
+01:11:20,360 --> 01:11:22,818
+if I start to build larger web applications that don't just
+
+1507
+01:11:22,818 --> 01:11:26,810
+have one HTML file, that have two, three, four, or more HTML files
+
+1508
+01:11:26,810 --> 01:11:30,230
+that all want to have red headlines that are all centered.
+
+1509
+01:11:30,230 --> 01:11:32,030
+Of course, I could take the style tag and I
+
+1510
+01:11:32,030 --> 01:11:34,626
+could copy paste it across all of my different HTML files,
+
+1511
+01:11:34,626 --> 01:11:37,250
+but again, that brings up the same problems that we saw before.
+
+1512
+01:11:37,250 --> 01:11:40,130
+The problem of whenever you find yourself copy and pasting
+
+1513
+01:11:40,130 --> 01:11:43,677
+code and repeating code we run the risk of making it more difficult to maintain
+
+1514
+01:11:43,677 --> 01:11:45,260
+and ultimately making it less elegant.
+
+1515
+01:11:45,260 --> 01:11:47,240
+If we wanted to change the color down the line
+
+1516
+01:11:47,240 --> 01:11:49,115
+it becomes a whole lot harder because we have
+
+1517
+01:11:49,115 --> 01:11:51,330
+to change it in many different places.
+
+1518
+01:11:51,330 --> 01:11:53,220
+So what can we do about that?
+
+1519
+01:11:53,220 --> 01:11:56,840
+Well, we can take that CSS code and just separate it into a different file
+
+1520
+01:11:56,840 --> 01:11:58,080
+altogether.
+
+1521
+01:11:58,080 --> 01:12:01,400
+So what I'll show you now is styletwo.html.
+
+1522
+01:12:01,400 --> 01:12:05,360
+Styletwo.html does the exact same thing as styleone.html.
+
+1523
+01:12:05,360 --> 01:12:08,870
+And all the source code will be made available to you afterwards as well.
+
+1524
+01:12:08,870 --> 01:12:13,010
+Styletwo.html shows you a big blue centered headline,
+
+1525
+01:12:13,010 --> 01:12:15,030
+but how is it doing that?
+
+1526
+01:12:15,030 --> 01:12:19,020
+Well, the body is still the same and we no longer have a style tag in the head,
+
+1527
+01:12:19,020 --> 01:12:22,160
+but what we do have is this line here, line five.
+
+1528
+01:12:22,160 --> 01:12:28,100
+Link rail equals style sheet href=styles.css.
+
+1529
+01:12:28,100 --> 01:12:29,930
+So what's going on here?
+
+1530
+01:12:29,930 --> 01:12:32,030
+This link tag is effectively telling us we
+
+1531
+01:12:32,030 --> 01:12:35,540
+want to link in some other file that's going to provide us information to help
+
+1532
+01:12:35,540 --> 01:12:38,780
+us know how to render this HTML page.
+
+1533
+01:12:38,780 --> 01:12:41,169
+And what kind of information are we trying to render?
+
+1534
+01:12:41,169 --> 01:12:42,710
+Well, it's going to be a style sheet.
+
+1535
+01:12:42,710 --> 01:12:45,620
+Information about how to style our web page.
+
+1536
+01:12:45,620 --> 01:12:47,780
+And which file are we going to include?
+
+1537
+01:12:47,780 --> 01:12:49,730
+Which is the file that we want to link?
+
+1538
+01:12:49,730 --> 01:12:52,370
+Well, it's styles.css.
+
+1539
+01:12:52,370 --> 01:12:54,470
+And so now if we take a look at styles.css,
+
+1540
+01:12:54,470 --> 01:12:58,220
+what's going on in there to allow it to render the CSS the way
+
+1541
+01:12:58,220 --> 01:12:59,275
+that we want it to?
+
+1542
+01:12:59,275 --> 01:13:01,240
+Let's open up styles.css.
+
+1543
+01:13:01,240 --> 01:13:03,590
+It's exactly the same thing as the contents
+
+1544
+01:13:03,590 --> 01:13:07,910
+that we saw in the style tag of our HTML header before.
+
+1545
+01:13:07,910 --> 01:13:12,120
+It's just h1, color is blue, text align is center.
+
+1546
+01:13:12,120 --> 01:13:14,090
+And that's what allows us to get this.
+
+1547
+01:13:14,090 --> 01:13:17,660
+If we add additional properties, maybe I want my paragraphs
+
+1548
+01:13:17,660 --> 01:13:23,690
+to all be red, for instance, and I save that, now if I refresh of the page
+
+1549
+01:13:23,690 --> 01:13:24,890
+the paragraphs are red.
+
+1550
+01:13:24,890 --> 01:13:26,930
+The HTML file didn't change at all.
+
+1551
+01:13:26,930 --> 01:13:29,660
+Styletwo.html stayed the same.
+
+1552
+01:13:29,660 --> 01:13:33,470
+Yet, when I refreshed it the styles changed because this linked file,
+
+1553
+01:13:33,470 --> 01:13:38,630
+this linked CSS file that is defining the style for my styletwo.html file
+
+1554
+01:13:38,630 --> 01:13:41,510
+has been updated to say, now I want all of the paragraphs
+
+1555
+01:13:41,510 --> 01:13:45,330
+to show up with red coloring instead of the original black.
+
+1556
+01:13:45,330 --> 01:13:49,850
+And so we saw three different ways via which we can link CSS
+
+1557
+01:13:49,850 --> 01:13:51,910
+into the contents of our HTML code.
+
+1558
+01:13:51,910 --> 01:13:55,790
+One, just by including that style attribute directly in the HTML.
+
+1559
+01:13:55,790 --> 01:13:58,580
+The second way, factoring it out into the header of the HTML
+
+1560
+01:13:58,580 --> 01:14:01,200
+page so that it applies to the entire page.
+
+1561
+01:14:01,200 --> 01:14:04,130
+And then finally, what might be one of the most common paradigms
+
+1562
+01:14:04,130 --> 01:14:07,580
+you'll use, especially if you start building larger web applications is
+
+1563
+01:14:07,580 --> 01:14:12,170
+this method of saying, take the CSS, separate out into a different file such
+
+1564
+01:14:12,170 --> 01:14:14,690
+that even if I have many different HTML files
+
+1565
+01:14:14,690 --> 01:14:17,930
+they can all reference the same CSS file so that they all
+
+1566
+01:14:17,930 --> 01:14:21,590
+get styled the way that I want the page to be styled.
+
+1567
+01:14:21,590 --> 01:14:25,970
+So those are the basics of how we might go about using CSS.
+
+1568
+01:14:25,970 --> 01:14:28,910
+Now let's take a look at a couple of the common CSS properties
+
+1569
+01:14:28,910 --> 01:14:29,990
+that we might use.
+
+1570
+01:14:29,990 --> 01:14:34,490
+So far we've seen color to give a particular element of color in HTML,
+
+1571
+01:14:34,490 --> 01:14:38,120
+and we've seen text align to say I want to center this text instead of left
+
+1572
+01:14:38,120 --> 01:14:39,730
+justifying it.
+
+1573
+01:14:39,730 --> 01:14:45,900
+And we can also use CSS to change the size of different elements as well.
+
+1574
+01:14:45,900 --> 01:14:48,029
+So let's take a look at size.html.
+
+1575
+01:14:48,029 --> 01:14:50,570
+And for good measure I've just included the CSS in the header
+
+1576
+01:14:50,570 --> 01:14:52,850
+like we saw in the second example before.
+
+1577
+01:14:52,850 --> 01:14:54,800
+Though in practice in a larger application
+
+1578
+01:14:54,800 --> 01:14:58,180
+you might want to move this information into a different file.
+
+1579
+01:14:58,180 --> 01:15:02,870
+But what you see here is inside the body I have a div.
+
+1580
+01:15:02,870 --> 01:15:05,810
+And a div just basically means a division of my code.
+
+1581
+01:15:05,810 --> 01:15:09,380
+Some section of my code that doesn't really have any real formal meaning.
+
+1582
+01:15:09,380 --> 01:15:12,470
+It's just a section of my code that I want to do something with,
+
+1583
+01:15:12,470 --> 01:15:14,780
+maybe style in a particular way.
+
+1584
+01:15:14,780 --> 01:15:17,510
+And here's a style I've applied to it.
+
+1585
+01:15:17,510 --> 01:15:22,010
+Background color is going to be teal, width is going to be 100 pixels,
+
+1586
+01:15:22,010 --> 01:15:25,200
+height is going to be 400 pixels.
+
+1587
+01:15:25,200 --> 01:15:31,620
+So if I now go to size.html, this is how it gets rendered.
+
+1588
+01:15:31,620 --> 01:15:37,190
+We have a vertical just block of HTML content that says hello, world.
+
+1589
+01:15:37,190 --> 01:15:40,760
+But in particular its background color is teal, it's got a particular width
+
+1590
+01:15:40,760 --> 01:15:43,130
+and it's got a particular height as defined
+
+1591
+01:15:43,130 --> 01:15:48,680
+by what I included inside of my style tag just a moment to go.
+
+1592
+01:15:48,680 --> 01:15:51,110
+And so using these width and height tags we
+
+1593
+01:15:51,110 --> 01:15:54,210
+can start to really define exactly what our website looks like.
+
+1594
+01:15:54,210 --> 01:15:58,890
+If we change the width to 500 pixels instead of 100
+
+1595
+01:15:58,890 --> 01:16:01,690
+and refresh the page there, we see that now it's a fair bit wider.
+
+1596
+01:16:01,690 --> 01:16:04,560
+And so we can control exactly how the web page shows up
+
+1597
+01:16:04,560 --> 01:16:07,390
+just by making these small modifications to it.
+
+1598
+01:16:07,390 --> 01:16:11,220
+But now what if we wanted to add a little more to this website
+
+1599
+01:16:11,220 --> 01:16:13,967
+in terms of its design, in terms of the spacing of this page,
+
+1600
+01:16:13,967 --> 01:16:16,300
+in terms of thinking about what it's going to look like?
+
+1601
+01:16:16,300 --> 01:16:18,630
+You notice that right now this hello, world block
+
+1602
+01:16:18,630 --> 01:16:21,860
+is very close to the upper left hand corner of the screen.
+
+1603
+01:16:21,860 --> 01:16:24,680
+Maybe we would want to move it around a little bit more.
+
+1604
+01:16:24,680 --> 01:16:29,250
+So that's where we can start to introduce the notion of a margin
+
+1605
+01:16:29,250 --> 01:16:32,310
+around the edge of a particular HTML element.
+
+1606
+01:16:32,310 --> 01:16:37,530
+So for instance, if I go in here and set the margin of the div
+
+1607
+01:16:37,530 --> 01:16:42,660
+to be 30 pixels, for instance, and now refresh that page,
+
+1608
+01:16:42,660 --> 01:16:45,090
+now we see that hello, world has a margin around it.
+
+1609
+01:16:45,090 --> 01:16:48,690
+It's got this sort of 30 pixel invisible border that's surrounding it.
+
+1610
+01:16:48,690 --> 01:16:51,000
+And it helps to space that out from different elements.
+
+1611
+01:16:51,000 --> 01:16:53,130
+And so controlling margin can often be helpful
+
+1612
+01:16:53,130 --> 01:16:55,530
+when you're trying to lay out a web page with a bunch of different elements
+
+1613
+01:16:55,530 --> 01:16:59,100
+and you want to control how far apart different elements are from each other.
+
+1614
+01:16:59,100 --> 01:17:01,240
+The margin is very helpful there.
+
+1615
+01:17:01,240 --> 01:17:04,140
+Another thing you might notice is that hello, world right now
+
+1616
+01:17:04,140 --> 01:17:08,610
+is very much just directly at the edge of this teal box, which
+
+1617
+01:17:08,610 --> 01:17:10,200
+looks a little bit suboptimal.
+
+1618
+01:17:10,200 --> 01:17:12,360
+Maybe I would want to change that a little more.
+
+1619
+01:17:12,360 --> 01:17:15,900
+And for that I can add in another CSS property called padding.
+
+1620
+01:17:15,900 --> 01:17:20,990
+So I can say, all right, let's add a padding of maybe 20 pixels.
+
+1621
+01:17:20,990 --> 01:17:23,310
+And after I refresh that, now you'll notice
+
+1622
+01:17:23,310 --> 01:17:25,950
+that hello, world is internally padded by sort
+
+1623
+01:17:25,950 --> 01:17:28,650
+of an invisible border of 20 pixels.
+
+1624
+01:17:28,650 --> 01:17:32,250
+And so margin and padding are both used in order to control spacing.
+
+1625
+01:17:32,250 --> 01:17:35,100
+But the key difference is that the margin of an element
+
+1626
+01:17:35,100 --> 01:17:38,470
+is the space around this outside of the border of the element.
+
+1627
+01:17:38,470 --> 01:17:40,680
+So this is my div, this teal box.
+
+1628
+01:17:40,680 --> 01:17:42,220
+The margin is what's outside of it.
+
+1629
+01:17:42,220 --> 01:17:44,670
+I've got 30 pixels of space along that side
+
+1630
+01:17:44,670 --> 01:17:49,750
+and the padding is between the content of the element and that elements
+
+1631
+01:17:49,750 --> 01:17:50,250
+border.
+
+1632
+01:17:50,250 --> 01:17:54,650
+So this right here is 20 pixels worth of padding for the hello, world
+
+1633
+01:17:54,650 --> 01:17:56,970
+that's located inside of this div.
+
+1634
+01:17:56,970 --> 01:18:00,480
+And so using margin and padding, especially on larger web applications
+
+1635
+01:18:00,480 --> 01:18:03,270
+you can start to really control the look and feel of the website
+
+1636
+01:18:03,270 --> 01:18:07,410
+in order to make it display exactly the way that you would want it to.
+
+1637
+01:18:07,410 --> 01:18:08,160
+All right.
+
+1638
+01:18:08,160 --> 01:18:11,370
+Thus far we've also only been interacting with our HTML page
+
+1639
+01:18:11,370 --> 01:18:14,490
+in the sense of having text that is all of the same font.
+
+1640
+01:18:14,490 --> 01:18:16,410
+It's sort have been the same default font
+
+1641
+01:18:16,410 --> 01:18:20,840
+that HTML tends to use whenever a web browser is displaying HTML content.
+
+1642
+01:18:20,840 --> 01:18:24,100
+And maybe we'd like to have a little more control over that.
+
+1643
+01:18:24,100 --> 01:18:31,780
+So let's open up font.html, and take a look at what's going on there.
+
+1644
+01:18:31,780 --> 01:18:35,910
+So again, we have a body inside of which is a div that says hello, world.
+
+1645
+01:18:35,910 --> 01:18:38,070
+And inside of the style tag up here we've
+
+1646
+01:18:38,070 --> 01:18:41,160
+added some special styling to that particular div.
+
+1647
+01:18:41,160 --> 01:18:43,290
+In particular, we've added three things.
+
+1648
+01:18:43,290 --> 01:18:46,410
+We've added a font family that effectively just says
+
+1649
+01:18:46,410 --> 01:18:49,530
+this is the font that I want this div to render in.
+
+1650
+01:18:49,530 --> 01:18:51,960
+And notice that I haven't just said give it one font.
+
+1651
+01:18:51,960 --> 01:18:55,472
+I said Arial, but I said Arial, sans serif.
+
+1652
+01:18:55,472 --> 01:18:57,180
+Reason for this is when we start to think
+
+1653
+01:18:57,180 --> 01:19:01,110
+about making sure that our website looks right in matter what browser it's
+
+1654
+01:19:01,110 --> 01:19:01,890
+loaded on.
+
+1655
+01:19:01,890 --> 01:19:05,160
+So maybe you were wanting to even include some font on your web page
+
+1656
+01:19:05,160 --> 01:19:08,490
+that the user's computer doesn't have, or that the user's web browser just
+
+1657
+01:19:08,490 --> 01:19:09,660
+doesn't understand.
+
+1658
+01:19:09,660 --> 01:19:13,590
+And so if you include multiple thongs as the font family
+
+1659
+01:19:13,590 --> 01:19:17,220
+in the styling of our HTML, then what's ultimately going to happen there
+
+1660
+01:19:17,220 --> 01:19:18,090
+is-- sorry.
+
+1661
+01:19:18,090 --> 01:19:19,770
+There's an extra tag there.
+
+1662
+01:19:19,770 --> 01:19:22,800
+What's ultimately going to happen is that the web browser will first
+
+1663
+01:19:22,800 --> 01:19:24,840
+try and match the first font that I provide.
+
+1664
+01:19:24,840 --> 01:19:27,352
+It will try and use the font Arial if at all possible.
+
+1665
+01:19:27,352 --> 01:19:30,060
+But if it doesn't have the font Arial, if the web browser doesn't
+
+1666
+01:19:30,060 --> 01:19:32,340
+know what Arial is or can't find that font,
+
+1667
+01:19:32,340 --> 01:19:35,760
+it's just going to default to any sans serif font.
+
+1668
+01:19:35,760 --> 01:19:39,570
+And so oftentimes if you want to use fancier fonts on a web page
+
+1669
+01:19:39,570 --> 01:19:44,490
+it can be a good idea to include the font that you want,
+
+1670
+01:19:44,490 --> 01:19:46,869
+but after that some additional more common fonts
+
+1671
+01:19:46,869 --> 01:19:48,660
+that might be more common in other browsers
+
+1672
+01:19:48,660 --> 01:19:51,360
+on older browsers in particular that way you
+
+1673
+01:19:51,360 --> 01:19:54,180
+can guarantee, or at least know with high probability
+
+1674
+01:19:54,180 --> 01:19:56,430
+that when a user looks at your page they're
+
+1675
+01:19:56,430 --> 01:20:00,077
+seeing what it is that you actually want them to be looking at.
+
+1676
+01:20:00,077 --> 01:20:02,160
+In addition to the font family, we've additionally
+
+1677
+01:20:02,160 --> 01:20:05,490
+specified the font size for how big we want the font to show up as.
+
+1678
+01:20:05,490 --> 01:20:07,510
+In this case, 28 pixels tall.
+
+1679
+01:20:07,510 --> 01:20:08,780
+And finally, a font weight.
+
+1680
+01:20:08,780 --> 01:20:12,370
+You want the fun to be bold, for instance.
+
+1681
+01:20:12,370 --> 01:20:16,119
+So now if we open up font.html, we see that what we get
+
+1682
+01:20:16,119 --> 01:20:18,660
+is slightly different text rendering that what we saw before.
+
+1683
+01:20:18,660 --> 01:20:21,320
+We see hello, world, but it's no longer in that same font
+
+1684
+01:20:21,320 --> 01:20:22,500
+that it was previously.
+
+1685
+01:20:22,500 --> 01:20:26,820
+It's now 28 point font in size, it's now in a particular font,
+
+1686
+01:20:26,820 --> 01:20:29,460
+it's now bold because we were able to control
+
+1687
+01:20:29,460 --> 01:20:32,040
+the font that was present there.
+
+1688
+01:20:32,040 --> 01:20:36,420
+Couple other CSS things that we'll just take a look out before we move on.
+
+1689
+01:20:36,420 --> 01:20:42,600
+We'll take a look at border.html So again, we have inside of the body
+
+1690
+01:20:42,600 --> 01:20:43,870
+a div that says hello, world.
+
+1691
+01:20:43,870 --> 01:20:46,680
+Just [INAUDIBLE] saying hello, world in some rectangular box.
+
+1692
+01:20:46,680 --> 01:20:49,380
+But in the past that rectangular box has sort of been invisible.
+
+1693
+01:20:49,380 --> 01:20:51,770
+We've seen the words hello, world, but there hasn't been
+
+1694
+01:20:51,770 --> 01:20:53,820
+like in a physical box drawn around it.
+
+1695
+01:20:53,820 --> 01:20:54,990
+But now there can be.
+
+1696
+01:20:54,990 --> 01:21:00,360
+Up in the style tag we're going to specify that we want inside of the div
+
+1697
+01:21:00,360 --> 01:21:05,880
+for there to be a border and that border to be a three pixel, solid blue line.
+
+1698
+01:21:05,880 --> 01:21:09,150
+And so by specifying border three, pixel, solid blue
+
+1699
+01:21:09,150 --> 01:21:12,420
+we can open up border.html and now we see
+
+1700
+01:21:12,420 --> 01:21:17,144
+hello, world inside of this rectangular box that is a three pixel blue line.
+
+1701
+01:21:17,144 --> 01:21:19,560
+And we can change this, can customize it however you like.
+
+1702
+01:21:19,560 --> 01:21:25,102
+It can be a five pixel, dotted red line, for instance.
+
+1703
+01:21:25,102 --> 01:21:27,060
+And now it's going to look something like that.
+
+1704
+01:21:27,060 --> 01:21:29,500
+So we have full control over what the border looks like.
+
+1705
+01:21:29,500 --> 01:21:31,567
+And again, there are many, many CSS properties.
+
+1706
+01:21:31,567 --> 01:21:34,650
+Far more than we're going to be able to look at in just tonight's lecture,
+
+1707
+01:21:34,650 --> 01:21:36,780
+but I'm giving you a taste of them, just a teaser
+
+1708
+01:21:36,780 --> 01:21:39,219
+of what CSS properties are out there so that as you start
+
+1709
+01:21:39,219 --> 01:21:41,010
+designing your own web applications you can
+
+1710
+01:21:41,010 --> 01:21:43,110
+think about what do you want the web page to look
+
+1711
+01:21:43,110 --> 01:21:46,470
+like, you can get a feel for what CSS is capable of.
+
+1712
+01:21:46,470 --> 01:21:49,590
+And as a result, you can start to design pages that look
+
+1713
+01:21:49,590 --> 01:21:51,810
+the way that you want them to look.
+
+1714
+01:21:51,810 --> 01:21:54,480
+So that's borders.
+
+1715
+01:21:54,480 --> 01:21:58,770
+And now let's try and use some of the CSS that we've learned in order
+
+1716
+01:21:58,770 --> 01:22:03,190
+to improve the style of one of the HTML pages that we've already looked at.
+
+1717
+01:22:03,190 --> 01:22:06,870
+So let's take a look at table.html.
+
+1718
+01:22:06,870 --> 01:22:10,770
+And recall that table.html was just a simple web page that
+
+1719
+01:22:10,770 --> 01:22:12,990
+listed presidents of the United States.
+
+1720
+01:22:12,990 --> 01:22:15,030
+We have Washington, Adams, Jefferson.
+
+1721
+01:22:15,030 --> 01:22:18,540
+And right now this table doesn't look particularly fancy or particularly
+
+1722
+01:22:18,540 --> 01:22:23,370
+great, but we can use CSS now to begin to add styling to it,
+
+1723
+01:22:23,370 --> 01:22:26,640
+to begin to control the way this looks to make it look the way we want it to.
+
+1724
+01:22:26,640 --> 01:22:30,720
+Maybe, for instance, we want a border around this table.
+
+1725
+01:22:30,720 --> 01:22:35,820
+So up in the head I can add a style tag and say, all right,
+
+1726
+01:22:35,820 --> 01:22:42,150
+around the table lets add a border and let's make it two pixels solid black.
+
+1727
+01:22:42,150 --> 01:22:44,709
+
+
+1728
+01:22:44,709 --> 01:22:46,500
+And now around our whole table we just have
+
+1729
+01:22:46,500 --> 01:22:48,720
+this box, a two pixel solid black line that's
+
+1730
+01:22:48,720 --> 01:22:51,125
+surrounding the entirety of this table.
+
+1731
+01:22:51,125 --> 01:22:51,750
+So that's good.
+
+1732
+01:22:51,750 --> 01:22:54,000
+That's a good start, but it's not great.
+
+1733
+01:22:54,000 --> 01:22:56,550
+I also would probably want for there to be borders
+
+1734
+01:22:56,550 --> 01:22:58,290
+around individual cells for this table.
+
+1735
+01:22:58,290 --> 01:23:00,990
+Lines that are dividing up the rows and the columns.
+
+1736
+01:23:00,990 --> 01:23:02,250
+And so let's do that now.
+
+1737
+01:23:02,250 --> 01:23:07,230
+So now I would want to apply styling to the table headers.
+
+1738
+01:23:07,230 --> 01:23:11,310
+Let's apply a border of maybe one pixel, solid black this time
+
+1739
+01:23:11,310 --> 01:23:14,100
+and also around the table data.
+
+1740
+01:23:14,100 --> 01:23:16,020
+One pixel, solid black.
+
+1741
+01:23:16,020 --> 01:23:19,440
+Recall that the headers were these things at the top the first name,
+
+1742
+01:23:19,440 --> 01:23:21,000
+last name, years in office.
+
+1743
+01:23:21,000 --> 01:23:23,730
+Whereas the data, the td were the individual cells
+
+1744
+01:23:23,730 --> 01:23:26,350
+that were composed within that table.
+
+1745
+01:23:26,350 --> 01:23:30,360
+And by specifying this now and I refresh of the page,
+
+1746
+01:23:30,360 --> 01:23:32,700
+now the individual cells also have a border around them.
+
+1747
+01:23:32,700 --> 01:23:35,670
+We see a little box around each one of these individual cells.
+
+1748
+01:23:35,670 --> 01:23:39,930
+And one thing you may have noticed is that the styling for the table header
+
+1749
+01:23:39,930 --> 01:23:41,970
+is the same as the styling for the table data.
+
+1750
+01:23:41,970 --> 01:23:44,087
+They're both border, one pixel solid block.
+
+1751
+01:23:44,087 --> 01:23:46,170
+And it felt a little bit repetitive for me to have
+
+1752
+01:23:46,170 --> 01:23:48,070
+to say the same thing two times.
+
+1753
+01:23:48,070 --> 01:23:53,760
+So what I can do instead is just say th,td, to mean take this styling,
+
+1754
+01:23:53,760 --> 01:23:58,320
+apply it to both table headers and table data and then I don't need this
+
+1755
+01:23:58,320 --> 01:24:00,030
+additional information for the CSS.
+
+1756
+01:24:00,030 --> 01:24:03,870
+I just say the table is going to have a two pixel, solid block border.
+
+1757
+01:24:03,870 --> 01:24:07,110
+The table header and the table data will each have a one pixel solid back
+
+1758
+01:24:07,110 --> 01:24:07,920
+border.
+
+1759
+01:24:07,920 --> 01:24:10,860
+And if I refresh that the same exact layout results.
+
+1760
+01:24:10,860 --> 01:24:13,860
+I don't see any changes in the styling because this is fundamentally
+
+1761
+01:24:13,860 --> 01:24:15,330
+the same meaning as before.
+
+1762
+01:24:15,330 --> 01:24:18,660
+We've just managed to eliminate some of that redundancy.
+
+1763
+01:24:18,660 --> 01:24:20,230
+What else might we want to do here?
+
+1764
+01:24:20,230 --> 01:24:22,650
+Well, right now one thing that you may notice
+
+1765
+01:24:22,650 --> 01:24:25,620
+is that the lines are repeated twice because we
+
+1766
+01:24:25,620 --> 01:24:29,070
+have a box around each one of our individual cells
+
+1767
+01:24:29,070 --> 01:24:33,600
+we see two lines between each individual cell instead of one.
+
+1768
+01:24:33,600 --> 01:24:36,669
+And so CSS found a way to get around this just an additional property
+
+1769
+01:24:36,669 --> 01:24:39,960
+that you wouldn't know about unless you looked it up or had used it previously.
+
+1770
+01:24:39,960 --> 01:24:43,740
+But [INAUDIBLE] additional CSS property called border collapse.
+
+1771
+01:24:43,740 --> 01:24:48,090
+And if I had border collapse collapse to this styling of this HTML page
+
+1772
+01:24:48,090 --> 01:24:52,410
+and then refresh it, now we see that those double borders go away.
+
+1773
+01:24:52,410 --> 01:24:54,240
+We just have just the borders we want.
+
+1774
+01:24:54,240 --> 01:24:57,245
+And if we didn't know that border collapse exist as a CSS tag
+
+1775
+01:24:57,245 --> 01:24:58,620
+it would be very easy to look up.
+
+1776
+01:24:58,620 --> 01:25:04,295
+You could just Google CSS property for removing double borders in a table.
+
+1777
+01:25:04,295 --> 01:25:06,420
+And you'll likely find someone online who has said,
+
+1778
+01:25:06,420 --> 01:25:10,800
+use border collapse:collapse and you can then use those CSS properties
+
+1779
+01:25:10,800 --> 01:25:14,140
+in your own web design as well.
+
+1780
+01:25:14,140 --> 01:25:16,370
+Now we might want to add some color to this as well.
+
+1781
+01:25:16,370 --> 01:25:20,340
+You might want the headings of our table to be in a slightly different color.
+
+1782
+01:25:20,340 --> 01:25:23,130
+So I might say for the table headers, let's
+
+1783
+01:25:23,130 --> 01:25:28,444
+say we want the background color to be light gray, for instance.
+
+1784
+01:25:28,444 --> 01:25:31,110
+And we refresh that and now the background for our table headers
+
+1785
+01:25:31,110 --> 01:25:32,190
+is light gray.
+
+1786
+01:25:32,190 --> 01:25:34,082
+And maybe you want to add some spacing.
+
+1787
+01:25:34,082 --> 01:25:35,790
+Recall that there are two ways that we've
+
+1788
+01:25:35,790 --> 01:25:37,650
+added spacing thus far in this course where
+
+1789
+01:25:37,650 --> 01:25:39,870
+margins are around the outside of the box
+
+1790
+01:25:39,870 --> 01:25:41,970
+and paddings on the inside of the box.
+
+1791
+01:25:41,970 --> 01:25:44,640
+Right now I get the feeling that these cells are a little bit
+
+1792
+01:25:44,640 --> 01:25:47,790
+cramped, that there's not a whole lot of space inside those boxes.
+
+1793
+01:25:47,790 --> 01:25:50,070
+So maybe I want to add more space there.
+
+1794
+01:25:50,070 --> 01:25:53,880
+So maybe for each of my table header cells and table data cells,
+
+1795
+01:25:53,880 --> 01:25:58,350
+I want to say padding five pixels, just to add five pixels of padding
+
+1796
+01:25:58,350 --> 01:26:00,949
+on the inside of my individual cells.
+
+1797
+01:26:00,949 --> 01:26:02,490
+And now it looks something like this.
+
+1798
+01:26:02,490 --> 01:26:05,070
+Looks a little bit cleaner, a little more room for the cells
+
+1799
+01:26:05,070 --> 01:26:07,350
+to breathe because I've added some padding in there
+
+1800
+01:26:07,350 --> 01:26:11,060
+just by adding these additional CSS properties.
+
+1801
+01:26:11,060 --> 01:26:14,460
+I can additionally add changes to the size of this.
+
+1802
+01:26:14,460 --> 01:26:16,410
+Maybe I want the table to be wider.
+
+1803
+01:26:16,410 --> 01:26:22,215
+I can say make the with 500 pixels, for instance, and now it's 500 pixels wide.
+
+1804
+01:26:22,215 --> 01:26:24,090
+But as someone mentioned earlier before, this
+
+1805
+01:26:24,090 --> 01:26:27,294
+might not be great because now if I shrink down this page
+
+1806
+01:26:27,294 --> 01:26:28,710
+now I've sort of lost information.
+
+1807
+01:26:28,710 --> 01:26:33,870
+I can scroll over to the other side, but the table doesn't respond with me.
+
+1808
+01:26:33,870 --> 01:26:36,480
+So I can instead say something like, what width?
+
+1809
+01:26:36,480 --> 01:26:38,500
+Let's make it 50%.
+
+1810
+01:26:38,500 --> 01:26:41,310
+So the width of the table takes up 50% of the view
+
+1811
+01:26:41,310 --> 01:26:42,940
+of the entire width of the window.
+
+1812
+01:26:42,940 --> 01:26:44,970
+And now as I shrink it down or make it larger
+
+1813
+01:26:44,970 --> 01:26:47,790
+you'll notice that my web browser knows automatically
+
+1814
+01:26:47,790 --> 01:26:49,680
+we need to add new lines to the table headers
+
+1815
+01:26:49,680 --> 01:26:51,411
+in order to make room for all the data.
+
+1816
+01:26:51,411 --> 01:26:53,160
+The web browser takes care of all of that.
+
+1817
+01:26:53,160 --> 01:26:56,280
+I just need to tell it, here's how I want the data to render,
+
+1818
+01:26:56,280 --> 01:26:59,910
+here are the specific style properties that I want to add to the HTML page.
+
+1819
+01:26:59,910 --> 01:27:02,370
+And the result is this.
+
+1820
+01:27:02,370 --> 01:27:04,230
+And finally, one thing I might want to do
+
+1821
+01:27:04,230 --> 01:27:09,990
+is say, for all the table data let's align it centered.
+
+1822
+01:27:09,990 --> 01:27:12,060
+And what we see now is we have a table that
+
+1823
+01:27:12,060 --> 01:27:15,420
+looks a whole lot nicer than the table we had just a couple of moments ago
+
+1824
+01:27:15,420 --> 01:27:17,430
+when we didn't have any of the CSS at all
+
+1825
+01:27:17,430 --> 01:27:20,820
+and it was just all the tech sort of on one side without any borders
+
+1826
+01:27:20,820 --> 01:27:24,690
+or centering or styling added to that.
+
+1827
+01:27:24,690 --> 01:27:27,900
+So using just a couple lines of CSS, we can
+
+1828
+01:27:27,900 --> 01:27:30,630
+start to take the contents of our pages and make
+
+1829
+01:27:30,630 --> 01:27:32,940
+them a whole lot more responsive.
+
+1830
+01:27:32,940 --> 01:27:35,005
+A couple final points to take a look at.
+
+1831
+01:27:35,005 --> 01:27:37,380
+Any questions about this so far before we move on though?
+
+1832
+01:27:37,380 --> 01:27:37,880
+Yeah.
+
+1833
+01:27:37,880 --> 01:27:38,880
+AUDIENCE: [INAUDIBLE]
+
+1834
+01:27:38,880 --> 01:27:39,610
+BRIAN YU: Yep.
+
+1835
+01:27:39,610 --> 01:28:03,444
+AUDIENCE: [INAUDIBLE]
+
+1836
+01:28:03,444 --> 01:28:04,590
+BRIAN YU: Great question.
+
+1837
+01:28:04,590 --> 01:28:06,690
+So the question is, there are so many properties out there.
+
+1838
+01:28:06,690 --> 01:28:08,030
+I've shown you a whole bunch today, but there
+
+1839
+01:28:08,030 --> 01:28:10,196
+are far more that I haven't even managed to touch on
+
+1840
+01:28:10,196 --> 01:28:12,410
+just because we don't have enough time.
+
+1841
+01:28:12,410 --> 01:28:15,170
+How do you know which one to use to make a certain thing happen?
+
+1842
+01:28:15,170 --> 01:28:19,340
+Oftentimes, the best way to do this is to look for documentation online.
+
+1843
+01:28:19,340 --> 01:28:22,100
+If you look up CSS property documentation
+
+1844
+01:28:22,100 --> 01:28:25,790
+you'll often find lists that just show you all of the different CSS properties
+
+1845
+01:28:25,790 --> 01:28:28,620
+that you can apply to style a particular element on the page.
+
+1846
+01:28:28,620 --> 01:28:29,720
+And you can use those.
+
+1847
+01:28:29,720 --> 01:28:32,390
+Or likewise, if you're looking for something very specific,
+
+1848
+01:28:32,390 --> 01:28:35,930
+you want to know how do you get something to happen?
+
+1849
+01:28:35,930 --> 01:28:39,320
+Maybe I didn't know about collapsing those borders before,
+
+1850
+01:28:39,320 --> 01:28:45,240
+I can just perform a Google search and look for CSS table,
+
+1851
+01:28:45,240 --> 01:28:47,244
+combine borders of cells.
+
+1852
+01:28:47,244 --> 01:28:49,160
+I don't quite know what I'm looking for, but I
+
+1853
+01:28:49,160 --> 01:28:50,900
+know approximately what I'm asking for.
+
+1854
+01:28:50,900 --> 01:28:53,900
+And if I look around carefully enough I'll notice that in the very first
+
+1855
+01:28:53,900 --> 01:28:58,927
+result it tells me I can use that border collapse:collapse property in order
+
+1856
+01:28:58,927 --> 01:28:59,760
+to make that happen.
+
+1857
+01:28:59,760 --> 01:29:01,730
+So even if I didn't know how to do that particular thing
+
+1858
+01:29:01,730 --> 01:29:04,370
+or didn't know how to do some other particular styling,
+
+1859
+01:29:04,370 --> 01:29:06,200
+this is all readily available information
+
+1860
+01:29:06,200 --> 01:29:09,560
+that you can look up because others have likely walked that trail before,
+
+1861
+01:29:09,560 --> 01:29:13,940
+tried to solve the same problems and are likely have a way to use CSS in order
+
+1862
+01:29:13,940 --> 01:29:17,300
+to make the styling look the way that you want it to ultimately look.
+
+1863
+01:29:17,300 --> 01:29:20,300
+So great question.
+
+1864
+01:29:20,300 --> 01:29:22,010
+OK.
+
+1865
+01:29:22,010 --> 01:29:24,440
+One more example just to quickly show you.
+
+1866
+01:29:24,440 --> 01:29:27,890
+What we have here are divs and spans.
+
+1867
+01:29:27,890 --> 01:29:32,150
+So we've seen divs before in a little bit of detail, where the div is just
+
+1868
+01:29:32,150 --> 01:29:34,440
+a division of my web page.
+
+1869
+01:29:34,440 --> 01:29:37,670
+That's just going to be some section of the web page, some vertical section
+
+1870
+01:29:37,670 --> 01:29:38,720
+of my web page.
+
+1871
+01:29:38,720 --> 01:29:42,440
+And a span as we see here, is really just the section of my web page
+
+1872
+01:29:42,440 --> 01:29:44,630
+that might be in the middle of some text.
+
+1873
+01:29:44,630 --> 01:29:47,570
+They don't really have the same kind of meaning the way that an image
+
+1874
+01:29:47,570 --> 01:29:51,410
+tag is an image and a list tag creates a list and a table tag creates a table.
+
+1875
+01:29:51,410 --> 01:29:54,320
+The divs and span tags really don't do anything at all,
+
+1876
+01:29:54,320 --> 01:29:57,170
+but they allow us to label different parts of our page.
+
+1877
+01:29:57,170 --> 01:30:00,590
+I can say div and then give this an id, where an id is just
+
+1878
+01:30:00,590 --> 01:30:04,790
+an attribute that uniquely identifies a section of my web page via a name
+
+1879
+01:30:04,790 --> 01:30:05,630
+that I give it.
+
+1880
+01:30:05,630 --> 01:30:08,240
+So I can say div id equals top, where top is just
+
+1881
+01:30:08,240 --> 01:30:10,910
+a name that I picked to say, you know what, this is going
+
+1882
+01:30:10,910 --> 01:30:12,710
+to be the top section of my web page.
+
+1883
+01:30:12,710 --> 01:30:15,500
+And I'm going to put it in a div just so that I can name it,
+
+1884
+01:30:15,500 --> 01:30:18,620
+so that I can name it top to mean this is the top of my web page.
+
+1885
+01:30:18,620 --> 01:30:20,810
+And likewise here, div equals middle.
+
+1886
+01:30:20,810 --> 01:30:24,440
+I picked the name middle as the name for this section of the web page.
+
+1887
+01:30:24,440 --> 01:30:27,500
+And then div id bottom just means I have a section here
+
+1888
+01:30:27,500 --> 01:30:29,030
+and I'm naming it bottom.
+
+1889
+01:30:29,030 --> 01:30:32,900
+And I can give it a name by using this id attribute.
+
+1890
+01:30:32,900 --> 01:30:34,230
+Then these spans here.
+
+1891
+01:30:34,230 --> 01:30:35,690
+Why am I using those?
+
+1892
+01:30:35,690 --> 01:30:38,900
+Well, I have this additional attribute called class.
+
+1893
+01:30:38,900 --> 01:30:42,410
+Class is an attribute that lets me give names to elements as well,
+
+1894
+01:30:42,410 --> 01:30:45,560
+but it lets me give names to a certain type of element.
+
+1895
+01:30:45,560 --> 01:30:46,430
+So with id's.
+
+1896
+01:30:46,430 --> 01:30:50,000
+When I have an id on an HTML element that id needs to be unique.
+
+1897
+01:30:50,000 --> 01:30:54,320
+There can only be one HTML element in my web page that has an id of top,
+
+1898
+01:30:54,320 --> 01:30:57,770
+only one that has an id of middle, and only one that has an id of bottom.
+
+1899
+01:30:57,770 --> 01:31:01,960
+But I can give many things, as many as I want the same class.
+
+1900
+01:31:01,960 --> 01:31:05,270
+And so here I'm saying, I'm going to call this class name.
+
+1901
+01:31:05,270 --> 01:31:08,840
+And that way if I want to I can refer to all
+
+1902
+01:31:08,840 --> 01:31:12,290
+of the different spans who have classes name and style them
+
+1903
+01:31:12,290 --> 01:31:13,124
+in a particular way.
+
+1904
+01:31:13,124 --> 01:31:16,040
+And you'll see what I mean by this in just a moment if it's confusing.
+
+1905
+01:31:16,040 --> 01:31:17,600
+But right now we have three divs.
+
+1906
+01:31:17,600 --> 01:31:20,990
+This is the top of my web page, this is the middle, this is the bottom.
+
+1907
+01:31:20,990 --> 01:31:24,560
+Where top, middle, and bottom are inside of these spans
+
+1908
+01:31:24,560 --> 01:31:26,724
+who have a class value of name.
+
+1909
+01:31:26,724 --> 01:31:27,890
+So what can we do with that?
+
+1910
+01:31:27,890 --> 01:31:31,670
+Why are we labeling things with top, middle, bottom name?
+
+1911
+01:31:31,670 --> 01:31:34,130
+Well, if we take a look at the styling up here,
+
+1912
+01:31:34,130 --> 01:31:37,460
+this is the contents of our style tag.
+
+1913
+01:31:37,460 --> 01:31:39,140
+We have this pound sign.
+
+1914
+01:31:39,140 --> 01:31:42,190
+And the pound sign in CSS is short for id.
+
+1915
+01:31:42,190 --> 01:31:46,556
+What this is here saying is get me the thing whose id is top
+
+1916
+01:31:46,556 --> 01:31:47,930
+and style it in a particular way.
+
+1917
+01:31:47,930 --> 01:31:51,704
+In this case, style it with a font size of 36 points.
+
+1918
+01:31:51,704 --> 01:31:53,870
+Here, take the thing that has id of middle and style
+
+1919
+01:31:53,870 --> 01:31:55,700
+it with a font size of 24 points.
+
+1920
+01:31:55,700 --> 01:31:58,360
+And likewise, take the thing that has id bottom and style
+
+1921
+01:31:58,360 --> 01:32:00,590
+it with a font size of 12 points.
+
+1922
+01:32:00,590 --> 01:32:04,580
+And before I wouldn't have had a way to distinguish the styling between three
+
+1923
+01:32:04,580 --> 01:32:09,170
+different divs, because if I had said div style that is 24 point text
+
+1924
+01:32:09,170 --> 01:32:11,240
+it would have applied to all three of my divs,
+
+1925
+01:32:11,240 --> 01:32:14,090
+but if I only want it to apply to one of them an easy way to do that
+
+1926
+01:32:14,090 --> 01:32:15,560
+is to uniquely identify it.
+
+1927
+01:32:15,560 --> 01:32:19,730
+This is the top div and then say, OK, get the thing whose id is top,
+
+1928
+01:32:19,730 --> 01:32:22,640
+here's how I want you to style that thing.
+
+1929
+01:32:22,640 --> 01:32:28,610
+Likewise down here, if the pound sign means id the dot sign in CSS
+
+1930
+01:32:28,610 --> 01:32:29,950
+means class.
+
+1931
+01:32:29,950 --> 01:32:34,877
+So dot name means take anything whose class is name and style
+
+1932
+01:32:34,877 --> 01:32:35,960
+it in this particular way.
+
+1933
+01:32:35,960 --> 01:32:38,990
+In this case, make the font weight bold.
+
+1934
+01:32:38,990 --> 01:32:47,197
+So now if I open up divspend.html, this is the contents that I see.
+
+1935
+01:32:47,197 --> 01:32:49,280
+I had three divs and you can sort of see them here
+
+1936
+01:32:49,280 --> 01:32:50,655
+even though they're not laid out.
+
+1937
+01:32:50,655 --> 01:32:53,640
+This was my top, this was my middle, this was my bottom.
+
+1938
+01:32:53,640 --> 01:32:55,490
+And because I said get the thing with id top
+
+1939
+01:32:55,490 --> 01:32:58,370
+and make it the biggest in font size, make the middle one somewhere
+
+1940
+01:32:58,370 --> 01:33:00,290
+in between, and the bottom of the web page
+
+1941
+01:33:00,290 --> 01:33:02,342
+the smallest font size at just 12 points,
+
+1942
+01:33:02,342 --> 01:33:04,550
+then they were able to render using the correct fonts
+
+1943
+01:33:04,550 --> 01:33:06,740
+even though that they're all div tags.
+
+1944
+01:33:06,740 --> 01:33:08,870
+And these names, top, middle, and bottom,
+
+1945
+01:33:08,870 --> 01:33:10,910
+they're all bolded because they were inside
+
+1946
+01:33:10,910 --> 01:33:13,580
+of spans that had a class of name.
+
+1947
+01:33:13,580 --> 01:33:17,930
+And I said take all of the things that have a class of name and style
+
+1948
+01:33:17,930 --> 01:33:19,522
+them with a font weight of bold.
+
+1949
+01:33:19,522 --> 01:33:21,230
+Take a look at that one more time in case
+
+1950
+01:33:21,230 --> 01:33:25,010
+it was confusing now that you've seen what this web page actually looks like.
+
+1951
+01:33:25,010 --> 01:33:27,950
+Inside the body we have these three divs.
+
+1952
+01:33:27,950 --> 01:33:31,160
+And these id's never show up in the contents of the HTML.
+
+1953
+01:33:31,160 --> 01:33:35,150
+These names are only present inside the HTML code and not
+
+1954
+01:33:35,150 --> 01:33:36,870
+when it gets rendered in the browser.
+
+1955
+01:33:36,870 --> 01:33:41,270
+But I'm giving the divs these names such that later on in my style
+
+1956
+01:33:41,270 --> 01:33:44,890
+tags I can go in and style them however I want them to,
+
+1957
+01:33:44,890 --> 01:33:47,990
+by giving them a particular font size, for example, in order
+
+1958
+01:33:47,990 --> 01:33:51,410
+to result in them rendering the way that I want them to be rendered.
+
+1959
+01:33:51,410 --> 01:33:55,350
+And likewise, the same for when we have individual names.
+
+1960
+01:33:55,350 --> 01:33:57,650
+So that's a brief introduction to CSS.
+
+1961
+01:33:57,650 --> 01:34:00,770
+Next week we'll dive in even further into HTML and CSS.
+
+1962
+01:34:00,770 --> 01:34:03,200
+But any questions about the CSS that we've
+
+1963
+01:34:03,200 --> 01:34:08,310
+seen so far in terms of how to go about styling our web pages?
+
+1964
+01:34:08,310 --> 01:34:08,810
+Yes.
+
+1965
+01:34:08,810 --> 01:34:10,778
+AUDIENCE: [INAUDIBLE] question.
+
+1966
+01:34:10,778 --> 01:34:15,206
+A number of the things that you did in the HTML code
+
+1967
+01:34:15,206 --> 01:34:18,896
+you could do in a Wysiwyg editor where you
+
+1968
+01:34:18,896 --> 01:34:22,094
+can see what you're doing more readily.
+
+1969
+01:34:22,094 --> 01:34:29,474
+And then Microsoft Word generates HTML code for you, right?
+
+1970
+01:34:29,474 --> 01:34:30,600
+BRIAN YU: Great question.
+
+1971
+01:34:30,600 --> 01:34:35,217
+AUDIENCE: Under what circumstances do you want-- in practice, how are people
+
+1972
+01:34:35,217 --> 01:34:37,404
+really generating their HTML code?
+
+1973
+01:34:37,404 --> 01:34:40,320
+And under what circumstances do you want to be down in the weeds
+
+1974
+01:34:40,320 --> 01:34:42,264
+writing in HTML?
+
+1975
+01:34:42,264 --> 01:34:43,650
+BRIAN YU: Fantastic question.
+
+1976
+01:34:43,650 --> 01:34:47,240
+So the question was, nowadays there are all these Wysiwyg editors where
+
+1977
+01:34:47,240 --> 01:34:50,840
+I can just click a bold button and make text bold or click a color box
+
+1978
+01:34:50,840 --> 01:34:54,590
+and change the color to whatever I want without needing to know hex values
+
+1979
+01:34:54,590 --> 01:34:56,870
+and class names and id's and all that, so why
+
+1980
+01:34:56,870 --> 01:35:00,000
+would I ever want to actually use this stuff, or in what situations would
+
+1981
+01:35:00,000 --> 01:35:01,560
+this actually come up?
+
+1982
+01:35:01,560 --> 01:35:04,002
+And the answer is that oftentimes a lot of the basics
+
+1983
+01:35:04,002 --> 01:35:05,210
+will already be done for you.
+
+1984
+01:35:05,210 --> 01:35:09,680
+Next week we'll start to dive into a CSS framework called bootstrap
+
+1985
+01:35:09,680 --> 01:35:13,700
+where a lot of the CSS to make web sites look nice is already written for you
+
+1986
+01:35:13,700 --> 01:35:16,940
+and you can just use it and make your website look a little bit better.
+
+1987
+01:35:16,940 --> 01:35:20,150
+But you'll want to use HTML and CSS when it's
+
+1988
+01:35:20,150 --> 01:35:23,960
+helpful for making very specific adjustments to your web page
+
+1989
+01:35:23,960 --> 01:35:25,820
+in order to make them look a particular way.
+
+1990
+01:35:25,820 --> 01:35:29,030
+And also, once we start dealing with dynamic web pages.
+
+1991
+01:35:29,030 --> 01:35:31,280
+So far all of the web pages we've created
+
+1992
+01:35:31,280 --> 01:35:33,616
+just show whatever content I want them to show.
+
+1993
+01:35:33,616 --> 01:35:36,740
+I type in the text that I want to appear on the page and I open up the page
+
+1994
+01:35:36,740 --> 01:35:40,190
+and it shows that text, but most modern websites aren't like that.
+
+1995
+01:35:40,190 --> 01:35:43,234
+I open up Facebook or Twitter and it's not like some Facebook or Twitter
+
+1996
+01:35:43,234 --> 01:35:46,400
+engineer has written all of the posts and tweets I'm going to see in an HTML
+
+1997
+01:35:46,400 --> 01:35:47,840
+page and shows that to me.
+
+1998
+01:35:47,840 --> 01:35:51,920
+It's that some server somewhere is figuring out what tweets
+
+1999
+01:35:51,920 --> 01:35:53,590
+and what Facebook post to show me.
+
+2000
+01:35:53,590 --> 01:35:58,100
+It's generating HTML and CSS and it's displaying that information to me.
+
+2001
+01:35:58,100 --> 01:36:01,550
+And that process of generating custom, dynamic HTML
+
+2002
+01:36:01,550 --> 01:36:03,980
+that gets displayed to the user based on different things
+
+2003
+01:36:03,980 --> 01:36:05,750
+is something we'll explore later in the course.
+
+2004
+01:36:05,750 --> 01:36:07,500
+But it's a situation in which we'll really
+
+2005
+01:36:07,500 --> 01:36:10,550
+need to start to leverage some of the tools in HTML and CSS
+
+2006
+01:36:10,550 --> 01:36:14,400
+in order to control when we're dynamically creating content.
+
+2007
+01:36:14,400 --> 01:36:15,800
+How does that content look?
+
+2008
+01:36:15,800 --> 01:36:17,550
+And those are situations in which we might
+
+2009
+01:36:17,550 --> 01:36:22,520
+want to have a little more formal control over the CSS and the HTML
+
+2010
+01:36:22,520 --> 01:36:24,500
+that we use inside of the page.
+
+2011
+01:36:24,500 --> 01:36:26,360
+But great question.
+
+2012
+01:36:26,360 --> 01:36:28,131
+Other things?
+
+2013
+01:36:28,131 --> 01:36:28,630
+Yeah.
+
+2014
+01:36:28,630 --> 01:36:33,380
+AUDIENCE: I just want to know the difference between id and class.
+
+2015
+01:36:33,380 --> 01:36:39,389
+For example, can I use the id attribute with span tag?
+
+2016
+01:36:39,389 --> 01:36:40,430
+BRIAN YU: Great question.
+
+2017
+01:36:40,430 --> 01:36:43,020
+So the question is, when you use id in class
+
+2018
+01:36:43,020 --> 01:36:45,810
+can you use the id with a span tag instead of a div?
+
+2019
+01:36:45,810 --> 01:36:46,590
+Yes, absolutely.
+
+2020
+01:36:46,590 --> 01:36:50,700
+You can use id's in class attributes on any HTML element.
+
+2021
+01:36:50,700 --> 01:36:52,560
+So I could have put a class on the div.
+
+2022
+01:36:52,560 --> 01:36:54,870
+I could have put an id on the span.
+
+2023
+01:36:54,870 --> 01:37:00,910
+id and class are just two different ways of identifying HTML elements in a style
+
+2024
+01:37:00,910 --> 01:37:04,050
+sheet, for instance, or using JavaScript as we'll soon see later.
+
+2025
+01:37:04,050 --> 01:37:06,810
+The only difference is that an id must be unique.
+
+2026
+01:37:06,810 --> 01:37:10,470
+So there can only be one HTML element called top, only one called middle,
+
+2027
+01:37:10,470 --> 01:37:13,950
+and only one called bottom, but there can be as many things
+
+2028
+01:37:13,950 --> 01:37:17,190
+as I want that have a class of a name, for example.
+
+2029
+01:37:17,190 --> 01:37:20,020
+And so generally speaking, if you want to style one thing
+
+2030
+01:37:20,020 --> 01:37:23,460
+in just one part of the web page you use an id,
+
+2031
+01:37:23,460 --> 01:37:26,920
+but if you want to style a bunch of different things you'll use a class.
+
+2032
+01:37:26,920 --> 01:37:29,114
+So if we think back to Twitter, for example, maybe
+
+2033
+01:37:29,114 --> 01:37:31,530
+your profile picture that shows up in the upper right hand
+
+2034
+01:37:31,530 --> 01:37:33,530
+corner of the screen, maybe there's an id
+
+2035
+01:37:33,530 --> 01:37:36,390
+attached to that that's like profile picture because I only have one
+
+2036
+01:37:36,390 --> 01:37:38,100
+and I want to style it a particular way.
+
+2037
+01:37:38,100 --> 01:37:41,285
+But for tweets that are showing up in my tweet feed on Twitter,
+
+2038
+01:37:41,285 --> 01:37:43,660
+those might have a class because there are a whole bunch.
+
+2039
+01:37:43,660 --> 01:37:46,380
+Dozens and dozens of different tweets that are all one style
+
+2040
+01:37:46,380 --> 01:37:47,720
+basically the same way.
+
+2041
+01:37:47,720 --> 01:37:49,470
+And so by giving them a class and say, you
+
+2042
+01:37:49,470 --> 01:37:53,860
+know what, style anything that has a class of tweet using these rules,
+
+2043
+01:37:53,860 --> 01:37:57,300
+then anything that is a tweet will be styled in that same manner.
+
+2044
+01:37:57,300 --> 01:38:02,470
+AUDIENCE: So the id and class actually cannot be used in the same,
+
+2045
+01:38:02,470 --> 01:38:04,244
+for example, div [INAUDIBLE]?
+
+2046
+01:38:04,244 --> 01:38:07,410
+BRIAN YU: The question is, can id's and classes be used in the same element?
+
+2047
+01:38:07,410 --> 01:38:08,760
+Yes, they absolutely can be.
+
+2048
+01:38:08,760 --> 01:38:14,730
+If I wanted to, I could put class equals name up in this top div, for instance.
+
+2049
+01:38:14,730 --> 01:38:17,640
+And what that would do is because it has a class of name,
+
+2050
+01:38:17,640 --> 01:38:20,790
+when I refresh this, this whole top div is now bold
+
+2051
+01:38:20,790 --> 01:38:25,200
+because if we just follow the rules that I gave it, I told my website,
+
+2052
+01:38:25,200 --> 01:38:28,710
+anything that has a class of name make its font weight bold.
+
+2053
+01:38:28,710 --> 01:38:32,710
+And then down here I said this div has a class of name,
+
+2054
+01:38:32,710 --> 01:38:34,800
+so the entire thing is going to render as bold.
+
+2055
+01:38:34,800 --> 01:38:37,350
+So you can give anything the class of name that you want.
+
+2056
+01:38:37,350 --> 01:38:40,980
+Not just the spans, although in this example, we only gave it to the spans.
+
+2057
+01:38:40,980 --> 01:38:42,577
+Great question though.
+
+2058
+01:38:42,577 --> 01:38:43,391
+AUDIENCE: Question.
+
+2059
+01:38:43,391 --> 01:38:43,975
+BRIAN YU: Yes.
+
+2060
+01:38:43,975 --> 01:38:44,474
+Question?
+
+2061
+01:38:44,474 --> 01:38:46,446
+AUDIENCE: What happens if there are conflicting
+
+2062
+01:38:46,446 --> 01:38:48,941
+sizes of same element [INAUDIBLE]?
+
+2063
+01:38:48,941 --> 01:38:53,931
+
+
+2064
+01:38:53,931 --> 01:38:55,040
+BRIAN YU: Great question.
+
+2065
+01:38:55,040 --> 01:38:59,150
+Question is, what happens if there are conflicts, in terms of what happens?
+
+2066
+01:38:59,150 --> 01:39:02,330
+And ultimately, we have to resolve those conflicts somehow
+
+2067
+01:39:02,330 --> 01:39:03,620
+by picking one or the other.
+
+2068
+01:39:03,620 --> 01:39:07,670
+And generally speaking, CSS will default to picking the more specific thing.
+
+2069
+01:39:07,670 --> 01:39:13,040
+So if I said I want the top to render with a color of red
+
+2070
+01:39:13,040 --> 01:39:18,800
+and I want the name to render with a color of blue, for instance,
+
+2071
+01:39:18,800 --> 01:39:21,920
+technically because the top is supposed to render as red
+
+2072
+01:39:21,920 --> 01:39:25,130
+this whole text would theoretically render as red.
+
+2073
+01:39:25,130 --> 01:39:30,320
+But because I said name renders as blue, then when I refresh this,
+
+2074
+01:39:30,320 --> 01:39:33,710
+even though top is still inside of that text that should all be red
+
+2075
+01:39:33,710 --> 01:39:38,150
+because the name is more local to it, because it's part of that span that's
+
+2076
+01:39:38,150 --> 01:39:42,860
+deeper within the tree that [INAUDIBLE] that we saw before than the div is then
+
+2077
+01:39:42,860 --> 01:39:46,580
+top is going to show up as blue instead of red.
+
+2078
+01:39:46,580 --> 01:39:48,560
+Great questions.
+
+2079
+01:39:48,560 --> 01:39:49,070
+All right.
+
+2080
+01:39:49,070 --> 01:39:51,140
+So we've seen a little bit of HTML and CSS,
+
+2081
+01:39:51,140 --> 01:39:55,310
+but thus far our web sites have only ever existed sort of locally
+
+2082
+01:39:55,310 --> 01:39:56,900
+on our own computers.
+
+2083
+01:39:56,900 --> 01:39:59,887
+I've been opening up these web pages in Chrome
+
+2084
+01:39:59,887 --> 01:40:01,970
+just by going to a particular file on my computer.
+
+2085
+01:40:01,970 --> 01:40:04,053
+And you can certainly do that on your own computer
+
+2086
+01:40:04,053 --> 01:40:06,350
+as well just by opening up HTML files and seeing
+
+2087
+01:40:06,350 --> 01:40:07,850
+how a web browser renders them.
+
+2088
+01:40:07,850 --> 01:40:10,689
+But ultimately, that's not very useful if I want to take my web page
+
+2089
+01:40:10,689 --> 01:40:12,980
+and deploy it to the internet, for instance, for anyone
+
+2090
+01:40:12,980 --> 01:40:13,896
+to be able to look at.
+
+2091
+01:40:13,896 --> 01:40:15,841
+So how may I go about doing that?
+
+2092
+01:40:15,841 --> 01:40:17,840
+To use that there are a number of different ways
+
+2093
+01:40:17,840 --> 01:40:23,600
+to deploy web pages to the internet, but one common way, or one way
+
+2094
+01:40:23,600 --> 01:40:26,660
+that we can use in this class using only the stuff we know so far
+
+2095
+01:40:26,660 --> 01:40:28,700
+is something called GitHub Pages.
+
+2096
+01:40:28,700 --> 01:40:31,370
+And GitHub Pages is a feature of GitHub which effectively
+
+2097
+01:40:31,370 --> 01:40:34,310
+lets you take a GitHub repository and deploy it to the internet
+
+2098
+01:40:34,310 --> 01:40:38,020
+so that people online can look at the HTML contents of that web page.
+
+2099
+01:40:38,020 --> 01:40:41,090
+And so let's try an example of that right now.
+
+2100
+01:40:41,090 --> 01:40:44,060
+If I go back to this GitHub repository that we
+
+2101
+01:40:44,060 --> 01:40:47,960
+saw way back at the beginning of lecture this is the lecture zero repository
+
+2102
+01:40:47,960 --> 01:40:52,410
+that inside of it has a hello.html page, that's got hello, world, hello, again,
+
+2103
+01:40:52,410 --> 01:40:54,407
+hello, hello, hello.
+
+2104
+01:40:54,407 --> 01:40:56,240
+I would like to deploy that to the internet.
+
+2105
+01:40:56,240 --> 01:40:57,989
+And the easiest way to do this from GitHub
+
+2106
+01:40:57,989 --> 01:40:59,870
+is using GitHub Pages by doing the following.
+
+2107
+01:40:59,870 --> 01:41:02,300
+On the right hand side I'll go to Settings,
+
+2108
+01:41:02,300 --> 01:41:05,354
+I'll scroll down to GitHub Pages.
+
+2109
+01:41:05,354 --> 01:41:08,270
+GitHub Pages is designed to host your personal organization or project
+
+2110
+01:41:08,270 --> 01:41:10,400
+pages from a GitHub repository.
+
+2111
+01:41:10,400 --> 01:41:13,700
+And I'm going to tell GitHub Pages, you know what, deploy
+
+2112
+01:41:13,700 --> 01:41:16,010
+to the internet from my master branch.
+
+2113
+01:41:16,010 --> 01:41:18,770
+The master branch is just the default branch
+
+2114
+01:41:18,770 --> 01:41:20,864
+that we've used on our GitHub repository.
+
+2115
+01:41:20,864 --> 01:41:23,030
+We haven't yet gone into creating multiple branches,
+
+2116
+01:41:23,030 --> 01:41:24,690
+but we'll get to that soon.
+
+2117
+01:41:24,690 --> 01:41:26,820
+But I'll go ahead and click Save here.
+
+2118
+01:41:26,820 --> 01:41:29,750
+And what that's going to do is enable GitHub Pages
+
+2119
+01:41:29,750 --> 01:41:33,680
+on this particular repository and deploy this code to the internet
+
+2120
+01:41:33,680 --> 01:41:35,390
+so that anyone online could theoretically
+
+2121
+01:41:35,390 --> 01:41:39,690
+go and see the hello.html file that I created before.
+
+2122
+01:41:39,690 --> 01:41:44,360
+So if I scroll down to GitHub Pages, it says your site is now
+
+2123
+01:41:44,360 --> 01:41:46,140
+published at this link.
+
+2124
+01:41:46,140 --> 01:41:52,220
+So if I go to this link and go to this link, /hello.html, it's student 50,
+
+2125
+01:41:52,220 --> 01:41:56,630
+my GitHub username. github.io slash the name of the repository, in this case,
+
+2126
+01:41:56,630 --> 01:41:59,202
+lecture zero /hello.html.
+
+2127
+01:41:59,202 --> 01:42:01,910
+It can sometimes take some time, but this time it's already done.
+
+2128
+01:42:01,910 --> 01:42:05,120
+What you see now is a URL that you can go to right now if you'd like.
+
+2129
+01:42:05,120 --> 01:42:09,380
+You can go to student50.github.io/ lecturezero/hello.html,
+
+2130
+01:42:09,380 --> 01:42:14,460
+and what you will see is a web page with the title of my web page and you'll see
+
+2131
+01:42:14,460 --> 01:42:18,650
+the contents of hello, world, hello, again, hello, hello, hello.
+
+2132
+01:42:18,650 --> 01:42:20,480
+And that is now deployed to the internet.
+
+2133
+01:42:20,480 --> 01:42:24,290
+We've deployed our first website to the internet all just using GitHub Pages.
+
+2134
+01:42:24,290 --> 01:42:27,350
+And the beauty of this is now if ever we make changes
+
+2135
+01:42:27,350 --> 01:42:29,990
+to this repository to the way that it works
+
+2136
+01:42:29,990 --> 01:42:32,930
+or update the code by making pushes to it,
+
+2137
+01:42:32,930 --> 01:42:35,124
+we will automatically update GitHub Pages.
+
+2138
+01:42:35,124 --> 01:42:37,290
+It will reflect the latest version of those changes.
+
+2139
+01:42:37,290 --> 01:42:41,810
+So we can add CSS to these web pages, we can add new content to the HTML,
+
+2140
+01:42:41,810 --> 01:42:46,400
+we can add different HTML files, and it will all deploy to a URL
+
+2141
+01:42:46,400 --> 01:42:48,920
+that anyone on the internet can then visit.
+
+2142
+01:42:48,920 --> 01:42:50,090
+And so that's GitHub Pages.
+
+2143
+01:42:50,090 --> 01:42:52,798
+And that's something that we'll begin to explore in project zero.
+
+2144
+01:42:52,798 --> 01:42:54,810
+Project zero, which will be released later today
+
+2145
+01:42:54,810 --> 01:42:57,260
+is going to be an opportunity for you to start using the stuff
+
+2146
+01:42:57,260 --> 01:42:58,590
+that we've talked about today.
+
+2147
+01:42:58,590 --> 01:43:02,780
+HTML and CSS and Git in order to create a web page of your own
+
+2148
+01:43:02,780 --> 01:43:06,050
+on a topic of your choosing and then deploy that to the internet for anyone
+
+2149
+01:43:06,050 --> 01:43:10,580
+to see ultimately using GitHub Pages by combining all of these tools.
+
+2150
+01:43:10,580 --> 01:43:14,360
+Questions about GitHub Pages or HTML or CSS or things we've seen?
+
+2151
+01:43:14,360 --> 01:43:19,290
+AUDIENCE: Does GitHub Pages render the CSS and JavaScript, for example,
+
+2152
+01:43:19,290 --> 01:43:21,755
+if you go visit the HTML page?
+
+2153
+01:43:21,755 --> 01:43:22,890
+BRIAN YU: Great question.
+
+2154
+01:43:22,890 --> 01:43:26,030
+So the question is, will GitHub Pages render a CSS and JavaScript
+
+2155
+01:43:26,030 --> 01:43:26,840
+once we get there?
+
+2156
+01:43:26,840 --> 01:43:29,454
+Yes, GitHub Pages will allow us to do CSS and JavaScript,
+
+2157
+01:43:29,454 --> 01:43:31,370
+though it's not going to do everything for us.
+
+2158
+01:43:31,370 --> 01:43:32,810
+We'll soon find ourselves within a couple
+
+2159
+01:43:32,810 --> 01:43:35,726
+of weeks finding that there are things we want to do with our websites
+
+2160
+01:43:35,726 --> 01:43:38,514
+that GitHub Pages just isn't quite powerful enough to do.
+
+2161
+01:43:38,514 --> 01:43:40,680
+And then we'll want to transition using other tools.
+
+2162
+01:43:40,680 --> 01:43:44,090
+And that's what we'll stuck getting into Flask and other web development
+
+2163
+01:43:44,090 --> 01:43:47,210
+services that will allow us to build more dynamic, more
+
+2164
+01:43:47,210 --> 01:43:51,110
+interactive websites that are a little more powerful than just web pages that
+
+2165
+01:43:51,110 --> 01:43:53,950
+display the contents of what we've already shown.
+
+2166
+01:43:53,950 --> 01:43:56,430
+But next week we'll dive a little more into Git and HTML
+
+2167
+01:43:56,430 --> 01:43:59,530
+and CSS doing some more advanced things with figuring out
+
+2168
+01:43:59,530 --> 01:44:02,260
+how to dynamically generate styling for our web sites
+
+2169
+01:44:02,260 --> 01:44:05,470
+and going into some of the more advanced features of HTML5.
+
+2170
+01:44:05,470 --> 01:44:08,650
+But for now, that's it for web programming with Python and JavaScript.
+
+2171
+01:44:08,650 --> 01:44:12,840
+Thank you all so much and we'll stick around a bit for questions.
+
+2172
+01:44:12,840 --> 01:44:15,153
+
+
