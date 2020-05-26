@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+        <style>
+ body {
+        background-color: #778899;
+        font-family: Arial;
+        padding-bottom: 50px;
+      }
+
+      .container {
+        background-color: #ffffff;
+        max-width: 50%;
+        margin: 5%;
+        padding: 5% 5% 5% 5%;
+      }
+  h1 {
+    margin: 0;
+    position: absolute;
+    left: 10%
+     }
+  h2 {
+  color: white;
+  margin: 5%;
+  padding: 5%
+
+  }
+
+    </style>
+    </head>
+    <body>
+
+            {% block body %}
+            {% endblock %}
+    </body>
+</html>

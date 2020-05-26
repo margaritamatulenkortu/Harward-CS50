@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registration
+
+
+
+{% endblock %}
+
+{% block body %}
+    <h1>Registration</h1>
+<div class="container">
+    <form action="{{ url_for('reg') }}" method="post">
+
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="Name Surname" minlength="2" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="user_name" placeholder="Your Username" minlength="2" required>
+        </div>
+
+        <div class="form-group">
+    <input class="form-control" type="password" name="password"
+           minlength="8" required placeholder="Your password">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Sign Up</button>
+        </div>
+
+    </form>
+    </div>
+{% endblock %}

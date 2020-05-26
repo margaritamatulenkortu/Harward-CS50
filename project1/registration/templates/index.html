@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registration
+
+
+
+{% endblock %}
+
+{% block body %}
+    <h1>Sign Up or Login to book club</h1>
+<div class="container">
+   <form action="{{ url_for('registr') }}" method="get">
+         <div class="form-group">
+            <button class="btn btn-primary" type="submit">Sign up</button>
+        </div>
+     </form>
+
+     <form action="{{ url_for('login') }}" method="get">
+         <div class="form-group">
+            <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+     </form>
+</div>
+{% endblock %}

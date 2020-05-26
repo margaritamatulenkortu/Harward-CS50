@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flight
+{% endblock %}
+
+{% block body %}
+    <h1>Books</h1>
+
+    <ul>
+        <li>Name: {{ book.name }}</li>
+        <li>Author: {{ book.author }}</li>
+        <li>ISBN: {{ book.isbn}} </li>
+    </ul>
+
+    <h2>Users</h2>
+    <ul>
+        {% for user in userb %}
+            <li>{{ user.name }}</li>
+        {% else %}
+            <li>No users.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
