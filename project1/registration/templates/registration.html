@@ -8,8 +8,16 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Registration</h1>
-<div class="container">
+
+<main role="main">
+
+
+     <section class="jumbotron text-center" >
+    <div class="container">
+      <section id="sectionbox">
+       <h3>Registration</h3>
+          <p id="text"> Join the book club</p>
+     <div class="container ">
     <form action="{{ url_for('reg') }}" method="post">
 
         <div class="form-group">
@@ -29,5 +37,20 @@
         </div>
 
     </form>
+         <form action="{{ url_for('index') }}" method="get">
+         <div class="form-group">
+            <button class="btn btn-secondary my-2" type="submit">To home page</button>
+        </div>
+     </form>
     </div>
+        </section>
+
+</div>
+  </section>
+
+
+
+</main>
+
+
 {% endblock %}

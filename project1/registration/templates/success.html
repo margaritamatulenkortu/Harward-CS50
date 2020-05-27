@@ -5,8 +5,27 @@
 {% endblock %}
 
 {% block body %}
-    <h2>Success!</h2>
+<main role="main">
 
-    You have successfully registrated.
 
+     <section class="jumbotron text-center" >
+    <div class="container">
+      <section id="sectionbox">
+       <h3>Registration completed</h3>
+          <p id="text"> You have successfully registrated </p>
+     <div class="container ">
+          <form action="{{ url_for('home') }}" method="post">
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Log in</button>
+        </div>
+    </form>
+    </div>
+        </section>
+
+</div>
+  </section>
+
+
+
+</main>
 {% endblock %}

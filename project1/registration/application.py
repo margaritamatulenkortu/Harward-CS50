@@ -44,7 +44,7 @@ def reg():
         db.commit()
         return render_template('success.html')
     except Exception as e:
-        print("Oops!", e.__class__, "occurred.")
+        print("Oopsi!", e.__class__, "occurred.")
         return render_template('error.html')
 
 @app.route('/log', methods=['GET', 'POST'])
@@ -54,15 +54,21 @@ def log():
     password = request.form.get("password")
     print("hello")
 
-    try:
-        result = db.execute("SELECT user_name, password FROM usersb WHERE user_name = '%s' AND password = '%s'" % (user_name, password))
-        print(result)
+    sql = "SELECT user_name, password FROM usersb WHERE user_name = '%s' AND password = '%s'" % (user_name, password)
+    result = db.execute(sql)
+    row = result.first()
+    if result.rowcount != 0:
         return render_template('first.html')
-    except Exception as e:
-        print("Oops!", e.__class__, "occurred.")
+    else:
         return render_template('error.html')
+
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
-        """Log Out"""
+        """Logout the current user."""
         return render_template('index.html')
+
+@app.route('/home', methods=['GET', 'POST'])
+def home():
+        """To home page"""
+        return render_template('first.html')
