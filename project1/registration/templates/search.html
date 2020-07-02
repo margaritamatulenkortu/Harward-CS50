@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section class="section">
+        <div class="container is-desktop">
+
+
+                <table class="table is-striped is-fullwidth">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Authors</th>
+                        <th>Year</th>
+                        <th>ISBN</th>
+                    </tr>
+                    </thead>
+
+                        <tr>
+                            <td><a href="{{ url_for('book', book_id=book.id) }}" title="{{ book.title }}">{{ book.title }}</a></td>
+                            <td>{{ book.authors }}</td>
+                            <td>{{ book.year }}</td>
+                            <td>{{ book.isbn }}</td>
+                        </tr>
+
+                </table>
+
+                <nav class="pagination is-centered">
+                    <a class="pagination-previous" {% if page==1 %}disabled
+                       {% else %}href="{{ url_for('search', q=query, page=page - 1) }} "{% endif %}>Previous</a>
+                    <a class="pagination-next" {% if page==pages %}disabled
+                       {% else %}href="{{ url_for('search', q=query, page=page + 1) }} "{% endif %}>Next page</a>
+                </nav>
+
+        </div>
+    </section>
+
+{% endblock %}
